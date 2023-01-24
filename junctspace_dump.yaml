@@ -1,0 +1,553 @@
+%YAML 1.2
+#%FLEETWRIGHT/PROTOTYPES 0.1
+---
+resources:
+  heat:
+    name: "Heat"
+    storeable: false
+  energy:
+    name: "Energy"
+    storeable: false
+  thrust:
+    name: "Thrust"
+    storeable: false
+  chemical_fuel:
+    name: "Chemfuel"
+    storeable: true
+    density: 4
+    price: 2
+    hazards:
+      hazard_leak: true
+  inert_fluid:
+    name: "Inert Fluid"
+    storeable: true
+    density: 5
+    price: 1
+    hazards:
+      hazard_leak: true
+  nuclear_bombs:
+    name: "Nuclear Bombs"
+    storeable: true
+    density: 10
+    price: 2
+    hazards:
+      terrorist_theft: true
+  fissile_pellets:
+    name: "Fissile Pellets"
+    storeable: true
+    density: 10
+    price: 8
+    hazards: null
+  dissolved_fissiles:
+    name: "Dissolved Fissiles"
+    storeable: true
+    density: 12
+    price: 9
+    hazards:
+      critical_leak: true
+  d3he:
+    name: "D3He"
+    storeable: true
+    density: 3
+    price: 3
+    hazards: null
+
+# ctrl+f for [TYPE] to find a type
+components:
+#################### [DRIVE] ###################
+  chemical_rocket:
+    name: "Chemical Rocket"
+    type: drive
+    density: 1
+    durability: 1
+    price: 0.5
+    thrust: 550
+    prop_use: 20
+    crew:
+      strategic:
+        base: 0
+        per_volume: 1
+    works_in_atmo: true
+    landing_bad_idea: false
+  nuclear_hybrid:
+    type: drive
+    density: 3
+    durability: 4
+    price: 3
+    thrust: 500
+    prop_use: 4
+    crew:
+      strategic:
+        base: 2
+        per_volume: 1
+    works_in_atmo: true
+    landing_bad_idea: false
+  electric_rocket:
+    type: drive
+    density: 2
+    durability: 2
+    price: 1
+    thrust: 80
+    prop_use: 0.05
+    crew:
+      strategic:
+        base: 5
+        per_volume: 0.1
+    works_in_atmo: false
+  orion_drive:
+    type: drive
+    density: 8
+    durability: 20
+    price: 6
+    thrust: 700
+    prop_use: 1
+    crew:
+      strategic:
+        base: 6
+        per_volume: 3
+    works_in_atmo: true
+    landing_bad_idea: true
+  mini_mag_orion:
+    type: drive
+    density: 5
+    durability: 10
+    price: 8
+    thrust: 550
+    prop_use: 0.5
+    crew:
+      strategic:
+        base: 6
+        per_volume: 2
+    works_in_atmo: true
+    landing_bad_idea: true
+    power_per_volume: 16
+    heat_per_energy: 0.125
+    can_idle: false
+  fissile_salt_water:
+    type: drive
+    density: 6
+    durability: 12
+    price: 9
+    thrust: 900
+    prop_use: 1.5
+    crew:
+      strategic:
+        base: 12
+        per_volume: 8
+    works_in_atmo: true
+    landing_bad_idea: true
+  fusion_torch:
+    type: drive
+    density: 1
+    durability: 1
+    price: 12
+    thrust: 450
+    prop_use: 0.05
+    crew:
+      strategic:
+        base: 8
+        per_volume: 2
+    works_in_atmo: false
+    power_per_volume: 12
+    heat_per_energy: 0.167
+    can_idle: true
+#################### [POWERPLANT] ###################
+  fuel_cell:
+    type: powerplant
+    density: 3
+    durability: 3
+    price: 1
+    power_per: 30
+    crew:
+      strategic:
+        base: 0
+        per_volume: 0.5
+    converter:
+      consumes:
+        chemical_fuel: 1
+      produces:
+        energy: 10
+        heat: 0
+  photovoltaic:
+    type: powerplant
+    density: 0.2
+    durability: 1
+    price: 1
+    power_per: 10
+    energy_per_heat: .inf
+    crew:
+      strategic:
+        base: 0
+        per_volume: 0.1
+    converter:
+      consumes: {}
+      produces:
+        energy: 10
+        heat: 0
+  molten_salt:
+    type: powerplant
+    density: 6
+    durability: 8
+    price: 3
+    crew:
+      strategic:
+        base: 6
+        per_volume: 2
+    converter:
+      consumes: {}
+      produces:
+        energy: 20
+        heat: 10
+  pebble_bed:
+    type: powerplant
+    __incomplete: 1
+  fission_fragment:
+    type: powerplant
+    density: 3
+    durability: 2
+    price: 5
+    power_per: 32
+    converter:
+      consumes: {}
+      produces:
+        energy: 8
+        heat: 1
+    crew:
+      strategic:
+        base: 12
+        per_volume: 4
+  magneto_inertial:
+    type: powerplant
+    __incomplete: 1
+  electrostatic_fusion:
+    type: powerplant
+    __incomplete: 1
+#################### [RADIATOR] ###################
+  solid_panel:
+    type: radiator
+    density: 4
+    durability: 2
+    price: 1
+    converter:
+      consumes:
+        power: 0.5
+      produces:
+        heat: -12
+    crew:
+      strategic:
+        base: 5
+        per_volume: 1
+  open_cycle:
+    type: radiator
+    density: 1
+    durability: 10
+    price: 1
+    converter:
+      consumes:
+        power: 0.5
+      produces:
+        heat: -30
+    crew:
+      strategic:
+        base: 0
+        per_volume: 1
+  ballistic_droplet:
+    type: radiator
+    density: 3
+    durability: 3
+    price: 1
+    converter:
+      consumes:
+        power: 0.5
+      produces:
+        heat: -20
+    crew:
+      strategic:
+        base: 4
+        per_volume: 2
+  em_droplet:
+    type: radiator
+    density: 4
+    durability: 2
+    price: 1
+    converter:
+      consumes:
+        power: 0.5
+      produces:
+        heat: -12
+    crew:
+      strategic:
+        base: 5
+        per_volume: 1
+  dusty_plasma:
+    type: radiator
+    density: 4
+    durability: 2
+    price: 1
+    converter:
+      consumes:
+        power: 0.5
+      produces:
+        heat: 12
+    crew:
+      strategic:
+        base: 5
+        per_volume: 1
+#################### [TANK] ###################
+  tank_chemical_fuel:
+    type: tank
+    density: 0
+    durability: 1
+    price: 2
+    stores: chemical_fuel
+  tank_inert_fluid:
+    type: tank
+    density: 0
+    durability: 1
+    price: 1
+    stores: inert_fluid
+  tank_nuclear_bombs:
+    type: tank
+    density: 0
+    durability: 1
+    price: 3
+    stores: nuclear_bombs
+  tank_fissile_pellets:
+    type: tank
+    density: 0
+    durability: 1
+    price: 2
+    stores: fissile_pellets
+  tank_dissolved_fissiles:
+    type: tank
+    durability: 1
+    price: 3
+    stores: dissolved_fissiles
+  tank_d3he:
+    type: tank
+    density: 3
+    durability: 1
+    price: 1
+    stores: d3he
+#################### [COMBAT_STATION] ###################
+  damcon:
+    type: combat_station
+    density: 2
+    durability: 5
+    price: 2
+    fixed_volume: 1
+  engineering:
+    type: combat_station
+    density: 3
+    durability: 3
+    price: 4
+    fixed_volume: 1
+  nerve_center:
+    type: combat_station
+    density: 3
+    durability: 1
+    price: 2
+    fixed_volume: 1
+  medbay:
+    type: combat_station
+    density: 2
+    durability: 2
+    price: 5
+    fixed_volume: 1
+  medevac:
+    type: combat_station
+    density: 2
+    durability: 5
+    price: 3
+    fixed_volume: 1
+  sardine_can:
+    type: living_quarter
+    density: 1
+    durability: 1
+    price: 1
+    crew_per_volume: 235
+    morale: -2
+    morale_stacks: false
+#################### [STORE] ###################
+  survival_rations:
+    type: store
+    density: 1
+    durability: 1
+    price: null
+#################### [RECREATIONAL] ###################
+  vr_chamber:
+    type: recreational
+    density: 1
+    price: 0
+    durability: 1
+    morale:
+      crew_served: 300
+      biological: 1
+      infomorph: 1
+  recreation_server:
+    type: recreational
+    density: 2
+    price: 0
+    durability: 3
+    morale:
+      crew_served: 300
+      construct: 1
+      infomorph: 1
+  board_game_room:
+    type: recreational
+    density: 1
+    price: 0
+    durability: 3
+    morale:
+      crew_served: 300
+      biological: 1
+      construct: 1
+#################### [COMMAND] ###################
+  civilian_bridge:
+    type: command
+    density: 1
+    durability: 2
+    price: 3
+    fixed_volume: 1
+  warship_cic:
+    type: command
+    density: 2
+    durability: 4
+    price: 3
+    fixed_volume: 1
+  shipmind_brainframe:
+    type: command
+    density: 3
+    durability: 2
+    price: 6
+    fixed_volume: 1
+    crew:
+      strategic:
+        base: 1
+#################### [FTL] ###################
+  jump_improvised:
+    type: ftl
+    density: 6
+    price: 0.1
+    durability: 1
+    crew:
+      strategic:
+        per_volume: 20
+    ftl_method: "jump"
+    jump_tac_tidi: 15
+    jump_tac_energy: 90
+    jump_str_energy: 90
+    jump_range:
+      method: log
+      constant: 0
+      base: 2
+      multiplier: 20
+  jump_rudimentary:
+    type: ftl
+    density: 6
+    price: 1
+    durability: 1
+    crew:
+      strategic:
+        base: 10
+        per_volume: 4
+    ftl_method: "jump"
+    jump_tac_tidi: 3
+    jump_tac_energy: 60
+    jump_str_energy: 6
+    jump_range:
+      method: linear
+      constant: 0
+      multiplier: 12.5
+  jump_standard:
+    type: ftl
+    density: 8
+    price: 4
+    durability: 1
+    crew:
+      strategic:
+        base: 5
+        per_volume: 2
+    ftl_method: "jump"
+    jump_tac_tidi: 2
+    jump_tac_energy: 50
+    jump_str_energy: 5
+    jump_range:
+      method: linear
+      constant: 0
+      multiplier: 25
+  jump_tactical:
+    type: ftl
+    density: 10
+    price: 10
+    durability: 1
+    ftl_method: "jump"
+    jump_tac_tidi: 1
+    jump_tac_energy: 80
+    jump_str_energy: 8
+    jump_range:
+      method: linear
+      constant: 0
+      multiplier: 16.666666 # rip whoever has to deal with this rounding error
+  jump_longrange:
+    type: ftl
+    density: 10
+    price: 10
+    durability: 1
+    ftl_method: "jump"
+    jump_tac_tidi: 4
+    jump_tac_energy: 60
+    jump_str_energy: 6
+    jump_range:
+      method: linear
+      constant: 0
+      multiplier: 50
+  jump_industrial:
+    type: ftl
+    density: 12
+    price: 3
+    durability: 1
+    ftl_method: "jump"
+    jump_tac_tidi: 3
+    jump_tac_energy: 45
+    jump_str_energy: 4.5
+    jump_range:
+      method: log
+      constant: 0
+      base: 4.5
+      multiplier: 45
+#################### [WEAPON_DIRECT] ###################
+  macron_gun:
+    type: weapon_direct
+    density: 2
+    durability: 3
+    price: 4
+    energy: 4
+    crew:
+      strategic:
+        base: 6
+        per_volume: 2
+    __incomplete: 1
+  laser:
+    type: weapon_direct
+    density: 3
+    durability: 2
+    price: 3
+    energy: 5
+    crew:
+      strategic:
+        base: 5
+        per_volume: 3
+    __incomplete: 1
+  particle_beam:
+    type: weapon_direct
+    density: 2
+    durability: 2
+    price: 3
+    energy: 5
+    crew:
+      strategic:
+        base: 8
+        per_volume: 2
+    __incomplete: 1
+#################### [WEAPON_LAUNCHED] ###################
