@@ -360,14 +360,42 @@ components:
     durability: 5
     price: 3
     fixed_volume: 1
+#################### [LIVING_QUARTER] ###################
   sardine_can:
     type: living_quarter
     density: 1
     durability: 1
     price: 1
-    crew_per_volume: 235
+    crew_stored: 235
     morale: -2
-    morale_stacks: false
+  cramped:
+    type: living_quarter
+    density: 1
+    durability: 2
+    price: 1
+    crew_stored: 195
+    moreale: -1
+  spartan:
+    type: living_quarter
+    density: 1
+    durability: 2
+    price: 1
+    crew_stored: 155
+    morale: +0
+  decent:
+    type: living_quarter
+    density: 1
+    durability: 3
+    price: 2
+    crew_stored: 115
+    morale: +1
+  good:
+    type: living_quarter
+    density: 1
+    durability: 3
+    price: 2
+    crew_stored: 75
+    morale: +2
 #################### [STORE] ###################
   survival_rations:
     type: store
@@ -550,4 +578,4 @@ components:
         base: 8
         per_volume: 2
     __incomplete: 1
-#################### [WEAPON_LAUNCHED] ###################
+#################### [WEAPON_GUIDED] ###################
