@@ -63,6 +63,7 @@ components:
     price: 0.5
     thrust: 550
     prop_use: 20
+    fuel: "chemical_fuel"
     crew:
       strategic:
         base: 0
@@ -76,6 +77,7 @@ components:
     price: 3
     thrust: 500
     prop_use: 4
+    fuel: "inert_fluid"
     crew:
       strategic:
         base: 2
@@ -89,6 +91,7 @@ components:
     price: 1
     thrust: 80
     prop_use: 0.05
+    fuel: "inert_fluid"
     crew:
       strategic:
         base: 5
@@ -101,6 +104,7 @@ components:
     price: 6
     thrust: 700
     prop_use: 1
+    fuel: "nuclear_bombs"
     crew:
       strategic:
         base: 6
@@ -114,6 +118,7 @@ components:
     price: 8
     thrust: 550
     prop_use: 0.5
+    fuel: "nuclear_bombs"
     crew:
       strategic:
         base: 6
@@ -130,6 +135,7 @@ components:
     price: 9
     thrust: 900
     prop_use: 1.5
+    fuel: "dissolved_fissiles"
     crew:
       strategic:
         base: 12
@@ -143,6 +149,7 @@ components:
     price: 12
     thrust: 450
     prop_use: 0.05
+    fuel: "d3he"
     crew:
       strategic:
         base: 8
