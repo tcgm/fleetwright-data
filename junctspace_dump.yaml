@@ -327,6 +327,7 @@ components:
     stores: fissile_pellets
   tank_dissolved_fissiles:
     type: tank
+    density: 0
     durability: 1
     price: 3
     stores: dissolved_fissiles
