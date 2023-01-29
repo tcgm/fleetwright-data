@@ -39,7 +39,8 @@ type ComponentPrototype = {
         quarters?: QuartersModule[],             //  |   applications MAY support it 
         recreational?: RecreationModule[],       //  |   but the behaviour is technically undefined 
         weapon_direct?: WeaponDirectModule[],    //  |  also undefined behaviour, but MAY be supported:
-        weapon_guided?: WeaponGuidedModule[],    // /    more than one of the same module
+        weapon_guided?: WeaponGuidedModule[],    //  |   more than one of the same module
+        ftl_drive?: FTLDriveModule[],            // /
     }
 }
 
@@ -110,6 +111,20 @@ type WeaponDirectModule = {
 
 type WeaponGuidedModule = {
     // #TODO
+}
+
+type FTLDriveModule = {
+    // #TODO non-jump ftl
+    method: "linear" | "log",
+    jump_tac_tidi: int,
+    jump_tac_energy: int,
+    jump_str_energy: int,
+    jump_range: {
+      method: "log" | "linear",
+      constant: int,
+      base: int, // "log" only
+      multiplier: int,
+    }
 }
 ```
 
