@@ -9,20 +9,7 @@ You're not expected to actually load these at runtime or anything (although you 
 
 Applications MAY reject a ship/class with unknown components, or MAY display them as errors, or MAY try to find the prototypes in some sort of database.
 
-## Shared Types
-
 ```ts
-type CrewingRequirements = {
-    strategic?: { // 0 if missing. SHOULD be displayed to the user as "maintenance"
-        base: int
-        per_volume: int
-    },
-    tactical?: { // 0 if missing. SHOULD be displayed to the user as "combat"
-        base: int
-        per_volume: int
-    }
-}
-
 type ComponentInstance = {
     id: string,
     volume: int,
@@ -41,14 +28,91 @@ type ComponentPrototype = {
     durability: int,
     price: int,
     fixed_volume?: int, // e.g., bridges have this =1. scaling still applies!
-    crew?: ?CrewingRequirements, // no crew required if missing
-    scaling_method?: "volume" | "leveled", // "volume" if missing
-    // #TODO level info
-    // #TODO upgrade point info (for weapons)
+    modules?: {
+        crew?: CrewModule[],
+        buffs?: BuffModule[],                    // \_ also mutex for now
+        leveled_buffs?: LeveledBuffModule[],     // /
+        converter?: ConverterModule[],           // \
+        engine?: EngineModule[],                 //  |
+        tank?: TankModule[],                     //  |
+        combat_station?: CombatStationModule[],  //  |> Mutually exclusive for now
+        quarters?: QuartersModule[],             //  |   applications MAY support it 
+        recreational?: RecreationModule[],       //  |   but the behaviour is technically undefined 
+        weapon_direct?: WeaponDirectModule[],    //  |  also undefined behaviour, but MAY be supported:
+        weapon_guided?: WeaponGuidedModule[],    // /    more than one of the same module
+    }
 }
 
 // ...
 ```
+
+### Modules
+```ts
+type CrewModule = {
+    strategic: {
+        // e.g., maintenance crew
+        base: int,
+        per_volume: int,
+    },
+    tactical: {
+        base: int,
+        per_volume: int,
+    },
+}
+
+type BuffModule = {
+    // #TODO
+}
+
+type ConverterModule = {
+    input: Object<str,int>, // resource: amount
+    outupt: Object<str,int>,
+}
+
+type EngineModule = {
+    thrust: int,
+    heat: int,
+    fuel: string, // resource
+    fuel_flow: int, // fuel/turn
+}
+
+type TankModule = {
+    stores: string, // resource
+}
+
+type CombatStationModule = {
+    // #TODO
+}
+
+type QuartersModule = {
+    crew: int, // /volume
+    morale: int
+}
+
+type RecreationalModule = {
+    crew: int, // /volume
+    morale: int,
+}
+
+type LeveledBuffModule = {
+    levels: {
+        1: {/* #TODO */}
+        2: {/* #TODO */}
+        3: {/* #TODO */}
+        4: {/* #TODO */}
+        // etc
+    }
+}
+
+type WeaponDirectModule = {
+    // #TODO
+}
+
+type WeaponGuidedModule = {
+    // #TODO
+}
+```
+
 
 ### Component Details
 ```ts
