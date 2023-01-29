@@ -61,103 +61,110 @@ components:
     density: 1
     durability: 1
     price: 0.5
-    thrust: 550
-    prop_use: 20
-    fuel: "chemical_fuel"
-    crew:
-      strategic:
-        base: 0
-        per_volume: 1
-    works_in_atmo: true
-    landing_bad_idea: false
+    modules:
+      crew:
+        strategic:
+          base: 0
+          per_volume: 1
+      engine:
+        thrust: 275
+        fuel: "chemical_fuel"
+        fuel_flow: 10
+        works_in_atmo: true
+        landing_bad_idea: false
   nuclear_hybrid:
     type: "engine"
     density: 3
     durability: 4
     price: 3
-    thrust: 500
-    prop_use: 4
-    fuel: "inert_fluid"
-    crew:
-      strategic:
-        base: 2
-        per_volume: 1
-    works_in_atmo: true
-    landing_bad_idea: false
+    modules:
+      crew:
+        strategic:
+          base: 2
+          per_volume: 1
+      engine:
+        thrust: 250
+        fuel: "inert_fluid"
+        fuel_flow: 4
+        works_in_atmo: true
+        landing_bad_idea: false
   electric_rocket:
     type: "engine"
     density: 2
     durability: 2
     price: 1
-    thrust: 80
-    prop_use: 0.05
-    fuel: "inert_fluid"
-    crew:
-      strategic:
-        base: 5
-        per_volume: 0.1
-    works_in_atmo: false
+    modules:
+      crew:
+        strategic:
+          base: 5
+          per_volume: 0.1
+      engine:
+        thrust: 40
+        fuel: "inert_fluid"
+        fuel_flow: 0.025
+        works_in_atmo: true
+        landing_bad_idea: false
   orion_drive:
     type: "engine"
     density: 8
     durability: 20
     price: 6
-    thrust: 700
-    prop_use: 1
-    fuel: "nuclear_bombs"
-    crew:
-      strategic:
-        base: 6
-        per_volume: 3
-    works_in_atmo: true
-    landing_bad_idea: true
+    modules:
+      crew:
+        strategic:
+          base: 6
+          per_volume: 3
+      engine:
+        thrust: 350
+        fuel: "nuclear_bombs"
+        fuel_flow: 1
+        works_in_atmo: true
+        landing_bad_idea: true
   mini_mag_orion:
     type: "engine"
     density: 5
     durability: 10
     price: 8
-    thrust: 550
-    prop_use: 0.5
-    fuel: "nuclear_bombs"
-    crew:
-      strategic:
-        base: 6
-        per_volume: 2
-    works_in_atmo: true
-    landing_bad_idea: true
-    power_per_volume: 16
-    heat_per_energy: 0.125
-    can_idle: false
+    modules:
+      crew:
+        strategic:
+          base: 6
+          per_volume: 2
+      engine:
+        thrust: 275
+        fuel: "nuclear_bombs"
+        fuel_flow: 0.5
   fissile_salt_water:
     type: "engine"
     density: 6
     durability: 12
     price: 9
-    thrust: 900
-    prop_use: 1.5
-    fuel: "dissolved_fissiles"
-    crew:
-      strategic:
-        base: 12
-        per_volume: 8
-    works_in_atmo: true
-    landing_bad_idea: true
+    modules:
+      crew:
+        strategic:
+          base: 12
+          per_volume: 8
+      engine:
+        thrust: 450
+        fuel: "dissolved_fissiles"
+        fuel_flow: 1.5
+        works_in_atmo: true
+        landing_bad_idea: true
   fusion_torch:
     type: "engine"
     density: 1
     durability: 1
     price: 12
-    thrust: 450
-    prop_use: 0.05
-    fuel: "d3he"
-    crew:
-      strategic:
-        base: 8
-        per_volume: 2
-    works_in_atmo: false
-    power_per_volume: 12
-    heat_per_energy: 0.167
-    can_idle: true
+    modules:
+      crew:
+        strategic:
+          base: 8
+          per_volume: 2
+      engine:
+        thrust: 450
+        fuel: "d3he"
+        fuel_flow: 0.05
+        works_in_atmo: false
 #################### [POWERPLANT] ###################
   fuel_cell:
     type: powerplant
