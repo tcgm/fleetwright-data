@@ -49,14 +49,14 @@ type ComponentPrototype = {
 ### Modules
 ```ts
 type CrewModule = {
-    strategic: {
+    strategic?: {
         // e.g., maintenance crew
-        base: int,
-        per_volume: int,
+        base?: int,
+        per_volume?: int,
     },
-    tactical: {
-        base: int,
-        per_volume: int,
+    tactical?: {
+        base?: int,
+        per_volume?: int,
     },
 }
 
