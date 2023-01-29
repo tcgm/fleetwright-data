@@ -164,7 +164,6 @@ components:
     density: 3
     durability: 3
     price: 1
-    power_per: 30
     crew:
       strategic:
         base: 0
@@ -584,3 +583,33 @@ components:
         per_volume: 2
     __incomplete: 1
 #################### [WEAPON_GUIDED] ###################
+  light_vls:
+    type: weapon_guided
+    density: 5
+    durability: 3
+    price: 3
+  light_magazine:
+    type: weapon_guided
+    density: 5
+    durability: 4
+    price: 2
+  light_em_catapult:
+    type: weapon_guided
+    density: 3
+    durability: 3
+    price: 4
+  heavy_vls:
+    type: weapon_guided
+    density: 5
+    durability: 3
+    price: 3
+  heavy_magazine:
+    type: weapon_guided
+    density: 5
+    durability: 4
+    price: 2
+  heavy_em_catapult:
+    type: weapon_guided
+    density: 4
+    durability: 4
+    price: 5
