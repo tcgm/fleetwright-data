@@ -34,7 +34,7 @@ type ComponentPrototype = {
         leveled_buffs?: LeveledBuffModule[],     // /
         converter?: ConverterModule[],           // \
         engine?: EngineModule[],                 //  |
-        tank?: TankModule[],                     //  |
+        storage?: StorageModule[],                     //  |
         combat_station?: CombatStationModule[],  //  |> Mutually exclusive for now
         quarters?: QuartersModule[],             //  |   applications MAY support it 
         recreational?: RecreationModule[],       //  |   but the behaviour is technically undefined 
@@ -77,7 +77,7 @@ type EngineModule = {
     fuel_flow: int, // fuel/turn
 }
 
-type TankModule = {
+type StorageModule = {
     stores: string, // resource
 }
 
