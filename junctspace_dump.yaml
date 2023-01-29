@@ -2,13 +2,13 @@
 #%FLEETWRIGHT/PROTOTYPES 0.1
 ---
 resources:
-  heat:
+  HEAT:
     name: "Heat"
     storeable: false
-  energy:
+  ENERGY:
     name: "Energy"
     storeable: false
-  thrust:
+  THRUST:
     name: "Thrust"
     storeable: false
   chemical_fuel:
@@ -170,11 +170,11 @@ components:
         base: 0
         per_volume: 0.5
     converter:
-      consumes:
+      input:
         chemical_fuel: 1
-      produces:
-        energy: 10
-        heat: 0
+      output:
+        ENERGY: 10
+        HEAT: 0
   photovoltaic:
     type: powerplant
     density: 0.2
@@ -187,10 +187,9 @@ components:
         base: 0
         per_volume: 0.1
     converter:
-      consumes: {}
-      produces:
-        energy: 10
-        heat: 0
+      output:
+        ENERGY: 10
+        HEAT: 0
   molten_salt:
     type: powerplant
     density: 6
@@ -201,10 +200,9 @@ components:
         base: 6
         per_volume: 2
     converter:
-      consumes: {}
-      produces:
-        energy: 20
-        heat: 10
+      output:
+        ENERGY: 20
+        HEAT: 10
   pebble_bed:
     type: powerplant
     __incomplete: 1
@@ -215,10 +213,9 @@ components:
     price: 5
     power_per: 32
     converter:
-      consumes: {}
-      produces:
-        energy: 8
-        heat: 1
+      output:
+        ENERGY: 8
+        HEAT: 1
     crew:
       strategic:
         base: 12
@@ -236,10 +233,10 @@ components:
     durability: 2
     price: 1
     converter:
-      consumes:
-        power: 0.5
-      produces:
-        heat: -12
+      input:
+        ENERGY: 0.5
+      output:
+        HEAT: -12
     crew:
       strategic:
         base: 5
@@ -250,10 +247,10 @@ components:
     durability: 10
     price: 1
     converter:
-      consumes:
-        power: 0.5
-      produces:
-        heat: -30
+      input:
+        ENERGY: 0.5
+      output:
+        HEAT: -30
     crew:
       strategic:
         base: 0
@@ -264,10 +261,10 @@ components:
     durability: 3
     price: 1
     converter:
-      consumes:
-        power: 0.5
-      produces:
-        heat: -20
+      input:
+        POWER: 0.5
+      output:
+        HEAT: -20
     crew:
       strategic:
         base: 4
@@ -278,10 +275,10 @@ components:
     durability: 2
     price: 1
     converter:
-      consumes:
-        power: 0.5
-      produces:
-        heat: -12
+      input:
+        POWER: 0.5
+      output:
+        HEAT: -12
     crew:
       strategic:
         base: 5
@@ -292,10 +289,10 @@ components:
     durability: 2
     price: 1
     converter:
-      consumes:
-        power: 0.5
-      produces:
-        heat: 12
+      input:
+        POWER: 0.5
+      output:
+        HEAT: 12
     crew:
       strategic:
         base: 5
