@@ -37,6 +37,7 @@ type ComponentPrototype = {
         tank?: TankModule[],                     //  |
         combat_station?: CombatStationModule[],  //  |> Mutually exclusive for now
         quarters?: QuartersModule[],             //  |   applications MAY support it 
+        stores?: StoresModule[],
         recreational?: RecreationModule[],       //  |   but the behaviour is technically undefined 
         weapon_direct?: WeaponDirectModule[],    //  |  also undefined behaviour, but MAY be supported:
         weapon_guided?: WeaponGuidedModule[],    // /    more than one of the same module
@@ -86,6 +87,11 @@ type CombatStationModule = {
 
 type QuartersModule = {
     crew: int, // /volume
+    morale: int
+}
+
+type StoresModule = {
+    crew: int // kept alive/turn/volume
     morale: int
 }
 
