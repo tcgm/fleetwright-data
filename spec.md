@@ -13,6 +13,7 @@ You're not expected to actually load these at runtime or anything (although you 
     - they MAY allow the user to write-in the desnity, cost, and durability
     - they MAY attempt to find the prototype in some sort of mod database
 - Applications SHOULD retain ship properties which they doesn't understand.
+- Applications MUST NOT require that a ship class be provided to use a ship instance.
 
 
 ## Components
