@@ -497,7 +497,7 @@ components:
   vr_chamber:
     type: recreational
     density: 1
-    price: 0
+    price: 5
     durability: 1
     modules:
       recreational:
@@ -507,7 +507,7 @@ components:
   recreation_server:
     type: recreational
     density: 2
-    price: 0
+    price: 3
     durability: 3
     modules:
       recreational:
@@ -517,7 +517,7 @@ components:
   board_game_room:
     type: recreational
     density: 1
-    price: 0
+    price: 1
     durability: 3
     modules:
       recreational:
