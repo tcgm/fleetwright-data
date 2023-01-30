@@ -444,7 +444,49 @@ components:
     type: store
     density: 1
     durability: 1
-    price: null
+    price: 0.5
+    modules:
+      stores:
+        crew: 250
+        morale: -2
+  basic_rations:
+    type: store
+    density: 1
+    durability: 1
+    price: 1
+    modules:
+      stores:
+        crew: 200
+        morale: 0
+  good_rations:
+    type: store
+    density: 1
+    durability: 1
+    price: 1.5
+    modules:
+      stores:
+        crew: 180
+        morale: +2
+  algae_reactor:
+    type: store
+    density: 1
+    durability: 3
+    price: 1.5
+    modules:
+      stores:
+        crew: 70
+        unlimited: true
+        morale: 0
+  aquaponics_bay:
+    type: store
+    density: 1
+    durability: 2
+    price: 3
+    modules:
+      stores:
+        crew: 50
+        unlimited: true
+        morale: +2
 #################### [RECREATIONAL] ###################
   vr_chamber:
     type: recreational
