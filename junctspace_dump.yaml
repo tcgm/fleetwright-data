@@ -171,16 +171,17 @@ components:
     density: 3
     durability: 3
     price: 1
-    crew:
-      strategic:
-        base: 0
-        per_volume: 0.5
-    converter:
-      input:
-        chemical_fuel: 1
-      output:
-        ENERGY: 10
-        HEAT: 0
+    modules:
+      crew:
+        strategic:
+          base: 0
+          per_volume: 0.5
+      converter:
+        input:
+          chemical_fuel: 1
+        output:
+          ENERGY: 10
+          HEAT: 0
   photovoltaic:
     type: powerplant
     density: 0.2
@@ -188,27 +189,29 @@ components:
     price: 1
     power_per: 10
     energy_per_heat: .inf
-    crew:
-      strategic:
-        base: 0
-        per_volume: 0.1
-    converter:
-      output:
-        ENERGY: 10
-        HEAT: 0
+    modules:
+      converter:
+        output:
+          ENERGY: 10
+          HEAT: 0
+      crew:
+        strategic:
+          base: 0
+          per_volume: 0.1
   molten_salt:
     type: powerplant
     density: 6
     durability: 8
     price: 3
-    crew:
-      strategic:
-        base: 6
-        per_volume: 2
-    converter:
-      output:
-        ENERGY: 20
-        HEAT: 10
+    modules:
+      crew:
+        strategic:
+          base: 6
+          per_volume: 2
+      converter:
+        output:
+          ENERGY: 20
+          HEAT: 10
   pebble_bed:
     type: powerplant
     __incomplete: 1
@@ -218,14 +221,15 @@ components:
     durability: 2
     price: 5
     power_per: 32
-    converter:
-      output:
-        ENERGY: 8
-        HEAT: 1
-    crew:
-      strategic:
-        base: 12
-        per_volume: 4
+    modules:
+      crew:
+        strategic:
+          base: 12
+          per_volume: 4
+      converter:
+        output:
+          ENERGY: 8
+          HEAT: 1
   magneto_inertial:
     type: powerplant
     __incomplete: 1
@@ -238,71 +242,77 @@ components:
     density: 4
     durability: 2
     price: 1
-    converter:
-      input:
-        ENERGY: 0.5
-      output:
-        HEAT: -12
-    crew:
-      strategic:
-        base: 5
-        per_volume: 1
+    modules:
+      crew:
+        strategic:
+          base: 5
+          per_volume: 1
+      converter:
+        input:
+          ENERGY: 0.5
+        output:
+          HEAT: -12
   open_cycle:
     type: radiator
     density: 1
     durability: 10
     price: 1
-    converter:
-      input:
-        ENERGY: 0.5
-      output:
-        HEAT: -30
-    crew:
-      strategic:
-        base: 0
-        per_volume: 1
+    modules:
+      crew:
+        strategic:
+          base: 0
+          per_volume: 1
+      converter:
+        input:
+          inert_fluid: 1
+          ENERGY: 0.5
+        output:
+          HEAT: -30
   ballistic_droplet:
     type: radiator
     density: 3
     durability: 3
     price: 1
-    converter:
-      input:
-        POWER: 0.5
-      output:
-        HEAT: -20
-    crew:
-      strategic:
-        base: 4
-        per_volume: 2
+    modules:
+      crew:
+        strategic:
+          base: 4
+          per_volume: 2
+      converter:
+        input:
+          POWER: 0.5
+        output:
+          HEAT: -20
   em_droplet:
     type: radiator
     density: 4
     durability: 2
     price: 1
-    converter:
-      input:
-        POWER: 0.5
-      output:
-        HEAT: -12
-    crew:
-      strategic:
-        base: 5
-        per_volume: 1
+    modules:
+      crew:
+        strategic:
+          base: 5
+          per_volume: 1
+      converter:
+        input:
+          POWER: 0.5
+        output:
+          HEAT: -12
   dusty_plasma:
     type: radiator
     density: 4
     durability: 2
     price: 1
-    converter:
-      input:
-        POWER: 0.5
-      output:
-        HEAT: 12
-    crew:
-      strategic:
-        base: 5
-        per_volume: 1
+    modules:
+      crew:
+        strategic:
+          base: 5
+          per_volume: 1
+      converter:
+        input:
+          POWER: 0.5
+        output:
+          HEAT: -12
 #################### [TANK] ###################
   tank_chemical_fuel:
     type: tank
