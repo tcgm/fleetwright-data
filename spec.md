@@ -8,7 +8,7 @@ We're using [TypeScript Object Types](https://www.typescriptlang.org/docs/handbo
 You're not expected to actually load these at runtime or anything (although you *could*); understand them with your brain and use the information to write your app.
 
 - Applications SHOULD reatin components they don't understand
-    - they MAY display them as errors
+    - they MAY display them as warnings
     - they MAY guess that the component has density 1, cost 1, durability 1
     - they MAY allow the user to write-in the desnity, cost, and durability
     - they MAY attempt to find the prototype in some sort of mod database
@@ -173,8 +173,10 @@ type GuidedWeaponDetails = {
 ```ts
 type ShipInstance = {
     type: "ship",
-    name: string,
-    class_name?: ?string,
+    ship_name: string,
+    class_name?: ?string, // mostly for the user to look at
+    ship_uuid?: ?string,
+    class_uuid?: ?string,
     description: ?string, //shown to other players
     notes: ?string, // private to owner, MAY be viewable by DM. multiline MUST be allowed. MAY support Markdown.
     created?: ?str, // RFC 3339, (i.e., allows a space instead of 'T')
@@ -190,7 +192,8 @@ type ShipInstance = {
 ```ts
 type ShipClass = {
     type: "ship_class",
-    name: string,
+    class_name: string,
+    class_uuid?: ?string, // preferably v4
     description: ?string, //shown to other players
     notes: ?string, // private to owner, MAY be viewable by DM. multiline MUST be allowed. MAY support Markdown.
     created?: ?str, // RFC 3339, (i.e., allows a space instead of 'T')
@@ -205,6 +208,9 @@ type ShipClass = {
 
 **`dolphin.fwship`**
 ```yaml
+%YAML 1.2
+#%FLEETWRIGHT/SHIP 0.0.1
+---
 type: "ship"
 name: "Inventive Dolphin"
 class_name: "Pegasus"
@@ -236,6 +242,9 @@ components:
 
 **`newsflash.fwclass`**
 ```yaml
+%YAML 1.2
+#%FLEETWRIGHT/CLASS 0.0.1
+---
 type: "ship_class"
 name: "Newsflash-Class Courier"
 armour: 0
