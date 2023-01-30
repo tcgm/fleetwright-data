@@ -1,3 +1,8 @@
+# Fleetwright Specifications
+
+there's no offical badge you get for complying to this spec or anything. if it works it works. but you probably should anyways.  
+I sort of personally think all of these are Pretty Good&trade;
+
 > **The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED",  "MAY", and "OPTIONAL" in this document are to be interpreted as described in [RFC 2119](https://www.rfc-editor.org/rfc/rfc2119).**
 
 Ships and ship classes are stored in YAML format.  You should probably just read the examples at the bottom.
@@ -14,6 +19,13 @@ You're not expected to actually load these at runtime or anything (although you 
     - they MAY attempt to find the prototype in some sort of mod database
 - Applications SHOULD retain ship properties which they doesn't understand.
 - Applications MUST NOT require that a ship class be provided to use a ship instance.
+    - this is because i think most users won't want to bother faffing about with ship classes, they'll just create 10 copies of a ship with changed names
+    - no *forcing* the user to make a class which they then have to think about
+    - if on the backend you need the class to exist, you can transparently create a class and have the user secretly be editing that
+    - but you still have to let them save only the ship
+- Applications SHOULD handle duplicate UUIDs gracefully
+    - prompt the user to make a copy or something like that
+    - or as long as the name is different you can just pick a new uuid
 
 
 ## Components
