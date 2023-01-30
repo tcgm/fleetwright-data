@@ -104,8 +104,10 @@ type StoresModule = {
 }
 
 type RecreationalModule = {
-    crew: int, // /volume
-    morale: int,
+    crew_served: int, // /volume
+    biological: int, // morale modifier
+    construct: int,  // could technically be negative
+    infomorph: int,  // but why would you want that?
 }
 
 

@@ -499,28 +499,31 @@ components:
     density: 1
     price: 0
     durability: 1
-    morale:
-      crew_served: 300
-      biological: 1
-      infomorph: 1
+    modules:
+      recreational:
+        crew_served: 300
+        biological: 1
+        infomorph: 1
   recreation_server:
     type: recreational
     density: 2
     price: 0
     durability: 3
-    morale:
-      crew_served: 300
-      construct: 1
-      infomorph: 1
+    modules:
+      recreational:
+        crew_served: 300
+        construct: 1
+        infomorph: 1
   board_game_room:
     type: recreational
     density: 1
     price: 0
     durability: 3
-    morale:
-      crew_served: 300
-      biological: 1
-      construct: 1
+    modules:
+      recreational:
+        crew_served: 300
+        biological: 1
+        construct: 1
 #################### [COMMAND] ###################
   civilian_bridge:
     type: command
