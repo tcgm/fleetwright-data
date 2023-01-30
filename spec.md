@@ -65,6 +65,16 @@ type CrewModule = {
 type BuffModule = {
     // #TODO
 }
+// might merge these two idk
+type LeveledBuffModule = {
+    levels: {
+        1: {/* #TODO */}
+        2: {/* #TODO */}
+        3: {/* #TODO */}
+        4: {/* #TODO */}
+        // etc
+    }
+}
 
 type ConverterModule = {
     input: Object<str,int>, // resource: amount
@@ -80,10 +90,6 @@ type EngineModule = {
 
 type StorageModule = {
     stores: string, // resource
-}
-
-type CombatStationModule = {
-    // #TODO
 }
 
 type QuartersModule = {
@@ -102,15 +108,6 @@ type RecreationalModule = {
     morale: int,
 }
 
-type LeveledBuffModule = {
-    levels: {
-        1: {/* #TODO */}
-        2: {/* #TODO */}
-        3: {/* #TODO */}
-        4: {/* #TODO */}
-        // etc
-    }
-}
 
 type WeaponDirectModule = {
     // #TODO
@@ -118,6 +115,12 @@ type WeaponDirectModule = {
 
 type WeaponGuidedModule = {
     // #TODO
+}
+
+type CommandModule = {
+    operate_offensive: bool,
+    operate_defensive: bool,
+    operate_navigation: bool,
 }
 
 type FTLDriveModule = {

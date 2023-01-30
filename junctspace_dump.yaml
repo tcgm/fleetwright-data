@@ -528,21 +528,46 @@ components:
     durability: 2
     price: 3
     fixed_volume: 1
+    modules:
+      crew:
+        tactical:
+          base: 6
+        strategic:
+          base: 6
+      command:
+        operate_offensive: false
+        operate_defensive: false
+        operate_navigation: true
   warship_cic:
     type: command
     density: 2
     durability: 4
     price: 3
     fixed_volume: 1
+    modules:
+      crew:
+        tactical:
+          base: 20
+        strategic:
+          base: 20
+      command:
+        operate_offensive: true
+        operate_defensive: true
+        operate_navigation: true
   shipmind_brainframe:
     type: command
     density: 3
     durability: 2
     price: 6
     fixed_volume: 1
-    crew:
-      strategic:
-        base: 1
+    modules:
+      crew:
+        strategic:
+          base: 1
+      command:
+        operate_offensive: true
+        operate_defensive: true
+        operate_navigation: true
 #################### [FTL] ###################
   jump_improvised:
     type: "ftl_drive"
