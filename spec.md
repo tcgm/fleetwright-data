@@ -34,12 +34,12 @@ type ComponentPrototype = {
         leveled_buffs?: LeveledBuffModule[],     // /
         converter?: ConverterModule[],           // \
         engine?: EngineModule[],                 //  |
-        storage?: StorageModule[],               //  |
-        combat_station?: CombatStationModule[],  //  |> Mutually exclusive for now
+        storage?: StorageModule[],               //  |> Mutually exclusive for now
         quarters?: QuartersModule[],             //  |   applications MAY support it 
         stores?: StoresModule[],                 //  |   but the behaviour is technically undefined 
         recreational?: RecreationModule[],       //  |   also undefined behaviour, but MAY be supported:
-        weapon_direct?: WeaponDirectModule[],    //  |   more than one of the same module
+        command: CommandModule[],                //  |   more than one of the same module
+        weapon_direct?: WeaponDirectModule[],    //  |
         weapon_guided?: WeaponGuidedModule[],    //  |   
         ftl_drive?: FTLDriveModule[],            // /
     }
