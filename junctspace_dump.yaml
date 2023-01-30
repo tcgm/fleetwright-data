@@ -473,6 +473,9 @@ components:
     durability: 3
     price: 1.5
     modules:
+      crew:
+        strategic:
+          per_volume: 2
       stores:
         crew: 70
         unlimited: true
@@ -483,6 +486,9 @@ components:
     durability: 2
     price: 3
     modules:
+      crew:
+        strategic:
+          per_volume: 4
       stores:
         crew: 50
         unlimited: true
