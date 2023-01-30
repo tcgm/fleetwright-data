@@ -173,6 +173,7 @@ type GuidedWeaponDetails = {
 type ShipInstance = {
     type: "ship",
     name: string,
+    class_name?: ?string,
     description: ?string, //shown to other players
     notes: ?string, // private to owner, MAY be viewable by DM. multiline MUST be allowed. MAY support Markdown.
     created?: ?str, // RFC 3339, (i.e., allows a space instead of 'T')
@@ -201,10 +202,11 @@ type ShipClass = {
 
 ## Examples
 
-**`pegasus.fwship`**
+**`dolphin.fwship`**
 ```yaml
 type: "ship"
-name: "Pegasus-class Light Cruiser"
+name: "Inventive Dolphin"
+class_name: "Pegasus"
 armour: 372
 components:
   - {id: "fissile_salt_water", volume: 10, armour: true}
@@ -233,7 +235,7 @@ components:
 
 **`newsflash.fwclass`**
 ```yaml
-type: "ship"
+type: "ship_class"
 name: "Newsflash-Class Courier"
 armour: 0
 components:
