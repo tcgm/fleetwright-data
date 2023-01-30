@@ -93,6 +93,7 @@ type QuartersModule = {
 
 type StoresModule = {
     crew: int // kept alive/turn/volume
+    infinite?: bool,
     morale: int
 }
 
