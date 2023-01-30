@@ -7,8 +7,15 @@ Ships and ship classes are stored in YAML format.  You should probably just read
 We're using [TypeScript Object Types](https://www.typescriptlang.org/docs/handbook/2/objects.html) to describe the format, because at least I find it intuitive.
 You're not expected to actually load these at runtime or anything (although you *could*); understand them with your brain and use the information to write your app.
 
-Applications MAY reject a ship/class with unknown components, or MAY display them as errors, or MAY try to find the prototypes in some sort of database.
+- Applications SHOULD reatin components they don't understand
+    - they MAY display them as errors
+    - they MAY guess that the component has density 1, cost 1, durability 1
+    - they MAY allow the user to write-in the desnity, cost, and durability
+    - they MAY attempt to find the prototype in some sort of mod database
+- Applications SHOULD retain ship properties which it doesn't understand.
 
+
+## Components
 ```ts
 type ComponentInstance = {
     id: string,
@@ -141,7 +148,7 @@ type FTLDriveModule = {
 ```
 
 
-### Component Details
+### Details
 ```ts
 type TankDetails = {
     fill_level?: int, // app MAY reject if > volume, or MAY automatically fix. if missing, implicitly full.
@@ -159,29 +166,35 @@ type GuidedWeaponDetails = {
 }
 ```
 
-## `.fwship`
+## Top-Level of Files
+
+### `.fwship`
 ```ts
 type ShipInstance = {
     type: "ship",
     name: string,
     description: ?string, //shown to other players
-    notes: ?string, // private to owner, MAY be viewable by DM. multiline MUST be allowed.
-    created?: ?str // RFC 3339, (i.e., allows a space instead of 'T')
-    edited?: ?str 
+    notes: ?string, // private to owner, MAY be viewable by DM. multiline MUST be allowed. MAY support Markdown.
+    created?: ?str, // RFC 3339, (i.e., allows a space instead of 'T')
+    edited?: ?str,  // ditto
+    livery?: ?str,  // file path (how this is resolved is an implemention detail)
+    image?: ?str,   // ditto
     armour_mass: int,
     components: FleetwrightComponentInstance[],
 }
 ```
 
-## `.fwclass`
+### `.fwclass`
 ```ts
 type ShipClass = {
     type: "ship_class",
     name: string,
-    description: ?string,
-    notes: ?string, 
-    created?: ?str // RFC 3339, (i.e., allows a space instead of 'T')
-    edited?: ?str 
+    description: ?string, //shown to other players
+    notes: ?string, // private to owner, MAY be viewable by DM. multiline MUST be allowed. MAY support Markdown.
+    created?: ?str, // RFC 3339, (i.e., allows a space instead of 'T')
+    edited?: ?str,  // ditto
+    livery?: ?str,  // file path (how this is resolved is an implemention detail)
+    image?: ?str,   // ditto
     components: FleetwrightComponentInstance[],
 }
 ```
@@ -190,45 +203,59 @@ type ShipClass = {
 
 **`pegasus.fwship`**
 ```yaml
-name: "Pegasus"
-description: "Lead ship of the Pegasus-class"
-components: [
-    {
-        id: "fissile_salt_water",
-        type: "drive",
-        volume: 10,
-        armour: true,
-    },{
-        id: "fission_fragment",
-        type: "powerplant",
-        volume: 4,
-        armour: true,
-    }
-]
-# ...
+type: "ship"
+name: "Pegasus-class Light Cruiser"
+armour: 372
+components:
+  - {id: "fissile_salt_water", volume: 10, armour: true}
+  - {id: "tank_dissolved_fissiles", volume: 40, armour: true}
+  - {id: "fission_fragment", volume: 4, armour: true}
+  - {id: "fission_fragment", volume: 4, armour: true}
+  - {id: "fission_fragment", volume: 2, armour: true}
+  - {id: "tank_inert_fluid", volume: 4, armour: true}
+  - {id: "tank_inert_fluid", volume: 4, armour: true}
+  - {id: "open_cycle", volume: 2, armour: true}
+  - {id: "open_cycle", volume: 2, armour: true}
+  - {id: "shipmind_brainframe", volume: 1, armour: true}
+  - {id: "shipmind_brainframe", volume: 1, armour: true}
+  - {id: "damcon", volume: 1, armour: true}
+  - {id: "damcon", volume: 1, armour: true}
+  - {id: "engineering", volume: 1, armour: true}
+  - {id: "nerve_center", volume: 1, armour: true}
+  - {id: "medevac", volume: 1, armour: true}
+  - {id: "particle_beam", volume: 24, armour: true}
+  - {id: "macron_gun", volume: 8, armour: true}
+  - {id: "macron_gun", volume: 8, armour: true}
+  - {id: "jump_standard", volume: 15, armour: true}
+  - {id: "jump_tactical", volume: 5, armour: true}
+  - {id: "spartan", volume: 3, armour: true}
 ```
 
 **`newsflash.fwclass`**
 ```yaml
-name: "Newsflash-Class"
-description: "Courier ship"
-notes: "asduhfakodasdbaposdfi"
+type: "ship"
+name: "Newsflash-Class Courier"
+armour: 0
 components:
-    # yes this is valid yaml, all one library i checked outputs like this by default actually
-    # it parses the same as the ship above
   - id: "fusion_torch"
-    type: "drive"
     volume: 2
     armour: false
   - id: "electrostatic_fusion"
-    type: "powerplant"
     volume: 4
     armour: false
+  - id: "jump_longrange"
+    volume: 19
+    armour: true
+  - id: "tank_d3he"
+    volume: 1
+    armour: false
+  - id: "civilian_bridge"
+    volume: 1
+    armour: false
+
 ```
 
 **`plasma_cannon.fwcomponent`**
 ```yaml
-id: "plasma_cannon",
-type: "weapon",
 # #TODO
 ```
