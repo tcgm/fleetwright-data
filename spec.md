@@ -12,7 +12,7 @@ You're not expected to actually load these at runtime or anything (although you 
     - they MAY guess that the component has density 1, cost 1, durability 1
     - they MAY allow the user to write-in the desnity, cost, and durability
     - they MAY attempt to find the prototype in some sort of mod database
-- Applications SHOULD retain ship properties which it doesn't understand.
+- Applications SHOULD retain ship properties which they doesn't understand.
 
 
 ## Components
