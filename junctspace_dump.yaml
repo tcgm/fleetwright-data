@@ -319,37 +319,49 @@ components:
     density: 0
     durability: 1
     price: 2
-    stores: chemical_fuel
+    modules:
+      tank:
+        stores: chemical_fuel
   tank_inert_fluid:
     type: tank
     density: 0
     durability: 1
     price: 1
-    stores: inert_fluid
+    modules:
+      tank:
+        stores: inert_fluid
   tank_nuclear_bombs:
     type: tank
     density: 0
     durability: 1
     price: 3
-    stores: nuclear_bombs
+    modules:
+      tank:
+        stores: nuclear_bombs
   tank_fissile_pellets:
     type: tank
     density: 0
     durability: 1
     price: 2
-    stores: fissile_pellets
+    modules:
+      tank:
+        stores: fissile_pellets
   tank_dissolved_fissiles:
     type: tank
     density: 0
     durability: 1
     price: 3
-    stores: dissolved_fissiles
+    modules:
+      tank:
+        stores: dissolved_fissiles
   tank_d3he:
     type: tank
     density: 3
     durability: 1
     price: 1
-    stores: d3he
+    modules:
+      tank:
+        stores: d3he
 #################### [COMBAT_STATION] ###################
   damcon:
     type: combat_station
