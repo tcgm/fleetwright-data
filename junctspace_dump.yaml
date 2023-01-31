@@ -102,7 +102,7 @@ components:
     density: 1
     durability: 4
     price: 2
-    thurst: 250
+    thrust: 250
     prop_use: 2.5
     fuel: "inert_fluid"
     crew:
