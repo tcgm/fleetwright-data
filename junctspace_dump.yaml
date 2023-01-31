@@ -61,8 +61,8 @@ components:
     density: 1
     durability: 1
     price: 0.5
-    thrust: 550
-    prop_use: 20
+    thrust: 275
+    prop_use: 10
     fuel: "chemical_fuel"
     crew:
       strategic:
@@ -70,13 +70,13 @@ components:
         per_volume: 1
     works_in_atmo: true
     landing_bad_idea: false
-  nuclear_hybrid:
+  thermal_rocket:
     type: "engine"
-    density: 3
-    durability: 4
-    price: 3
-    thrust: 500
-    prop_use: 4
+    density: 1
+    durability: 5
+    price: 1
+    thrust: 250
+    prop_use: 5
     fuel: "inert_fluid"
     crew:
       strategic:
@@ -86,24 +86,35 @@ components:
     landing_bad_idea: false
   electric_rocket:
     type: "engine"
-    density: 2
+    density: 1
     durability: 2
     price: 1
-    thrust: 80
-    prop_use: 0.05
+    thrust: 40
+    prop_use: 0.025
     fuel: "inert_fluid"
     crew:
       strategic:
         base: 5
         per_volume: 0.1
     works_in_atmo: false
+  thermo_electric_rocket:
+    type: "engine"
+    density: 1
+    durability: 4
+    price: 2
+    thurst: 250
+    prop_use: 2.5
+    fuel: "inert_fluid"
+    crew:
+      base: 6
+      per_volume: 2
   orion_drive:
     type: "engine"
     density: 8
     durability: 20
     price: 6
-    thrust: 700
-    prop_use: 1
+    thrust: 350
+    prop_use: 0.5
     fuel: "nuclear_bombs"
     crew:
       strategic:
@@ -116,8 +127,8 @@ components:
     density: 5
     durability: 10
     price: 8
-    thrust: 550
-    prop_use: 0.5
+    thrust: 275
+    prop_use: 0.25
     fuel: "nuclear_bombs"
     crew:
       strategic:
@@ -133,8 +144,8 @@ components:
     density: 6
     durability: 12
     price: 9
-    thrust: 900
-    prop_use: 1.5
+    thrust: 450
+    prop_use: 0.75
     fuel: "dissolved_fissiles"
     crew:
       strategic:
@@ -147,7 +158,7 @@ components:
     density: 1
     durability: 1
     price: 12
-    thrust: 450
+    thrust: 225
     prop_use: 0.05
     fuel: "d3he"
     crew:
