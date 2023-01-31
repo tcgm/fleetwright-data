@@ -350,7 +350,7 @@ components:
     stores: dissolved_fissiles
   tank_d3he:
     type: tank
-    density: 3
+    density: 0
     durability: 1
     price: 1
     stores: d3he
