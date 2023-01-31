@@ -497,7 +497,7 @@ components:
       multiplier: 20
   jump_rudimentary:
     type: "ftl_drive"
-    density: 12
+    density: 8
     price: 1
     durability: 1
     crew:
