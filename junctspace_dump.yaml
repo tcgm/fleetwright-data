@@ -497,7 +497,7 @@ components:
       multiplier: 20
   jump_rudimentary:
     type: "ftl_drive"
-    density: 6
+    density: 12
     price: 1
     durability: 1
     crew:
@@ -544,7 +544,7 @@ components:
       multiplier: 16.666666 # rip whoever has to deal with this rounding error
   jump_longrange:
     type: "ftl_drive"
-    density: 10
+    density: 8
     price: 10
     durability: 1
     ftl_method: "jump"
