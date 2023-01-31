@@ -215,7 +215,17 @@ components:
         HEAT: 10
   pebble_bed:
     type: powerplant
-    __incomplete: 1
+    density: 4
+    durability: 5
+    price: 2
+    crew:
+      strategic:
+        base: 3
+        per_volume: 1
+    converter:
+      output:
+        ENERGY: 18
+        HEAT: 54
   fission_fragment:
     type: powerplant
     density: 3
