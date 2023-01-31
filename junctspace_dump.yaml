@@ -129,7 +129,7 @@ components:
     price: 8
     thrust: 275
     prop_use: 0.25
-    fuel: "nuclear_bombs"
+    fuel: "fissile_pellets"
     crew:
       strategic:
         base: 6
