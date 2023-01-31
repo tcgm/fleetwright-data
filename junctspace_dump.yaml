@@ -594,11 +594,13 @@ components:
         operate_defensive: true
         operate_navigation: true
       buff:
-        method: "flat"
         stacks: false
-        ecm: +2
-        sensors: +2
-        acceleration: +1
+        add:
+          ecm: +2
+          sensors: +2
+          acceleration: +1
+        multiply:
+          jump_energy: 0.9
       #TODO jump energy buff
       #TODO evasion buff
 
