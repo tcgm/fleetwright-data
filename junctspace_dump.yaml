@@ -61,130 +61,127 @@ components:
     density: 1
     durability: 1
     price: 0.5
-    thrust: 275
-    prop_use: 10
-    fuel: "chemical_fuel"
-    crew:
-      strategic:
-        base: 0
-        per_volume: 1
-    works_in_atmo: true
-    landing_bad_idea: false
-  thermal_rocket:
+    modules:
+      crew:
+        strategic:
+          base: 0
+          per_volume: 1
+      engine:
+        thrust: 275
+        fuel: "chemical_fuel"
+        fuel_flow: 10
+        works_in_atmo: true
+        landing_bad_idea: false
+  nuclear_hybrid:
     type: "engine"
-    density: 1
-    durability: 5
-    price: 1
-    thrust: 250
-    prop_use: 5
-    fuel: "inert_fluid"
-    crew:
-      strategic:
-        base: 2
-        per_volume: 1
-    works_in_atmo: true
-    landing_bad_idea: false
+    density: 3
+    durability: 4
+    price: 3
+    modules:
+      crew:
+        strategic:
+          base: 2
+          per_volume: 1
+      engine:
+        thrust: 250
+        fuel: "inert_fluid"
+        fuel_flow: 4
+        works_in_atmo: true
+        landing_bad_idea: false
   electric_rocket:
     type: "engine"
     density: 1
     durability: 2
     price: 1
-    thrust: 40
-    prop_use: 0.025
-    fuel: "inert_fluid"
-    crew:
-      strategic:
-        base: 5
-        per_volume: 0.1
-    works_in_atmo: false
-  thermo_electric_rocket:
-    type: "engine"
-    density: 1
-    durability: 4
-    price: 2
-    thrust: 250
-    prop_use: 2.5
-    fuel: "inert_fluid"
-    crew:
-      base: 6
-      per_volume: 2
+    modules:
+      crew:
+        strategic:
+          base: 5
+          per_volume: 0.1
+      engine:
+        thrust: 40
+        fuel: "inert_fluid"
+        fuel_flow: 0.025
+        works_in_atmo: true
+        landing_bad_idea: false
   orion_drive:
     type: "engine"
     density: 8
     durability: 20
     price: 6
-    thrust: 350
-    prop_use: 0.5
-    fuel: "nuclear_bombs"
-    crew:
-      strategic:
-        base: 6
-        per_volume: 3
-    works_in_atmo: true
-    landing_bad_idea: true
+    modules:
+      crew:
+        strategic:
+          base: 6
+          per_volume: 3
+      engine:
+        thrust: 350
+        fuel: "nuclear_bombs"
+        fuel_flow: 1
+        works_in_atmo: true
+        landing_bad_idea: true
   mini_mag_orion:
     type: "engine"
     density: 5
     durability: 10
     price: 8
-    thrust: 275
-    prop_use: 0.25
-    fuel: "fissile_pellets"
-    crew:
-      strategic:
-        base: 6
-        per_volume: 2
-    works_in_atmo: true
-    landing_bad_idea: true
-    power_per_volume: 16
-    heat_per_energy: 0.125
-    can_idle: false
+    modules:
+      crew:
+        strategic:
+          base: 6
+          per_volume: 2
+      engine:
+        thrust: 275
+        fuel: "nuclear_bombs"
+        fuel_flow: 0.5
   fissile_salt_water:
     type: "engine"
     density: 6
     durability: 12
     price: 9
-    thrust: 450
-    prop_use: 0.75
-    fuel: "dissolved_fissiles"
-    crew:
-      strategic:
-        base: 12
-        per_volume: 8
-    works_in_atmo: true
-    landing_bad_idea: true
+    modules:
+      crew:
+        strategic:
+          base: 12
+          per_volume: 8
+      engine:
+        thrust: 450
+        fuel: "dissolved_fissiles"
+        fuel_flow: 1.5
+        works_in_atmo: true
+        landing_bad_idea: true
   fusion_torch:
     type: "engine"
     density: 1
     durability: 1
     price: 12
-    thrust: 225
-    prop_use: 0.05
-    fuel: "d3he"
-    crew:
-      strategic:
-        base: 8
-        per_volume: 2
-    works_in_atmo: false
-    power_per_volume: 12
-    heat_per_energy: 0.167
-    can_idle: true
+    modules:
+      crew:
+        strategic:
+          base: 8
+          per_volume: 2
+      engine:
+        thrust: 450
+        fuel: "d3he"
+        fuel_flow: 0.05
+        works_in_atmo: false
 #################### [POWERPLANT] ###################
   fuel_cell:
     type: powerplant
     density: 3
     durability: 3
     price: 1
-    crew:
-      strategic:
-        base: 0
-        per_volume: 0.5
-    converter:
-      input:
-        chemical_fuel: 1
-      output:
-        ENERGY: 10
-        HEAT: 0
+    modules:
+      crew:
+        strategic:
+          base: 0
+          per_volume: 0.5
+      converter:
+        input:
+          chemical_fuel: 1
+        output:
+          ENERGY: 10
+          HEAT: 0
   photovoltaic:
     type: powerplant
     density: 0.2
@@ -192,57 +189,72 @@ components:
     price: 1
     power_per: 10
     energy_per_heat: .inf
-    crew:
-      strategic:
-        base: 0
-        per_volume: 0.1
-    converter:
-      output:
-        ENERGY: 10
-        HEAT: 0
+    modules:
+      converter:
+        output:
+          ENERGY: 10
+          HEAT: 0
+      crew:
+        strategic:
+          base: 0
+          per_volume: 0.1
   molten_salt:
     type: powerplant
     density: 6
     durability: 8
     price: 3
-    crew:
-      strategic:
-        base: 6
-        per_volume: 2
-    converter:
-      output:
-        ENERGY: 20
-        HEAT: 10
+    modules:
+      crew:
+        strategic:
+          base: 6
+          per_volume: 2
+      converter:
+        output:
+          ENERGY: 20
+          HEAT: 10
   pebble_bed:
     type: powerplant
     density: 4
-    durability: 5
-    price: 2
-    crew:
-      strategic:
-        base: 3
-        per_volume: 1
-    converter:
-      output:
-        ENERGY: 18
-        HEAT: 54
+    durability: 8
+    price: 3
+    modules:
+      crew:
+        strategic:
+          base: 3
+          per_volume: 1
+      converter:
+        output:
+          ENERGY: 18
+          HEAT: 54
   fission_fragment:
     type: powerplant
     density: 3
     durability: 2
     price: 5
-    power_per: 32
-    converter:
-      output:
-        ENERGY: 8
-        HEAT: 1
-    crew:
-      strategic:
-        base: 12
-        per_volume: 4
+    modules:
+      crew:
+        strategic:
+          base: 12
+          per_volume: 4
+      converter:
+        output:
+          ENERGY: 8
+          HEAT: 1
   magneto_inertial:
     type: powerplant
-    __incomplete: 1
+    density: 4
+    durability: 2
+    price: 5
+    modules:
+      crew:
+        strategic:
+          base: 7
+          per_volume: 2
+      converter:
+        generator:
+          output:
+            ENERGY: 35
+            HEAT: 245
   electrostatic_fusion:
     type: powerplant
     __incomplete: 1
@@ -252,108 +264,126 @@ components:
     density: 4
     durability: 2
     price: 1
-    converter:
-      input:
-        ENERGY: 0.5
-      output:
-        HEAT: -12
-    crew:
-      strategic:
-        base: 5
-        per_volume: 1
+    modules:
+      crew:
+        strategic:
+          base: 5
+          per_volume: 1
+      converter:
+        input:
+          ENERGY: 0.5
+        output:
+          HEAT: -12
   open_cycle:
     type: radiator
     density: 1
     durability: 10
     price: 1
-    converter:
-      input:
-        ENERGY: 0.5
-      output:
-        HEAT: -30
-    crew:
-      strategic:
-        base: 0
-        per_volume: 1
+    modules:
+      crew:
+        strategic:
+          base: 0
+          per_volume: 1
+      converter:
+        input:
+          inert_fluid: 1
+          ENERGY: 0.5
+        output:
+          HEAT: -30
   ballistic_droplet:
     type: radiator
     density: 3
     durability: 3
     price: 1
-    converter:
-      input:
-        POWER: 0.5
-      output:
-        HEAT: -20
-    crew:
-      strategic:
-        base: 4
-        per_volume: 2
+    modules:
+      crew:
+        strategic:
+          base: 4
+          per_volume: 2
+      converter:
+        input:
+          POWER: 0.5
+        output:
+          HEAT: -20
   em_droplet:
     type: radiator
     density: 4
     durability: 2
     price: 1
-    converter:
-      input:
-        POWER: 0.5
-      output:
-        HEAT: -12
-    crew:
-      strategic:
-        base: 5
-        per_volume: 1
+    modules:
+      crew:
+        strategic:
+          base: 5
+          per_volume: 1
+      converter:
+        input:
+          POWER: 0.5
+        output:
+          HEAT: -12
   dusty_plasma:
     type: radiator
     density: 4
     durability: 2
     price: 1
-    converter:
-      input:
-        POWER: 0.5
-      output:
-        HEAT: 12
-    crew:
-      strategic:
-        base: 5
-        per_volume: 1
+    modules:
+      crew:
+        strategic:
+          base: 5
+          per_volume: 1
+      converter:
+        input:
+          POWER: 0.5
+        output:
+          HEAT: -12
 #################### [TANK] ###################
   tank_chemical_fuel:
     type: tank
     density: 0
     durability: 1
     price: 2
-    stores: chemical_fuel
+    modules:
+      tank:
+        stores: chemical_fuel
   tank_inert_fluid:
     type: tank
     density: 0
     durability: 1
     price: 1
-    stores: inert_fluid
+    modules:
+      tank:
+        stores: inert_fluid
   tank_nuclear_bombs:
     type: tank
     density: 0
     durability: 1
     price: 3
-    stores: nuclear_bombs
+    modules:
+      tank:
+        stores: nuclear_bombs
   tank_fissile_pellets:
     type: tank
     density: 0
     durability: 1
     price: 2
-    stores: fissile_pellets
+    modules:
+      tank:
+        stores: fissile_pellets
   tank_dissolved_fissiles:
     type: tank
     density: 0
     durability: 1
     price: 3
-    stores: dissolved_fissiles
+    modules:
+      tank:
+        stores: dissolved_fissiles
   tank_d3he:
     type: tank
     density: 0
     durability: 1
     price: 1
-    stores: d3he
+    modules:
+      tank:
+        stores: d3he
 #################### [COMBAT_STATION] ###################
   damcon:
     type: combat_station
@@ -391,70 +421,131 @@ components:
     density: 1
     durability: 1
     price: 1
-    crew_served: 235
-    morale: -2
+    modules:
+      quarters:
+        crew: 235
+        morale: -2
   cramped:
     type: living_quarter
     density: 1
     durability: 2
     price: 1
-    crew_served: 195
-    moreale: -1
+    modules:
+      quarters:
+        crew: 195
+        moreale: -1
   spartan:
     type: living_quarter
     density: 1
     durability: 2
     price: 1
-    crew_served: 155
-    morale: +0
+    modules:
+      quarters:
+        crew: 155
+        morale: +0
   decent:
     type: living_quarter
     density: 1
     durability: 3
     price: 2
-    crew_served: 115
-    morale: +1
+    modules:
+      quarters:
+        crew: 115
+        morale: +1
   good:
     type: living_quarter
     density: 1
     durability: 3
     price: 2
-    crew_served: 75
-    morale: +2
+    modules:
+      quarters:
+        crew: 75
+        morale: +2
 #################### [STORE] ###################
   survival_rations:
     type: store
     density: 1
     durability: 1
-    price: null
+    price: 0.5
+    modules:
+      stores:
+        crew: 250
+        morale: -2
+  basic_rations:
+    type: store
+    density: 1
+    durability: 1
+    price: 1
+    modules:
+      stores:
+        crew: 200
+        morale: 0
+  good_rations:
+    type: store
+    density: 1
+    durability: 1
+    price: 1.5
+    modules:
+      stores:
+        crew: 180
+        morale: +2
+  algae_reactor:
+    type: store
+    density: 1
+    durability: 3
+    price: 1.5
+    modules:
+      crew:
+        strategic:
+          per_volume: 2
+      stores:
+        crew: 70
+        unlimited: true
+        morale: 0
+  aquaponics_bay:
+    type: store
+    density: 1
+    durability: 2
+    price: 3
+    modules:
+      crew:
+        strategic:
+          per_volume: 4
+      stores:
+        crew: 50
+        unlimited: true
+        morale: +2
 #################### [RECREATIONAL] ###################
   vr_chamber:
     type: recreational
     density: 1
-    price: 0
+    price: 5
     durability: 1
-    morale:
-      crew_served: 300
-      biological: 1
-      infomorph: 1
+    modules:
+      recreational:
+        crew_served: 300
+        biological: 1
+        infomorph: 1
   recreation_server:
     type: recreational
     density: 2
-    price: 0
+    price: 3
     durability: 3
-    morale:
-      crew_served: 300
-      construct: 1
-      infomorph: 1
+    modules:
+      recreational:
+        crew_served: 300
+        construct: 1
+        infomorph: 1
   board_game_room:
     type: recreational
     density: 1
-    price: 0
+    price: 1
     durability: 3
-    morale:
-      crew_served: 300
-      biological: 1
-      construct: 1
+    modules:
+      recreational:
+        crew_served: 300
+        biological: 1
+        construct: 1
 #################### [COMMAND] ###################
   civilian_bridge:
     type: command
@@ -462,21 +553,57 @@ components:
     durability: 2
     price: 3
     fixed_volume: 1
+    modules:
+      crew:
+        tactical:
+          base: 6
+        strategic:
+          base: 6
+      command:
+        operate_offensive: false
+        operate_defensive: false
+        operate_navigation: true
   warship_cic:
     type: command
     density: 2
     durability: 4
     price: 3
     fixed_volume: 1
+    modules:
+      crew:
+        tactical:
+          base: 20
+        strategic:
+          base: 20
+      command:
+        operate_offensive: true
+        operate_defensive: true
+        operate_navigation: true
   shipmind_brainframe:
     type: command
     density: 3
     durability: 2
     price: 6
     fixed_volume: 1
-    crew:
-      strategic:
-        base: 1
+    modules:
+      crew:
+        strategic:
+          base: 1
+      command:
+        operate_offensive: true
+        operate_defensive: true
+        operate_navigation: true
+      buff:
+        scaling_function: 1
+        add:
+          ecm: +2
+          sensors: +2
+          acceleration: +1
+        multiply:
+          jump_energy: 0.9
+      #TODO jump energy buff
+      #TODO evasion buff
+
 #################### [FTL] ###################
   jump_improvised:
     type: "ftl_drive"
@@ -486,15 +613,17 @@ components:
     crew:
       strategic:
         per_volume: 20
-    ftl_method: "jump"
-    jump_tac_tidi: 15
-    jump_tac_energy: 90
-    jump_str_energy: 90
-    jump_range:
-      method: log
-      constant: 0
-      base: 2
-      multiplier: 20
+    modules:
+      ftl_drive:
+        ftl_method: "jump"
+        jump_tac_tidi: 15
+        jump_tac_energy: 90
+        jump_str_energy: 90
+        jump_range:
+          method: log
+          constant: 0
+          base: 2
+          multiplier: 20
   jump_rudimentary:
     type: "ftl_drive"
     density: 8
@@ -504,14 +633,16 @@ components:
       strategic:
         base: 10
         per_volume: 4
-    ftl_method: "jump"
-    jump_tac_tidi: 3
-    jump_tac_energy: 60
-    jump_str_energy: 6
-    jump_range:
-      method: linear
-      constant: 0
-      multiplier: 12.5
+    modules:
+      ftl_drive:
+        ftl_method: "jump"
+        jump_tac_tidi: 3
+        jump_tac_energy: 60
+        jump_str_energy: 6
+        jump_range:
+          method: linear
+          constant: 0
+          multiplier: 12.5
   jump_standard:
     type: "ftl_drive"
     density: 8
@@ -521,54 +652,62 @@ components:
       strategic:
         base: 5
         per_volume: 2
-    ftl_method: "jump"
-    jump_tac_tidi: 2
-    jump_tac_energy: 50
-    jump_str_energy: 5
-    jump_range:
-      method: linear
-      constant: 0
-      multiplier: 25
+    modules:
+      ftl_drive:
+        ftl_method: "jump"
+        jump_tac_tidi: 2
+        jump_tac_energy: 50
+        jump_str_energy: 5
+        jump_range:
+          method: linear
+          constant: 0
+          multiplier: 25
   jump_tactical:
     type: "ftl_drive"
     density: 10
     price: 10
     durability: 1
-    ftl_method: "jump"
-    jump_tac_tidi: 1
-    jump_tac_energy: 80
-    jump_str_energy: 8
-    jump_range:
-      method: linear
-      constant: 0
-      multiplier: 16.666666 # rip whoever has to deal with this rounding error
+    modules:
+      ftl_drive:
+        ftl_method: "jump"
+        jump_tac_tidi: 1
+        jump_tac_energy: 80
+        jump_str_energy: 8
+        jump_range:
+          method: linear
+          constant: 0
+          multiplier: 16.666666 # rip whoever has to deal with this rounding error
   jump_longrange:
     type: "ftl_drive"
     density: 8
     price: 10
     durability: 1
-    ftl_method: "jump"
-    jump_tac_tidi: 4
-    jump_tac_energy: 60
-    jump_str_energy: 6
-    jump_range:
-      method: linear
-      constant: 0
-      multiplier: 50
+    modules:
+      ftl_drive:
+        ftl_method: "jump"
+        jump_tac_tidi: 4
+        jump_tac_energy: 60
+        jump_str_energy: 6
+        jump_range:
+          method: linear
+          constant: 0
+          multiplier: 50
   jump_industrial:
     type: "ftl_drive"
     density: 12
     price: 3
     durability: 1
-    ftl_method: "jump"
-    jump_tac_tidi: 3
-    jump_tac_energy: 45
-    jump_str_energy: 4.5
-    jump_range:
-      method: log
-      constant: 0
-      base: 4.5
-      multiplier: 45
+    modules:
+      ftl_drive:
+        ftl_method: "jump"
+        jump_tac_tidi: 3
+        jump_tac_energy: 45
+        jump_str_energy: 4.5
+        jump_range:
+          method: log
+          constant: 0
+          base: 4.5
+          multiplier: 45
 #################### [WEAPON_DIRECT] ###################
   macron_gun:
     type: weapon_direct
@@ -634,3 +773,27 @@ components:
     density: 4
     durability: 4
     price: 5
+#################### [EWAR] ###################
+  sensors:
+    type: ewar
+    density: 3
+    durability: 3
+    price: 4
+    modules:
+      buff:
+        scaling_function: volume
+        add:
+          sensors: +1
+        multiply:
+          foo: 1.8
+          bar: 0.5
+  ecm:
+    type: ewar
+    density: 3
+    durability: 3
+    price: 4
+    modules:
+      buff:
+        scaling_function: volume
+        add:
+          raw_ecm: 1
