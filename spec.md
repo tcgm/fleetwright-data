@@ -54,20 +54,14 @@ type ComponentPrototype = {
         leveled_buffs?: LeveledBuffModule[],     // /
         converter?: ConverterModule[],           // \
         engine?: EngineModule[],                 //  |
-        storage?: StorageModule[],               //  |> Mutually exclusive for now
+        storage?: StorageModule[],               //  |
+        combat_station?: CombatStationModule[],  //  |> Mutually exclusive for now
         quarters?: QuartersModule[],             //  |   applications MAY support it 
-<<<<<<< HEAD
         stores?: StoresModule[],                 //  |   but the behaviour is technically undefined 
         recreational?: RecreationModule[],       //  |   also undefined behaviour, but MAY be supported:
         command: CommandModule[],                //  |   more than one of the same module
         weapon_direct?: WeaponDirectModule[],    //  |
         weapon_guided?: WeaponGuidedModule[],    //  |   
-=======
-        stores?: StoresModule[],
-        recreational?: RecreationModule[],       //  |   but the behaviour is technically undefined 
-        weapon_direct?: WeaponDirectModule[],    //  |  also undefined behaviour, but MAY be supported:
-        weapon_guided?: WeaponGuidedModule[],    //  |   more than one of the same module
->>>>>>> 4abb6cf (add ftl module)
         ftl_drive?: FTLDriveModule[],            // /
     }
 }
@@ -146,15 +140,12 @@ type WeaponGuidedModule = {
     // #TODO
 }
 
-<<<<<<< HEAD
 type CommandModule = {
     operate_offensive: bool,
     operate_defensive: bool,
     operate_navigation: bool,
 }
 
-=======
->>>>>>> 4abb6cf (add ftl module)
 type FTLDriveModule = {
     // #TODO non-jump ftl
     method: "linear" | "log",
