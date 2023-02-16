@@ -257,7 +257,18 @@ components:
             HEAT: 245
   electrostatic_fusion:
     type: powerplant
-    __incomplete: 1
+    density: 2
+    durability: 2
+    price: 5
+    modules:
+      crew:
+        strategic:
+          base: 6
+          per_volume: 2
+      converter:
+        output:
+          ENERGY: 24
+          HEAT: 144
 #################### [RADIATOR] ###################
   solid_panel:
     type: radiator
