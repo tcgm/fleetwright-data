@@ -8,9 +8,6 @@ resources:
   ENERGY:
     name: "Energy"
     storeable: false
-  THRUST:
-    name: "Thrust"
-    storeable: false
   chemical_fuel:
     name: "Chemfuel"
     storeable: true
