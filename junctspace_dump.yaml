@@ -310,7 +310,7 @@ components:
           per_volume: 2
       converter:
         input:
-          POWER: 0.5
+          ENERGY: 0.5
         output:
           HEAT: -20
   em_droplet:
@@ -325,7 +325,7 @@ components:
           per_volume: 1
       converter:
         input:
-          POWER: 0.5
+          ENERGY: 0.5
         output:
           HEAT: -12
   dusty_plasma:
@@ -340,7 +340,7 @@ components:
           per_volume: 1
       converter:
         input:
-          POWER: 0.5
+          ENERGY: 0.5
         output:
           HEAT: -12
 #################### [TANK] ###################
