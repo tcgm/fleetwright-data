@@ -801,9 +801,6 @@ components:
         scaling_function: volume
         add:
           sensors: +1
-        multiply:
-          foo: 1.8
-          bar: 0.5
   ecm:
     type: ewar
     density: 3
