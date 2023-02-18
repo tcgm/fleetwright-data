@@ -733,10 +733,11 @@ components:
     durability: 3
     price: 4
     energy: 4
-    crew:
-      strategic:
-        base: 6
-        per_volume: 2
+    modules:
+      crew:
+        strategic:
+          base: 6
+          per_volume: 2
     __incomplete: 1
   laser:
     type: weapon_direct
@@ -744,10 +745,11 @@ components:
     durability: 2
     price: 3
     energy: 5
-    crew:
-      strategic:
-        base: 5
-        per_volume: 3
+    modules:
+      crew:
+        strategic:
+          base: 5
+          per_volume: 3
     __incomplete: 1
   particle_beam:
     type: weapon_direct
@@ -755,10 +757,11 @@ components:
     durability: 2
     price: 3
     energy: 5
-    crew:
-      strategic:
-        base: 8
-        per_volume: 2
+    modules:
+      crew:
+        strategic:
+          base: 8
+          per_volume: 2
     __incomplete: 1
 #################### [WEAPON_GUIDED] ###################
   light_vls:
