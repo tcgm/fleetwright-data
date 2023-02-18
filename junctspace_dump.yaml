@@ -433,7 +433,7 @@ components:
     price: 3
     fixed_volume: 1
 #################### [LIVING_QUARTER] ###################
-  sardine_can:
+  quarters_sardine_can:
     type: living_quarter
     density: 1
     durability: 1
@@ -442,7 +442,7 @@ components:
       quarters:
         crew: 235
         morale: -2
-  cramped:
+  quarters_cramped:
     type: living_quarter
     density: 1
     durability: 2
@@ -451,7 +451,7 @@ components:
       quarters:
         crew: 195
         moreale: -1
-  spartan:
+  quarters_spartan:
     type: living_quarter
     density: 1
     durability: 2
@@ -460,7 +460,7 @@ components:
       quarters:
         crew: 155
         morale: +0
-  decent:
+  quarters_decent:
     type: living_quarter
     density: 1
     durability: 3
@@ -469,7 +469,7 @@ components:
       quarters:
         crew: 115
         morale: +1
-  good:
+  quarters_good:
     type: living_quarter
     density: 1
     durability: 3
