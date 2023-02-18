@@ -131,6 +131,10 @@ components:
         thrust: 275
         fuel: "nuclear_bombs"
         fuel_flow: 0.5
+      converter:
+        output:
+          ENERGY: 16
+          HEAT: 2
   fissile_salt_water:
     type: "engine"
     density: 6
