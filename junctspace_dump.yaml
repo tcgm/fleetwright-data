@@ -162,6 +162,11 @@ components:
         fuel: "d3he"
         fuel_flow: 0.05
         works_in_atmo: false
+      converter:
+        output: 
+          ENERGY: 12
+          HEAT: 2
+
 #################### [POWERPLANT] ###################
   fuel_cell:
     type: powerplant
@@ -222,7 +227,7 @@ components:
       converter:
         output:
           ENERGY: 18
-          HEAT: 54
+          HEAT: 6
   fission_fragment:
     type: powerplant
     density: 3
@@ -251,7 +256,7 @@ components:
         generator:
           output:
             ENERGY: 35
-            HEAT: 245
+            HEAT: 5
   electrostatic_fusion:
     type: powerplant
     density: 2
@@ -265,7 +270,7 @@ components:
       converter:
         output:
           ENERGY: 24
-          HEAT: 144
+          HEAT: 4
 #################### [RADIATOR] ###################
   solid_panel:
     type: radiator
