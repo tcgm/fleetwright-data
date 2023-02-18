@@ -612,6 +612,7 @@ components:
         operate_navigation: true
       buff:
         scaling_function: 1
+        stacking: false
         add:
           ecm: +2
           sensors: +2
