@@ -379,7 +379,7 @@ components:
     type: tank
     density: 0
     durability: 1
-    price: 2
+    price: 3
     modules:
       tank:
         stores: fissile_pellets
