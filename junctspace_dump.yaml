@@ -301,7 +301,7 @@ components:
           per_volume: 1
       converter:
         input:
-          inert_fluid: 1
+          inert_fluid: 3
           ENERGY: 0.5
         output:
           HEAT: -30
@@ -309,7 +309,7 @@ components:
     type: radiator
     density: 3
     durability: 3
-    price: 1
+    price: 2
     modules:
       crew:
         strategic:
@@ -322,34 +322,34 @@ components:
           HEAT: -20
   em_droplet:
     type: radiator
-    density: 4
-    durability: 2
-    price: 1
+    density: 2
+    durability: 6
+    price: 4
     modules:
       crew:
         strategic:
           base: 5
-          per_volume: 1
+          per_volume: 3
       converter:
         input:
-          ENERGY: 0.5
+          ENERGY: 2
         output:
-          HEAT: -12
+          HEAT: -24
   dusty_plasma:
     type: radiator
-    density: 4
-    durability: 2
-    price: 1
+    density: 2
+    durability: 5
+    price: 7
     modules:
       crew:
         strategic:
-          base: 5
-          per_volume: 1
+          base: 6
+          per_volume: 3
       converter:
         input:
-          ENERGY: 0.5
+          ENERGY: 3
         output:
-          HEAT: -12
+          HEAT: -36
 #################### [TANK] ###################
   tank_chemical_fuel:
     type: tank
