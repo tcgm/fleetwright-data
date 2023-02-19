@@ -19,7 +19,7 @@ resources:
     name: "Inert Fluid"
     storeable: true
     density: 5
-    price: 1
+    price: 0.01
     hazards: null
   nuclear_bombs:
     name: "Nuclear Bombs"
@@ -363,7 +363,7 @@ components:
     type: tank
     density: 0
     durability: 1
-    price: 1
+    price: 0.2
     modules:
       tank:
         stores: inert_fluid
