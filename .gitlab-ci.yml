@@ -1,0 +1,11 @@
+stages:
+  - validate
+
+yaml-correctness-validation-job:
+  stage: validate
+  image: python:3
+  script:
+    - echo "Checking YAML correctness"
+    - pip install pyyaml
+    - python -c 'import yaml, sys; print(yaml.safe_load(sys.stdin))' < junctspace_dump.yaml
+    - echo "YAML correctness checked."
