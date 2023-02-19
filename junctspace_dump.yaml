@@ -416,7 +416,7 @@ components:
     type: combat_station
     density: 3
     durability: 1
-    price: 2
+    price: 5
     fixed_volume: 1
   medbay:
     type: combat_station
