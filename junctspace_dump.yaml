@@ -506,9 +506,9 @@ components:
         morale: +2
   algae_reactor:
     type: store
-    density: 1
-    durability: 3
-    price: 1.5
+    density: 3
+    durability: 4
+    price: 2
     modules:
       crew:
         strategic:
@@ -519,7 +519,7 @@ components:
         morale: 0
   aquaponics_bay:
     type: store
-    density: 1
+    density: 2
     durability: 2
     price: 3
     modules:
