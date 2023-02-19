@@ -728,8 +728,8 @@ components:
   macron_gun:
     type: weapon_direct
     density: 2
-    durability: 3
-    price: 4
+    durability: 2
+    price: 3
     energy: 4
     modules:
       crew:
@@ -740,7 +740,7 @@ components:
   laser:
     type: weapon_direct
     density: 3
-    durability: 2
+    durability: 3
     price: 3
     energy: 5
     modules:
