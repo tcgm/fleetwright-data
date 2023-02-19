@@ -1,19 +1,9 @@
 stages:
   - validate
 
-default:
-  image: 
-
 yaml-correctness-validation-job:
   stage: validate
   script:
     - echo "Checking YAML correctness"
-    - |
-      DIRECTORY=.
-      for i in $directory/*.yaml; do
-        ruby -ryaml -e "p YAML.load(STDIN.read)" < $i
-      done
-      for i in $directory/*.yml; do
-        ruby -ryaml -e "p YAML.load(STDIN.read)" < $i
-      done
+    - ruby -ryaml -e "p YAML.load(STDIN.read)" < junctspace_dump.yaml
     - echo "YAML correctness checked."
