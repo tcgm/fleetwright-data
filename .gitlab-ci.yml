@@ -1,17 +1,19 @@
 stages:
   - validate
 
+default:
+  image: 
+
 yaml-correctness-validation-job:
   stage: validate
   script:
     - echo "Checking YAML correctness"
-    - pip install pyyaml
     - |
-        DIRECTORY=.
-        for i in $directory/*.yaml; do
-            python -c 'import yaml, sys; print(yaml.safe_load(sys.stdin))' < $i
-        done
-        for i in $directory/*.yml; do
-            python -c 'import yaml, sys; print(yaml.safe_load(sys.stdin))' < $i
-        done
+      DIRECTORY=.
+      for i in $directory/*.yaml; do
+        ruby -ryaml -e "p YAML.load(STDIN.read)" < $i
+      done
+      for i in $directory/*.yml; do
+        ruby -ryaml -e "p YAML.load(STDIN.read)" < $i
+      done
     - echo "YAML correctness checked."
