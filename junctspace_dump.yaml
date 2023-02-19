@@ -644,7 +644,7 @@ components:
     type: "ftl_drive"
     density: 8
     price: 1
-    durability: 1
+    durability: 2
     crew:
       strategic:
         base: 10
@@ -663,7 +663,7 @@ components:
     type: "ftl_drive"
     density: 8
     price: 4
-    durability: 1
+    durability: 4
     crew:
       strategic:
         base: 5
@@ -682,7 +682,7 @@ components:
     type: "ftl_drive"
     density: 10
     price: 10
-    durability: 1
+    durability: 8
     modules:
       ftl_drive:
         ftl_method: "jump"
@@ -692,12 +692,12 @@ components:
         jump_range:
           method: linear
           constant: 0
-          multiplier: 16.666666 # rip whoever has to deal with this rounding error
+          multiplier: 16.66666666666666 # rip whoever has to deal with this rounding error
   jump_longrange:
     type: "ftl_drive"
     density: 8
     price: 10
-    durability: 1
+    durability: 3
     modules:
       ftl_drive:
         ftl_method: "jump"
@@ -712,7 +712,7 @@ components:
     type: "ftl_drive"
     density: 12
     price: 3
-    durability: 1
+    durability: 7
     modules:
       ftl_drive:
         ftl_method: "jump"
