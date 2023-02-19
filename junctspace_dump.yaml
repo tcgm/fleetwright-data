@@ -185,17 +185,15 @@ components:
           per_volume: 0.5
       converter:
         input:
-          chemical_fuel: 1
+          chemical_fuel: 3
         output:
-          ENERGY: 10
+          ENERGY: 30
           HEAT: 0
   photovoltaic:
     type: powerplant
     density: 0.2
     durability: 1
     price: 1
-    power_per: 10
-    energy_per_heat: .inf
     modules:
       converter:
         output:
@@ -222,8 +220,8 @@ components:
   pebble_bed:
     type: powerplant
     density: 4
-    durability: 8
-    price: 3
+    durability: 5
+    price: 2
     modules:
       crew:
         strategic:
@@ -245,13 +243,13 @@ components:
           per_volume: 4
       converter:
         output:
-          ENERGY: 8
-          HEAT: 1
+          ENERGY: 32
+          HEAT: 4
   magneto_inertial:
     type: powerplant
     density: 4
     durability: 2
-    price: 5
+    price: 6
     modules:
       crew:
         strategic:
