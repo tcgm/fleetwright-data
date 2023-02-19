@@ -3,7 +3,7 @@ stages:
 
 yaml-correctness-validation-job:
   stage: validate
-  image: python
+  image: python:3
   script:
     - echo "Checking YAML correctness"
     - pip install pyyaml
