@@ -257,10 +257,9 @@ components:
           base: 7
           per_volume: 2
       converter:
-        generator:
-          output:
-            ENERGY: 35
-            HEAT: 5
+        output:
+          ENERGY: 35
+          HEAT: 5
   electrostatic_fusion:
     type: powerplant
     density: 2
