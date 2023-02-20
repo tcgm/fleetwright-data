@@ -747,7 +747,7 @@ components:
       crew:
         strategic:
           base: 5
-          per_volume: 3
+          per_volume: 5
     __incomplete: 1
   particle_beam:
     type: weapon_direct
