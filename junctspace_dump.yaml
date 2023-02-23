@@ -859,6 +859,9 @@ components:
         scaling_function: volume
         add:
           sensors: +1
+      converter:
+        input:
+          ENERGY: 3
   ecm:
     type: ewar
     density: 3
@@ -869,3 +872,6 @@ components:
         scaling_function: volume
         add:
           raw_ecm: 1
+      converter:
+        input:
+          ENERGY: 3
