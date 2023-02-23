@@ -692,11 +692,11 @@ components:
         jump_range:
           method: linear
           constant: 0
-          multiplier: 16.66666666666666 # rip whoever has to deal with this rounding error
+          multiplier: 25
   jump_longrange:
     type: "ftl_drive"
     density: 8
-    price: 10
+    price: 15
     durability: 3
     modules:
       ftl_drive:
