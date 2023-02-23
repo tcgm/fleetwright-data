@@ -730,36 +730,42 @@ components:
     density: 2
     durability: 2
     price: 3
-    energy: 4
     modules:
       crew:
         strategic:
           base: 6
           per_volume: 2
+        converter:
+          input:
+            ENERGY: 4
     __incomplete: 1
   laser:
     type: weapon_direct
     density: 3
     durability: 3
     price: 3
-    energy: 5
     modules:
       crew:
         strategic:
           base: 5
           per_volume: 3
+      converter:
+        input:
+          ENERGY: 5
     __incomplete: 1
   particle_beam:
     type: weapon_direct
     density: 2
     durability: 2
     price: 3
-    energy: 5
     modules:
       crew:
         strategic:
           base: 8
           per_volume: 2
+      converter:
+        input:
+          ENERGY: 5
     __incomplete: 1
 #################### [WEAPON_GUIDED] ###################
   light_vls:
