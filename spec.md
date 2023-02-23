@@ -84,9 +84,12 @@ type CrewModule = {
 }
 
 type BuffModule = {
-    // #TODO
+    scaling_function?: 1 | "volume"; // maybe others, default volume
+    stacking?: bool, // default true
+    add?: Object,      // stat: delta, default {}
+    multiply?: Object, // stat: multiplier, default {}
 }
-// might merge these two idk
+
 type LeveledBuffModule = {
     levels: {
         1: {/* #TODO */}
@@ -97,6 +100,10 @@ type LeveledBuffModule = {
     }
 }
 
+type PickOneBuffModule = {
+    choices: BuffModule[]
+}
+
 type ConverterModule = {
     input: Object<str,int>, // resource: amount
     outupt: Object<str,int>,
@@ -104,8 +111,8 @@ type ConverterModule = {
 
 type EngineModule = {
     thrust: int,
-    heat: int,
-    fuel: string, // resource
+    heat?: int,
+    fuel: {[resource]: double},
     fuel_flow: int, // fuel/turn
 }
 
