@@ -43,7 +43,7 @@ resources:
       hazard_leak: true
       critical_leak: true
   d3he:
-    name: "D3He"
+    name: "D-3He Fuel"
     storeable: true
     density: 3
     price: 3
