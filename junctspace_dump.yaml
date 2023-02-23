@@ -101,7 +101,7 @@ components:
         fuel:
           "inert_fluid": 0.025
           ENERGY: 10
-        works_in_atmo: true
+        works_in_atmo: false
         landing_bad_idea: false
   thermo_electric_rocket:
     type: "engine"
@@ -147,7 +147,7 @@ components:
           "fissile_pellets": 0.25
         alternator:
           ENERGY: 16
-          HEAT: 2
+          HEAT: 4
         works_in_atmo: false
   fissile_salt_water:
     type: "engine"
@@ -422,7 +422,7 @@ components:
     modules:
       levelled_buff:
         levels:
-          1: 
+          1:
             crew: {base: 10} # CrewModule
             buff: {add: {repair: 1}} # BuffModule
           2:
@@ -780,8 +780,9 @@ components:
         strategic:
           base: 5
           per_volume: 3
-      active:
-        ENERGY: 5
+      converter:
+        input:
+          ENERGY: 5
     __incomplete: 1
   particle_beam:
     type: weapon_direct
