@@ -768,7 +768,7 @@ components:
           per_volume: 2
       weapon_direct:
         active:
-          ENERGY: 4
+          ENERGY: -4
     __incomplete: 1
   laser:
     type: weapon_direct
@@ -782,7 +782,7 @@ components:
           per_volume: 3
       weapon_direct:
         active:
-          ENERGY: 5
+          ENERGY: -5
     __incomplete: 1
   particle_beam:
     type: weapon_direct
@@ -796,7 +796,7 @@ components:
           per_volume: 2
       weapon_direct:
         active:
-          ENERGY: 5
+          ENERGY: -5
     __incomplete: 1
 #################### [WEAPON_GUIDED] ###################
   light_vls:
@@ -811,7 +811,7 @@ components:
           per_volume: 2
       weapon_guided:
         active:
-          ENERGY: 1
+          ENERGY: -1
     __incomplete: 1
   light_magazine:
     type: weapon_guided
@@ -825,7 +825,7 @@ components:
           per_volume: 1
       weapon_guided:
         active:
-          ENERGY: 1
+          ENERGY: -1
     __incomplete: 1
   light_em_catapult:
     type: weapon_guided
@@ -839,7 +839,7 @@ components:
           per_volume: 1
       weapon_guided:
         active:
-          ENERGY: 4
+          ENERGY: -4
   heavy_vls:
     type: weapon_guided
     density: 5
@@ -852,7 +852,7 @@ components:
           per_volume: 2
       weapon_guided:
         active:
-          ENERGY: 1
+          ENERGY: -1
   heavy_magazine:
     type: weapon_guided
     density: 5
@@ -865,7 +865,7 @@ components:
           per_volume: 1
       weapon_guided:
         active:
-          ENERGY: 1
+          ENERGY: -1
   heavy_em_catapult:
     type: weapon_guided
     density: 4
@@ -878,7 +878,7 @@ components:
           per_volume: 1
       weapon_guided:
         active:
-          ENERGY: 8
+          ENERGY: -8
 #################### [EWAR] ###################
   sensors:
     type: ewar
