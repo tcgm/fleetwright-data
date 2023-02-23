@@ -48,25 +48,25 @@ type ComponentPrototype = {
     durability: int,
     price: int,
     fixed_volume?: int, // e.g., bridges have this =1. scaling still applies!
-    modules?: {
-        crew?: CrewModule[],
-        buffs?: BuffModule[],                    // \_ also mutex for now
-        leveled_buffs?: LeveledBuffModule[],     // /
-        converter?: ConverterModule[],           // \
-        engine?: EngineModule[],                 //  |
-        storage?: StorageModule[],               //  |
-        combat_station?: CombatStationModule[],  //  |> Mutually exclusive for now
-        quarters?: QuartersModule[],             //  |   applications MAY support it 
-        stores?: StoresModule[],                 //  |   but the behaviour is technically undefined 
-        recreational?: RecreationModule[],       //  |   also undefined behaviour, but MAY be supported:
-        command: CommandModule[],                //  |   more than one of the same module
-        weapon_direct?: WeaponDirectModule[],    //  |
-        weapon_guided?: WeaponGuidedModule[],    //  |   
-        ftl_drive?: FTLDriveModule[],            // /
-    }
+    modules?: ModuleObject,
 }
 
-// ...
+type ModuleObject = {
+    crew?: CrewModule,
+    buffs?: BuffModule,                    // \_ also mutex for now
+    leveled_buffs?: LeveledBuffModule,     // /
+    converter?: ConverterModule,           // \
+    engine?: EngineModule,                 //  |
+    storage?: StorageModule,               //  |
+    combat_station?: CombatStationModule,  //  |> Mutually exclusive for now
+    quarters?: QuartersModule,             //  |   applications MAY support it 
+    stores?: StoresModule,                 //  |   but the behaviour is technically undefined 
+    recreational?: RecreationModule,       //  |
+    command: CommandModule,                //  |
+    weapon_direct?: WeaponDirectModule,    //  |
+    weapon_guided?: WeaponGuidedModule,    //  |   
+    ftl_drive?: FTLDriveModule,            // /
+}
 ```
 
 ### Modules
@@ -78,6 +78,7 @@ type CrewModule = {
         per_volume?: int,
     },
     tactical?: {
+        // combat crew
         base?: int,
         per_volume?: int,
     },
@@ -85,23 +86,13 @@ type CrewModule = {
 
 type BuffModule = {
     scaling_function?: 1 | "volume"; // maybe others, default volume
-    stacking?: bool, // default true
+    stacking?: bool,   // default true
     add?: Object,      // stat: delta, default {}
     multiply?: Object, // stat: multiplier, default {}
 }
 
-type LeveledBuffModule = {
-    levels: {
-        1: {/* #TODO */}
-        2: {/* #TODO */}
-        3: {/* #TODO */}
-        4: {/* #TODO */}
-        // etc
-    }
-}
-
-type PickOneBuffModule = {
-    choices: BuffModule[]
+type LevelledBuffModule = {
+    
 }
 
 type ConverterModule = {
