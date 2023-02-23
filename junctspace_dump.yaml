@@ -82,13 +82,13 @@ components:
       engine:
         thrust: 250
         fuel: "inert_fluid"
-        fuel_flow: 2.5
+        fuel_flow: 5
         works_in_atmo: true
         landing_bad_idea: false
   electric_rocket:
     type: "engine"
     density: 1
-    durability: 2
+    durability: 2 
     price: 1
     modules:
       crew:
@@ -99,12 +99,12 @@ components:
         thrust: 40
         fuel: "inert_fluid"
         fuel_flow: 0.025
-        works_in_atmo: true
+        works_in_atmo: false
         landing_bad_idea: false
   orion_drive:
     type: "engine"
     density: 8
-    durability: 20
+    durability: 8
     price: 6
     modules:
       crew:
@@ -120,7 +120,7 @@ components:
   mini_mag_orion:
     type: "engine"
     density: 5
-    durability: 10
+    durability: 4
     price: 8
     modules:
       crew:
@@ -139,7 +139,7 @@ components:
   fissile_salt_water:
     type: "engine"
     density: 6
-    durability: 12
+    durability: 6
     price: 9
     modules:
       crew:
