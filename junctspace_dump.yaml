@@ -766,9 +766,9 @@ components:
         strategic:
           base: 6
           per_volume: 2
-        converter:
-          input:
-            ENERGY: 4
+      converter:
+        input:
+          ENERGY: 4
     __incomplete: 1
   laser:
     type: weapon_direct
