@@ -766,8 +766,8 @@ components:
         strategic:
           base: 6
           per_volume: 2
-      converter:
-        input:
+      weapon_direct:
+        active:
           ENERGY: 4
     __incomplete: 1
   laser:
@@ -780,8 +780,8 @@ components:
         strategic:
           base: 5
           per_volume: 3
-      converter:
-        input:
+      weapon_direct:
+        active:
           ENERGY: 5
     __incomplete: 1
   particle_beam:
@@ -794,8 +794,8 @@ components:
         strategic:
           base: 8
           per_volume: 2
-      converter:
-        input:
+      weapon_direct:
+        active:
           ENERGY: 5
     __incomplete: 1
 #################### [WEAPON_GUIDED] ###################
@@ -809,8 +809,8 @@ components:
         strategic:
           base: 4
           per_volume: 2
-      converter:
-        input:
+      weapon_guided:
+        active:
           ENERGY: 1
     __incomplete: 1
   light_magazine:
@@ -823,8 +823,8 @@ components:
         strategic:
           base: 3
           per_volume: 1
-      converter:
-        input:
+      weapon_guided:
+        active:
           ENERGY: 1
     __incomplete: 1
   light_em_catapult:
@@ -837,8 +837,8 @@ components:
         strategic:
           base: 5
           per_volume: 1
-      converter:
-        input:
+      weapon_guided:
+        active:
           ENERGY: 4
   heavy_vls:
     type: weapon_guided
@@ -850,8 +850,8 @@ components:
         strategic:
           base: 3
           per_volume: 2
-      converter:
-        input:
+      weapon_guided:
+        active:
           ENERGY: 1
   heavy_magazine:
     type: weapon_guided
@@ -863,8 +863,8 @@ components:
         strategic:
           base: 2
           per_volume: 1
-      converter:
-        input:
+      weapon_guided:
+        active:
           ENERGY: 1
   heavy_em_catapult:
     type: weapon_guided
@@ -876,8 +876,8 @@ components:
         strategic:
           base: 5
           per_volume: 1
-      converter:
-        input:
+      weapon_guided:
+        active:
           ENERGY: 8
 #################### [EWAR] ###################
   sensors:
