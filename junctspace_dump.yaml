@@ -657,10 +657,10 @@ components:
     density: 6
     price: 0.1
     durability: 1
-    crew:
-      strategic:
-        per_volume: 20
     modules:
+      crew:
+        strategic:
+          per_volume: 20
       ftl_drive:
         ftl_method: "jump"
         jump_tac_tidi: 15
@@ -676,11 +676,11 @@ components:
     density: 8
     price: 1
     durability: 2
-    crew:
-      strategic:
-        base: 10
-        per_volume: 4
     modules:
+      crew:
+        strategic:
+          base: 10
+          per_volume: 4
       ftl_drive:
         ftl_method: "jump"
         jump_tac_tidi: 3
@@ -695,11 +695,11 @@ components:
     density: 8
     price: 4
     durability: 4
-    crew:
-      strategic:
-        base: 5
-        per_volume: 2
     modules:
+      crew:
+        strategic:
+          base: 5
+          per_volume: 2 
       ftl_drive:
         ftl_method: "jump"
         jump_tac_tidi: 2
@@ -715,9 +715,13 @@ components:
     price: 10
     durability: 8
     modules:
+      crew:
+        strategic:
+          base: 5
+          per_volume: 3
       ftl_drive:
         ftl_method: "jump"
-        jump_tac_tidi: 1
+        jump_tac_tidi: 1  
         jump_tac_energy: 80
         jump_str_energy: 8
         jump_range:
@@ -730,6 +734,10 @@ components:
     price: 15
     durability: 3
     modules:
+      crew:
+        strategic:
+          base: 6
+          per_volume: 4
       ftl_drive:
         ftl_method: "jump"
         jump_tac_tidi: 4
@@ -745,6 +753,10 @@ components:
     price: 3
     durability: 7
     modules:
+      crew:
+        strategic:
+          base: 2
+          per_volume: 1
       ftl_drive:
         ftl_method: "jump"
         jump_tac_tidi: 3
