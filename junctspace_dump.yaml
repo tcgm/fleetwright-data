@@ -423,19 +423,19 @@ components:
       levelled_buff:
         levels:
           1:
-            crew: {base: 10} # CrewModule
+            crew: {tactical: {base: 10}} # CrewModule
             buff: {add: {repair: 1}} # BuffModule
           2:
             min_morale: 2
-            crew: {base: 25}
+            crew: {tactical: {base: 25}}
             buff: {add: {repair: 3}}
           3:
             min_morale: 4
-            crew: {base: 50} # haven't added crew types to CrewModule yet
+            crew: {tactical: {base: 50}} # haven't added crew types to CrewModule yet
             buff: {add: {repair: 6}}
           4:
             min_morale: 6
-            crew: {base: 100}
+            crew: {tactical: {base: 100}}
             buff: {add: {repair: 12}}
   engineering:
     type: combat_station
