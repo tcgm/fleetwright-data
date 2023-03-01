@@ -51,7 +51,7 @@ resources:
 
 # ctrl+f for [TYPE] to find a type
 components:
-#################### [DRIVE] ###################
+  #################### [DRIVE] ###################
   chemical_rocket:
     name: "Chemical Rocket"
     type: "engine"
@@ -65,7 +65,7 @@ components:
           per_volume: 1
       engine:
         thrust: 275
-        fuel: 
+        fuel:
           "chemical_fuel": 10
         works_in_atmo: true
         landing_bad_idea: false
@@ -91,7 +91,7 @@ components:
     name: "Electric Rocket"
     type: "engine"
     density: 1
-    durability: 2 
+    durability: 2
     price: 1
     modules:
       crew:
@@ -187,11 +187,11 @@ components:
           "d3he": 0.05
         works_in_atmo: false
       converter:
-        output: 
+        output:
           ENERGY: 12
           HEAT: 3
 
-#################### [POWERPLANT] ###################
+  #################### [POWERPLANT] ###################
   fuel_cell:
     type: powerplant
     density: 3
@@ -292,7 +292,7 @@ components:
         output:
           ENERGY: 24
           HEAT: 4
-#################### [RADIATOR] ###################
+  #################### [RADIATOR] ###################
   solid_panel:
     type: radiator
     density: 4
@@ -369,7 +369,7 @@ components:
           ENERGY: 3
         output:
           HEAT: -36
-#################### [TANK] ###################
+  #################### [TANK] ###################
   tank_chemical_fuel:
     type: tank
     density: 4
@@ -418,7 +418,7 @@ components:
     modules:
       tank:
         stores: d3he
-#################### [COMBAT_STATION] ###################
+  #################### [COMBAT_STATION] ###################
   damcon:
     type: combat_station
     density: 2
@@ -429,26 +429,45 @@ components:
       levelled_buff:
         levels:
           1:
-            crew: {tactical: {base: 10}} # CrewModule
-            buff: {add: {repair: 1}} # BuffModule
+            crew: { tactical: { base: 10 } } # CrewModule
+            buff: { add: { repair: 1 } } # BuffModule
           2:
             min_morale: 2
-            crew: {tactical: {base: 25}}
-            buff: {add: {repair: 3}}
+            crew: { tactical: { base: 25 } }
+            buff: { add: { repair: 3 } }
           3:
             min_morale: 4
-            crew: {tactical: {base: 50}} # haven't added crew types to CrewModule yet
-            buff: {add: {repair: 6}}
+            crew: { tactical: { base: 50 } } # haven't added crew types to CrewModule yet
+            buff: { add: { repair: 6 } }
           4:
             min_morale: 6
-            crew: {tactical: {base: 100}}
-            buff: {add: {repair: 12}}
+            crew: { tactical: { base: 100 } }
+            buff: { add: { repair: 12 } }
   engineering:
     type: combat_station
     density: 3
     durability: 3
     price: 4
     fixed_volume: 1
+    modules:
+      levelled_buff:
+        levels:
+          1:
+            crew: { tactical: { base: 10 } }
+            buff: { add: { acceleration: 1 } }
+          2:
+            min_morale: 2
+            crew: { tactical: { base: 25 } }
+            buff: { multiply: { energy: 1.1 } }
+          3:
+            min_morale: 4
+            crew: { tactical: { base: 50 } } # haven't added crew types to CrewModule yet
+            buff: { multiply: { dv: 1.1 } }
+          4:
+            min_morale: 6
+            crew: { tactical: { base: 100 } }
+            buff:
+              { add: { acceleration: 1 }, multiply: { energy: 1.1, dv: 1.1 } }
   nerve_center:
     type: combat_station
     density: 3
@@ -467,7 +486,7 @@ components:
     durability: 5
     price: 3
     fixed_volume: 1
-#################### [LIVING_QUARTER] ###################
+  #################### [LIVING_QUARTER] ###################
   quarters_sardine_can:
     type: living_quarter
     density: 1
@@ -513,7 +532,7 @@ components:
       quarters:
         crew: 75
         morale: +2
-#################### [STORE] ###################
+  #################### [STORE] ###################
   survival_rations:
     type: store
     density: 1
@@ -567,7 +586,7 @@ components:
         crew: 50
         unlimited: true
         morale: +2
-#################### [RECREATIONAL] ###################
+  #################### [RECREATIONAL] ###################
   vr_chamber:
     type: recreational
     density: 1
@@ -598,7 +617,7 @@ components:
         crew_served: 300
         biological: 1
         construct: 1
-#################### [COMMAND] ###################
+  #################### [COMMAND] ###################
   civilian_bridge:
     type: command
     density: 1
@@ -657,7 +676,7 @@ components:
       #TODO jump energy buff
       #TODO evasion buff
 
-#################### [FTL] ###################
+  #################### [FTL] ###################
   jump_improvised:
     type: "ftl_drive"
     density: 6
@@ -705,7 +724,7 @@ components:
       crew:
         strategic:
           base: 5
-          per_volume: 2 
+          per_volume: 2
       ftl_drive:
         ftl_method: "jump"
         jump_tac_tidi: 2
@@ -727,7 +746,7 @@ components:
           per_volume: 3
       ftl_drive:
         ftl_method: "jump"
-        jump_tac_tidi: 1  
+        jump_tac_tidi: 1
         jump_tac_energy: 80
         jump_str_energy: 8
         jump_range:
@@ -773,7 +792,7 @@ components:
           constant: 0
           base: 4.5
           multiplier: 45
-#################### [WEAPON_DIRECT] ###################
+  #################### [WEAPON_DIRECT] ###################
   macron_gun:
     type: weapon_direct
     density: 2
@@ -816,7 +835,7 @@ components:
         active:
           ENERGY: -5
     __incomplete: 1
-#################### [WEAPON_GUIDED] ###################
+  #################### [WEAPON_GUIDED] ###################
   light_vls:
     type: weapon_guided
     density: 5
@@ -897,7 +916,7 @@ components:
       weapon_guided:
         active:
           ENERGY: -8
-#################### [EWAR] ###################
+  #################### [EWAR] ###################
   sensors:
     type: ewar
     density: 3
