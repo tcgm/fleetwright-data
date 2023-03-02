@@ -842,7 +842,14 @@ components:
       weapon_direct:
         active:
           ENERGY: -4
-    __incomplete: 1
+        range:
+          precision_targeting: 1
+          gauranteed_hit: 2
+          probable_hit: 4
+        range_upgrade:
+          precision_targeting: 1
+          gauranteed_hit: 2
+          probable_hit: 3
   laser:
     type: weapon_direct
     density: 3
@@ -856,6 +863,14 @@ components:
       weapon_direct:
         active:
           ENERGY: -5
+        range:
+          precision_targeting: 4
+          gauranteed_hit: 7
+          probable_hit: 10
+        range_upgrade:
+          precision_targeting: 2
+          gauranteed_hit: 3
+          probable_hit: 4
     __incomplete: 1
   particle_beam:
     type: weapon_direct
@@ -870,6 +885,14 @@ components:
       weapon_direct:
         active:
           ENERGY: -5
+        range:
+          precision_targeting: 2
+          gauranteed_hit: 4
+          probable_hit: 6
+        range_upgrade:
+          precision_targeting: 2
+          gauranteed_hit: 4
+          probable_hit: 5
     __incomplete: 1
   #################### [WEAPON_GUIDED] ###################
   light_vls:
