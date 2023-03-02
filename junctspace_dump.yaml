@@ -480,6 +480,24 @@ components:
     durability: 2
     price: 5
     fixed_volume: 1
+    modules:
+      levelled_buff:
+        levels:
+          1:
+            crew: { tactical: { base: 10 } }
+            heal_crew: 5
+          2:
+            min_morale: 2
+            crew: { tactical: { base: 25 } }
+            heal_crew: 12
+          3:
+            min_morale: 4
+            crew: { tactical: { base: 50 } } # haven't added crew types to CrewModule yet
+            heal_crew: 30
+          4:
+            min_morale: 6
+            crew: { tactical: { base: 100 } }
+            heal_crew: 50
   medevac:
     type: combat_station
     density: 2
