@@ -486,6 +486,24 @@ components:
     durability: 5
     price: 3
     fixed_volume: 1
+    modules:
+      levelled_buff:
+        levels:
+          1:
+            crew: { tactical: { base: 10 } }
+            buff: { add: { wia_ratio: 0.1 } }
+          2:
+            min_morale: 2
+            crew: { tactical: { base: 25 } }
+            buff: { add: { wia_ratio: 0.2 } }
+          3:
+            min_morale: 4
+            crew: { tactical: { base: 50 } } # haven't added crew types to CrewModule yet
+            buff: { add: { wia_ratio: 0.3 } }
+          4:
+            min_morale: 6
+            crew: { tactical: { base: 100 } }
+            buff: { add: { wia_ratio: 0.4 } }
   #################### [LIVING_QUARTER] ###################
   quarters_sardine_can:
     type: living_quarter
