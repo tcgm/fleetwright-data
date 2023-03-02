@@ -850,6 +850,8 @@ components:
           precision_targeting: 1
           gauranteed_hit: 2
           probable_hit: 3
+        power: 5
+        power_upgrade: 5
   laser:
     type: weapon_direct
     density: 3
@@ -871,7 +873,8 @@ components:
           precision_targeting: 2
           gauranteed_hit: 3
           probable_hit: 4
-    __incomplete: 1
+        power: 5
+        power_upgrade: 5
   particle_beam:
     type: weapon_direct
     density: 2
@@ -893,7 +896,10 @@ components:
           precision_targeting: 2
           gauranteed_hit: 4
           probable_hit: 5
-    __incomplete: 1
+        power: 2
+        power_upgrade: 6
+        #TODO: implement the actual function somehow
+        # which is "+2, then +4, +6 after"
   #################### [WEAPON_GUIDED] ###################
   light_vls:
     type: weapon_guided
@@ -922,7 +928,6 @@ components:
       weapon_guided:
         active:
           ENERGY: -1
-    __incomplete: 1
   light_em_catapult:
     type: weapon_guided
     density: 3
