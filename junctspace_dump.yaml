@@ -911,7 +911,8 @@ components:
         strategic:
           base: 4
           per_volume: 2
-      weapon_guided:
+      missile_vls:
+        size: heavy
         active:
           ENERGY: -1
     __incomplete: 1
@@ -925,7 +926,8 @@ components:
         strategic:
           base: 3
           per_volume: 1
-      weapon_guided:
+      missile_catapult:
+        size: light
         active:
           ENERGY: -1
   light_em_catapult:
@@ -938,7 +940,8 @@ components:
         strategic:
           base: 5
           per_volume: 1
-      weapon_guided:
+      missile_catapult:
+        size: light
         active:
           ENERGY: -4
   heavy_vls:
@@ -951,7 +954,8 @@ components:
         strategic:
           base: 3
           per_volume: 2
-      weapon_guided:
+      missile_vls:
+        size: heavy
         active:
           ENERGY: -1
   heavy_magazine:
@@ -964,7 +968,8 @@ components:
         strategic:
           base: 2
           per_volume: 1
-      weapon_guided:
+      missile_catapult:
+        size: heavy
         active:
           ENERGY: -1
   heavy_em_catapult:
@@ -977,7 +982,8 @@ components:
         strategic:
           base: 5
           per_volume: 1
-      weapon_guided:
+      missile_catapult:
+        size: heavy
         active:
           ENERGY: -8
   #################### [EWAR] ###################
