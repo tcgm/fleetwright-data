@@ -1025,3 +1025,34 @@ components:
           raw_ecm: 1
         active:
           ENERGY: -3
+
+
+#################### [MISSILES] ###################
+
+missiles:
+  guidance:
+    none:
+    heat_seeking:
+    home_on_jam:
+    imaging_radar:
+    center_of_mass:
+    command_guidance:
+  payload:
+    kinetic:
+    inertial_mine:
+    nuclear_bomb:
+    neutron_bomb:
+    casaba_howitzer:
+    nefp:
+    excalibur:
+    decoy:
+    em_deflector:
+    light_gas_gun:
+    chemical_laser:
+    laser_relay:
+    missile_rack:
+  propulsion:
+    solid_rocket_motor:
+    liquid_fueled_rocket:
+    nuclear_thermal:
+    nuclear_thermo_electric_hybrid:
