@@ -913,7 +913,7 @@ components:
           per_volume: 2
       weapon_guided:
         launch_method: vls
-        size: heavy
+        size: light
         active:
           ENERGY: -1
     __incomplete: 1
