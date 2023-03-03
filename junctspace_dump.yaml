@@ -1031,7 +1031,6 @@ components:
 
 missiles:
   guidance:
-    none:
     heat_seeking:
     home_on_jam:
     imaging_radar:
@@ -1052,6 +1051,7 @@ missiles:
     laser_relay:
     missile_rack:
   propulsion:
+    none:
     solid_rocket_motor:
     liquid_fueled_rocket:
     nuclear_thermal:
