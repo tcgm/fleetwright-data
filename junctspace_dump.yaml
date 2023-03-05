@@ -418,110 +418,6 @@ components:
     modules:
       tank:
         stores: d3he
-  #################### [COMBAT_STATION] ###################
-  damcon:
-    type: combat_station
-    density: 2
-    durability: 5
-    price: 2
-    fixed_volume: 1
-    modules:
-      levelled_buff:
-        levels:
-          1:
-            crew: { tactical: { base: 10 } } # CrewModule
-            buff: { add: { repair: 1 } } # BuffModule
-          2:
-            min_morale: 2
-            crew: { tactical: { base: 25 } }
-            buff: { add: { repair: 3 } }
-          3:
-            min_morale: 4
-            crew: { tactical: { base: 50 } } # haven't added crew types to CrewModule yet
-            buff: { add: { repair: 6 } }
-          4:
-            min_morale: 6
-            crew: { tactical: { base: 100 } }
-            buff: { add: { repair: 12 } }
-  engineering:
-    type: combat_station
-    density: 3
-    durability: 3
-    price: 4
-    fixed_volume: 1
-    modules:
-      levelled_buff:
-        levels:
-          1:
-            crew: { tactical: { base: 10 } }
-            buff: { add: { acceleration: 1 } }
-          2:
-            min_morale: 2
-            crew: { tactical: { base: 25 } }
-            buff: { multiply: { energy: 1.1 } }
-          3:
-            min_morale: 4
-            crew: { tactical: { base: 50 } } # haven't added crew types to CrewModule yet
-            buff: { multiply: { dv: 1.1 } }
-          4:
-            min_morale: 6
-            crew: { tactical: { base: 100 } }
-            buff:
-              { add: { acceleration: 1 }, multiply: { energy: 1.1, dv: 1.1 } }
-  nerve_center:
-    type: combat_station
-    density: 3
-    durability: 1
-    price: 5
-    fixed_volume: 1
-  medbay:
-    type: combat_station
-    density: 2
-    durability: 2
-    price: 5
-    fixed_volume: 1
-    modules:
-      levelled_buff:
-        levels:
-          1:
-            crew: { tactical: { base: 10 } }
-            heal_crew: 5
-          2:
-            min_morale: 2
-            crew: { tactical: { base: 25 } }
-            heal_crew: 12
-          3:
-            min_morale: 4
-            crew: { tactical: { base: 50 } } # haven't added crew types to CrewModule yet
-            heal_crew: 30
-          4:
-            min_morale: 6
-            crew: { tactical: { base: 100 } }
-            heal_crew: 50
-  medevac:
-    type: combat_station
-    density: 2
-    durability: 5
-    price: 3
-    fixed_volume: 1
-    modules:
-      levelled_buff:
-        levels:
-          1:
-            crew: { tactical: { base: 10 } }
-            buff: { add: { wia_ratio: 0.1 } }
-          2:
-            min_morale: 2
-            crew: { tactical: { base: 25 } }
-            buff: { add: { wia_ratio: 0.2 } }
-          3:
-            min_morale: 4
-            crew: { tactical: { base: 50 } } # haven't added crew types to CrewModule yet
-            buff: { add: { wia_ratio: 0.3 } }
-          4:
-            min_morale: 6
-            crew: { tactical: { base: 100 } }
-            buff: { add: { wia_ratio: 0.4 } }
   #################### [LIVING_QUARTER] ###################
   quarters_sardine_can:
     type: living_quarter
@@ -1027,8 +923,94 @@ components:
           ENERGY: -3
 
 
-#################### [MISSILES] ###################
+#################### [COMBAT_STATION] ###################
+combat_stations:
+  damcon:
+    name: "Damage Control"
+    modules:
+      levelled_buff:
+        levels:
+          1:
+            crew: { tactical: { base: 10 } } # CrewModule
+            buff: { add: { repair: 1 } } # BuffModule
+          2:
+            min_morale: 2
+            crew: { tactical: { base: 25 } }
+            buff: { add: { repair: 3 } }
+          3:
+            min_morale: 4
+            crew: { tactical: { base: 50 } } # haven't added crew types to CrewModule yet
+            buff: { add: { repair: 6 } }
+          4:
+            min_morale: 6
+            crew: { tactical: { base: 100 } }
+            buff: { add: { repair: 12 } }
+  engineering:
+    name: "Engineering"
+    modules:
+      levelled_buff:
+        levels:
+          1:
+            crew: { tactical: { base: 10 } }
+            buff: { add: { acceleration: 1 } }
+          2:
+            min_morale: 2
+            crew: { tactical: { base: 25 } }
+            buff: { multiply: { energy: 1.1 } }
+          3:
+            min_morale: 4
+            crew: { tactical: { base: 50 } } # haven't added crew types to CrewModule yet
+            buff: { multiply: { dv: 1.1 } }
+          4:
+            min_morale: 6
+            crew: { tactical: { base: 100 } }
+            buff:
+              { add: { acceleration: 1 }, multiply: { energy: 1.1, dv: 1.1 } }
+  nerve_center:
+    name: "Nerve Center"
+  medbay:
+    name: "Medbay"
+    modules:
+      levelled_buff:
+        levels:
+          1:
+            crew: { tactical: { base: 10 } }
+            heal_crew: 5
+          2:
+            min_morale: 2
+            crew: { tactical: { base: 25 } }
+            heal_crew: 12
+          3:
+            min_morale: 4
+            crew: { tactical: { base: 50 } } # haven't added crew types to CrewModule yet
+            heal_crew: 30
+          4:
+            min_morale: 6
+            crew: { tactical: { base: 100 } }
+            heal_crew: 50
+  medevac:
+    name: "Medevac"
+    modules:
+      levelled_buff:
+        levels:
+          1:
+            crew: { tactical: { base: 10 } }
+            buff: { add: { wia_ratio: 0.1 } }
+          2:
+            min_morale: 2
+            crew: { tactical: { base: 25 } }
+            buff: { add: { wia_ratio: 0.2 } }
+          3:
+            min_morale: 4
+            crew: { tactical: { base: 50 } } # haven't added crew types to CrewModule yet
+            buff: { add: { wia_ratio: 0.3 } }
+          4:
+            min_morale: 6
+            crew: { tactical: { base: 100 } }
+            buff: { add: { wia_ratio: 0.4 } }
 
+
+#################### [MISSILES] ###################
 missiles:
   guidance:
     heat_seeking:
