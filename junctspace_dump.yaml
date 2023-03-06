@@ -304,7 +304,7 @@ components:
   quarters_sardine_can:
     type: living_quarter
     density: 1
-    durability: 1
+    durability: 3
     price: 1
     modules:
       quarters:
@@ -313,7 +313,7 @@ components:
   quarters_cramped:
     type: living_quarter
     density: 1
-    durability: 2
+    durability: 6
     price: 1
     modules:
       quarters:
@@ -322,7 +322,7 @@ components:
   quarters_spartan:
     type: living_quarter
     density: 1
-    durability: 2
+    durability: 6
     price: 1
     modules:
       quarters:
@@ -331,7 +331,7 @@ components:
   quarters_decent:
     type: living_quarter
     density: 1
-    durability: 3
+    durability: 9
     price: 2
     modules:
       quarters:
@@ -340,7 +340,7 @@ components:
   quarters_good:
     type: living_quarter
     density: 1
-    durability: 3
+    durability: 9
     price: 2
     modules:
       quarters:
