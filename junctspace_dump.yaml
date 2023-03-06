@@ -405,7 +405,7 @@ components:
     type: recreational
     density: 1
     price: 5
-    durability: 1
+    durability: 3
     modules:
       recreational:
         crew_served: 300
@@ -415,7 +415,7 @@ components:
     type: recreational
     density: 2
     price: 3
-    durability: 3
+    durability: 9
     modules:
       recreational:
         crew_served: 300
@@ -425,7 +425,7 @@ components:
     type: recreational
     density: 1
     price: 1
-    durability: 3
+    durability: 9
     modules:
       recreational:
         crew_served: 300
