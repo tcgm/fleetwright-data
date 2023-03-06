@@ -56,7 +56,7 @@ components:
     name: "Chemical Rocket"
     type: "engine"
     density: 1
-    durability: 1
+    durability: 3
     price: 0.5
     modules:
       crew:
@@ -73,7 +73,7 @@ components:
     name: "Thermal Rocket"
     type: "engine"
     density: 1
-    durability: 5
+    durability: 15
     price: 1
     modules:
       crew:
@@ -91,7 +91,7 @@ components:
     name: "Electric Rocket"
     type: "engine"
     density: 1
-    durability: 2
+    durability: 6
     price: 1
     modules:
       crew:
@@ -109,7 +109,7 @@ components:
     name: "Thermo-Electric Rocket"
     type: "engine"
     density: 1
-    durability: 4
+    durability: 12
     price: 2
     modules:
       engine:
@@ -122,7 +122,7 @@ components:
     name: "Orion Drive"
     type: "engine"
     density: 8
-    durability: 8
+    durability: 24
     price: 6
     modules:
       crew:
@@ -136,9 +136,10 @@ components:
         works_in_atmo: true
         landing_bad_idea: true
   mini_mag_orion:
+    name: "Mini-mag Orion"
     type: "engine"
     density: 5
-    durability: 4
+    durability: 12
     price: 8
     modules:
       crew:
@@ -157,7 +158,7 @@ components:
     name: "Fissile Salt Water Drive"
     type: "engine"
     density: 6
-    durability: 6
+    durability: 18
     price: 9
     modules:
       crew:
@@ -174,7 +175,7 @@ components:
     name: "Fusion Torch"
     type: "engine"
     density: 1
-    durability: 1
+    durability: 3
     price: 12
     modules:
       crew:
