@@ -495,7 +495,7 @@ components:
     type: "ftl_drive"
     density: 6
     price: 0.1
-    durability: 1
+    durability: 3
     modules:
       crew:
         strategic:
@@ -514,7 +514,7 @@ components:
     type: "ftl_drive"
     density: 8
     price: 1
-    durability: 2
+    durability: 6
     modules:
       crew:
         strategic:
@@ -533,7 +533,7 @@ components:
     type: "ftl_drive"
     density: 8
     price: 4
-    durability: 4
+    durability: 12
     modules:
       crew:
         strategic:
@@ -552,7 +552,7 @@ components:
     type: "ftl_drive"
     density: 10
     price: 10
-    durability: 8
+    durability: 24
     modules:
       crew:
         strategic:
@@ -571,7 +571,7 @@ components:
     type: "ftl_drive"
     density: 8
     price: 15
-    durability: 3
+    durability: 9
     modules:
       crew:
         strategic:
@@ -590,7 +590,7 @@ components:
     type: "ftl_drive"
     density: 12
     price: 3
-    durability: 7
+    durability: 21
     modules:
       crew:
         strategic:
