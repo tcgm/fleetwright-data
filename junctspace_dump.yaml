@@ -350,7 +350,7 @@ components:
   survival_rations:
     type: store
     density: 1
-    durability: 1
+    durability: 3
     price: 0.5
     modules:
       stores:
@@ -359,7 +359,7 @@ components:
   basic_rations:
     type: store
     density: 1
-    durability: 1
+    durability: 3
     price: 1
     modules:
       stores:
@@ -368,7 +368,7 @@ components:
   good_rations:
     type: store
     density: 1
-    durability: 1
+    durability: 3
     price: 1.5
     modules:
       stores:
@@ -377,7 +377,7 @@ components:
   algae_reactor:
     type: store
     density: 3
-    durability: 4
+    durability: 12
     price: 2
     modules:
       crew:
@@ -390,7 +390,7 @@ components:
   aquaponics_bay:
     type: store
     density: 2
-    durability: 2
+    durability: 6
     price: 3
     modules:
       crew:
