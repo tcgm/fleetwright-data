@@ -196,18 +196,17 @@ components:
   fuel_cell:
     type: powerplant
     density: 3
-    durability: 3
+    durability: 12
     price: 1
     modules:
       crew:
         strategic:
-          base: 0
           per_volume: 0.5
       converter:
         input:
           chemical_fuel: 3
         output:
-          ENERGY: 30
+          ENERGY: 0.08333 # 1/12
           HEAT: 0
   photovoltaic:
     type: powerplant
@@ -215,83 +214,42 @@ components:
     durability: 1
     price: 1
     modules:
+      #TODO: solar panels ought to be their own module
       converter:
         output:
-          ENERGY: 10
+          ENERGY: 0.1
           HEAT: 0
       crew:
         strategic:
           base: 0
           per_volume: 0.1
-  molten_salt:
+  fission:
     type: powerplant
-    density: 6
-    durability: 8
-    price: 3
+    density: 5
+    durability: 24
+    price: 5 #TODO y=mx+b
     modules:
       crew:
         strategic:
-          base: 6
+          base: 10
           per_volume: 2
       converter:
         output:
-          ENERGY: 20
-          HEAT: 10
-  pebble_bed:
-    type: powerplant
-    density: 4
-    durability: 5
-    price: 2
-    modules:
-      crew:
-        strategic:
-          base: 3
-          per_volume: 1
-      converter:
-        output:
-          ENERGY: 18
-          HEAT: 6
-  fission_fragment:
+          ENERGY: 0.08333 # 1/12
+          HEAT: 4
+  fusion:
     type: powerplant
     density: 3
-    durability: 2
-    price: 5
+    durability: 9
+    price: 6 #TODO y=mx+b
     modules:
       crew:
         strategic:
-          base: 12
-          per_volume: 4
-      converter:
-        output:
-          ENERGY: 32
-          HEAT: 4
-  magneto_inertial:
-    type: powerplant
-    density: 4
-    durability: 2
-    price: 6
-    modules:
-      crew:
-        strategic:
-          base: 7
+          base: 15
           per_volume: 2
       converter:
         output:
-          ENERGY: 35
-          HEAT: 5
-  electrostatic_fusion:
-    type: powerplant
-    density: 2
-    durability: 2
-    price: 5
-    modules:
-      crew:
-        strategic:
-          base: 6
-          per_volume: 2
-      converter:
-        output:
-          ENERGY: 24
+          ENERGY: 0.11111 # 1/9
           HEAT: 4
   #################### [RADIATOR] ###################
   solid_panel:
