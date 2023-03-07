@@ -808,87 +808,30 @@ components:
 combat_stations:
   damcon:
     name: "Damage Control"
-    modules:
-      levelled_buff:
-        levels:
-          1:
-            crew: { tactical: { base: 10 } } # CrewModule
-            buff: { add: { repair: 1 } } # BuffModule
-          2:
-            min_morale: 2
-            crew: { tactical: { base: 25 } }
-            buff: { add: { repair: 3 } }
-          3:
-            min_morale: 4
-            crew: { tactical: { base: 50 } } # haven't added crew types to CrewModule yet
-            buff: { add: { repair: 6 } }
-          4:
-            min_morale: 6
-            crew: { tactical: { base: 100 } }
-            buff: { add: { repair: 12 } }
+    assigned_crew:
+      - crew: {_any: 10}: 
+        buff:
+          add: {repair: 0.1}
+      - crew: {_any: 25}
+        morale: 4
+        buff:
+          add: {repair: 0.12}
+      - crew: {[biological, construct]: 50}
+        morale: 4
+        buff:
+          add: {repair: 0.14}
+      - crew: {biological: 50, construct: 50}: 
+        morale: 6
+        buff:
+          add: {repair: 0.15}
   engineering:
     name: "Engineering"
-    modules:
-      levelled_buff:
-        levels:
-          1:
-            crew: { tactical: { base: 10 } }
-            buff: { add: { acceleration: 1 } }
-          2:
-            min_morale: 2
-            crew: { tactical: { base: 25 } }
-            buff: { multiply: { energy: 1.1 } }
-          3:
-            min_morale: 4
-            crew: { tactical: { base: 50 } } # haven't added crew types to CrewModule yet
-            buff: { multiply: { dv: 1.1 } }
-          4:
-            min_morale: 6
-            crew: { tactical: { base: 100 } }
-            buff:
-              { add: { acceleration: 1 }, multiply: { energy: 1.1, dv: 1.1 } }
   nerve_center:
     name: "Nerve Center"
   medbay:
     name: "Medbay"
-    modules:
-      levelled_buff:
-        levels:
-          1:
-            crew: { tactical: { base: 10 } }
-            heal_crew: 5
-          2:
-            min_morale: 2
-            crew: { tactical: { base: 25 } }
-            heal_crew: 12
-          3:
-            min_morale: 4
-            crew: { tactical: { base: 50 } } # haven't added crew types to CrewModule yet
-            heal_crew: 30
-          4:
-            min_morale: 6
-            crew: { tactical: { base: 100 } }
-            heal_crew: 50
   medevac:
     name: "Medevac"
-    modules:
-      levelled_buff:
-        levels:
-          1:
-            crew: { tactical: { base: 10 } }
-            buff: { add: { wia_ratio: 0.1 } }
-          2:
-            min_morale: 2
-            crew: { tactical: { base: 25 } }
-            buff: { add: { wia_ratio: 0.2 } }
-          3:
-            min_morale: 4
-            crew: { tactical: { base: 50 } } # haven't added crew types to CrewModule yet
-            buff: { add: { wia_ratio: 0.3 } }
-          4:
-            min_morale: 6
-            crew: { tactical: { base: 100 } }
-            buff: { add: { wia_ratio: 0.4 } }
 
 
 #################### [MISSILES] ###################
