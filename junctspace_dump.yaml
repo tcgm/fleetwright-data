@@ -809,18 +809,18 @@ combat_stations:
   damcon:
     name: "Damage Control"
     assigned_crew:
-      - crew: {_any: 10}
+      - any_crew: 10
         buff:
           add: {repair: 0.1}
-      - crew: {_any: 25}
+      - any_crew: 25
         morale: 4
         buff:
           add: {repair: 0.12}
-      - crew: {[biological, construct]: 50}
+      - specific_crew: {[biological, construct]: 50}
         morale: 4
         buff:
           add: {repair: 0.14}
-      - crew: {biological: 50, construct: 50}: 
+      - specific_crew: {biological: 50, construct: 50}: 
         morale: 6
         buff:
           add: {repair: 0.15}
