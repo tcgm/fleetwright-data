@@ -809,7 +809,7 @@ combat_stations:
   damcon:
     name: "Damage Control"
     assigned_crew:
-      - crew: {_any: 10}: 
+      - crew: {_any: 10}
         buff:
           add: {repair: 0.1}
       - crew: {_any: 25}
