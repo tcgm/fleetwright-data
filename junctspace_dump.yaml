@@ -2,6 +2,9 @@
 #%FLEETWRIGHT/PROTOTYPES 0.1
 ---
 resources:
+  HEAT:
+    name: "Heat"
+    storeable: false
   ENERGY:
     name: "Energy"
     storeable: false
