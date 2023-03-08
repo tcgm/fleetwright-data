@@ -823,9 +823,9 @@ combat_stations:
         buff:
           add: {repair: 0.14}
       - specific_crew: 
-        - type: biological
+        - type: [biological]
           amount: 50
-        - type: construct
+        - type: [construct]
           amount: 50
         min_morale: 6
         buff:
