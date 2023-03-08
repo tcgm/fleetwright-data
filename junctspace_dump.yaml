@@ -813,15 +813,15 @@ combat_stations:
         buff:
           add: {repair: 0.1}
       - any_crew: 25
-        morale: 4
+        min_morale: 4
         buff:
           add: {repair: 0.12}
       - specific_crew: {[biological, construct]: 50}
-        morale: 4
+        min_morale: 4
         buff:
           add: {repair: 0.14}
       - specific_crew: {biological: 50, construct: 50}: 
-        morale: 6
+        min_morale: 6
         buff:
           add: {repair: 0.15}
   engineering:
