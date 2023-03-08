@@ -832,6 +832,30 @@ combat_stations:
           add: {repair: 0.15}
   engineering:
     name: "Engineering"
+    assigned_crew:
+      - any_crew: 10
+        buff_choice:
+          - add: {ecm: 1}
+          - add: {sensors: 1}
+      - any_crew: 25
+        min_morale: 4
+        buff_choice:
+          - add: {ecm: 2}
+          - add: {sensors: 2}
+      - specific_crew:
+        - type: [biological, construct]
+          amount: 50
+        min_morale: 4
+        buff:
+          add: {ecm: 3, sensors: 3}
+      - specific_crew: 
+        - type: [biological]
+          amount: 50
+        - type: [construct]
+          amount: 50
+        min_morale: 6
+        buff:
+          add: {ecm: 4, sensors: 4}
   nerve_center:
     name: "Nerve Center"
   medbay:
