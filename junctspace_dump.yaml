@@ -820,7 +820,7 @@ combat_stations:
         min_morale: 4
         buff:
           add: {repair: 0.14}
-      - specific_crew: {biological: 50, construct: 50}: 
+      - specific_crew: {biological: 50, construct: 50}
         min_morale: 6
         buff:
           add: {repair: 0.15}
