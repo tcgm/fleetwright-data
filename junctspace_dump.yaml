@@ -811,16 +811,19 @@ combat_stations:
     assigned_crew:
       - any_crew: 10
         buff:
+          scaling_function: crew
           add: {repair: 0.1}
       - any_crew: 25
         min_morale: 4
         buff:
+          scaling_function: crew
           add: {repair: 0.12}
       - specific_crew:
         - type: [biological, construct]
           amount: 50
         min_morale: 4
         buff:
+          scaling_function: crew
           add: {repair: 0.14}
       - specific_crew: 
         - type: [biological]
@@ -829,14 +832,17 @@ combat_stations:
           amount: 50
         min_morale: 6
         buff:
+          scaling_function: crew
           add: {repair: 0.15}
   engineering:
     name: "Engineering"
     assigned_crew:
       - any_crew: 10
         buff_choice:
-          - add: {ecm: 1}
-          - add: {sensors: 1}
+          - scaling_function: 1
+            add: {ecm: 1}
+          - scaling_function: 1
+            add: {sensors: 1}
       - any_crew: 25
         min_morale: 4
         buff_choice:
@@ -848,6 +854,7 @@ combat_stations:
         min_morale: 4
         buff:
           add: {ecm: 3, sensors: 3}
+          scaling_function: 1
       - specific_crew: 
         - type: [biological]
           amount: 50
@@ -855,6 +862,7 @@ combat_stations:
           amount: 50
         min_morale: 6
         buff:
+          scaling_function: 1
           add: {ecm: 4, sensors: 4}
   nerve_center:
     name: "Nerve Center"
