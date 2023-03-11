@@ -836,6 +836,8 @@ combat_stations:
           add: {repair: 0.15}
   engineering:
     name: "Engineering"
+  nerve_center:
+    name: "Nerve Center"
     assigned_crew:
       - any_crew: 10
         buff_choice:
@@ -864,8 +866,6 @@ combat_stations:
         buff:
           scaling_function: 1
           add: {ecm: 4, sensors: 4}
-  nerve_center:
-    name: "Nerve Center"
   medbay:
     name: "Medbay"
   medevac:
