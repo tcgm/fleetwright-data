@@ -879,27 +879,96 @@ combat_stations:
 missiles:
   guidance:
     heat_seeking:
+      price:
+        light: 0.1
+        heavy: 1
     home_on_jam:
+      price:
+        light: 0.1
+        heavy: 1
     imaging_radar:
+      price:
+        light: 0.1
+        heavy: 1
     center_of_mass:
+      price:
+        light: 0.1
+        heavy: 1
     command_guidance:
+      price:
+        light: 0.1
+        heavy: 1
   payload:
     kinetic:
+      price:
+        light: 0
+        heavy: 0
     inertial_mine:
+      price:
+        light: 0.1
+        heavy: 1
     nuclear_bomb:
+      price:
+        light: 0.6
+        heavy: 5
     neutron_bomb:
+      price:
+        light: 0.8
+        heavy: 6
     casaba_howitzer:
+      price:
+        light: 0.8
+        heavy: 6
     nefp:
+      price:
+        light: 1
+        heavy: 7
     excalibur:
+      price:
+        light: 1.2
+        heavy: 8
     decoy:
+      price:
+        light: 0.3
+        heavy: 4
     em_deflector:
+      price:
+        light: 0.5
+        heavy: 4
     light_gas_gun:
+      price:
+        light: 0.3
+        heavy: 3
     chemical_laser:
+      price:
+        light: 0.3
+        heavy: 3
     laser_relay:
+      price:
+        light: 0.5
+        heavy: 4
     missile_rack:
+      price:
+        light: 1
+        heavy: 3
   propulsion:
     none:
+      price:
+        light: 0
+        heavy: 0
     solid_rocket_motor:
+      price:
+        light: 0.1
+        heavy: 1
     liquid_fueled_rocket:
+      price:
+        light: 0.2
+        heavy: 2
     nuclear_thermal:
+      price:
+        light: 0.6
+        heavy: 6
     nuclear_thermo_electric_hybrid:
+      price:
+        light: 1
+        heavy: 10
