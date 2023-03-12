@@ -188,8 +188,7 @@ components:
         works_in_atmo: false
       converter:
         output:
-          ENERGY: 12
-          HEAT: 3
+          ENERGY: 0.04
 
   #################### [POWERPLANT] ###################
   fuel_cell:
