@@ -801,7 +801,15 @@ components:
           raw_ecm: 1
         active:
           ENERGY: -3
-
+  uplink:
+    type: ewar
+    density: 3
+    durability: 9
+    price: 3
+    modules:
+      crew:
+        strategic:
+          per_volume: 2
 
 #################### [COMBAT_STATION] ###################
 combat_stations:
