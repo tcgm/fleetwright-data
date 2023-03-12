@@ -839,6 +839,10 @@ combat_stations:
           add: {repair: 0.15}
   engineering:
     name: "Engineering"
+    assigned_crew:
+      - any_crew: 10
+        buff:
+          add: {acceleration: 1}
   nerve_center:
     name: "Nerve Center"
     assigned_crew:
