@@ -559,7 +559,7 @@ components:
       ftl_drive:
         ftl_method: "jump"
         jump_tac_tidi: 1
-        jump_tac_energy: 80
+        jump_tac_energy: 0.05555
         jump_str_energy: 8
         jump_range:
           method: linear
@@ -783,8 +783,6 @@ components:
         scaling_function: volume
         add:
           sensors: +1
-        active:
-          ENERGY: -3
   ecm:
     type: ewar
     density: 3
@@ -799,8 +797,6 @@ components:
         scaling_function: volume
         add:
           raw_ecm: 1
-        active:
-          ENERGY: -3
   uplink:
     type: ewar
     density: 3
