@@ -817,7 +817,7 @@ combat_stations:
           scaling_function: crew
           add: {repair: 0.1}
       - any_crew: 25
-        min_morale: 4
+        min_morale: 2
         buff:
           scaling_function: crew
           add: {repair: 0.12}
