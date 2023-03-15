@@ -897,6 +897,32 @@ combat_stations:
           add: {ecm: 4, sensors: 4}
   medbay:
     name: "Medbay"
+    assigned_crew:
+      - any_crew: 10
+        buff:
+          add: {heal_crew: 0.2}
+          scaling_function: crew
+      - any_crew: 25
+        min_morale: 2
+        buff:
+          add: {heal_crew: 0.56}
+          scaling_function: crew
+      - specific_crew:
+        - type: [biological, construct]
+          amount: 50
+        min_morale: 4
+        buff:
+          add: {heal_crew: 0.64}
+          scaling_function: crew
+      - specific_crew:
+        - type: [biological]
+          amount: 50
+        - type: [construct]
+          amount: 50
+        min_morale: 4
+        buff:
+          add: {heal_crew: 0.75}
+          scaling_function: crew
   medevac:
     name: "Medevac"
 
