@@ -843,6 +843,28 @@ combat_stations:
       - any_crew: 10
         buff:
           add: {acceleration: 1}
+      - any_crew: 25
+        min_morale: 2
+        buff_choice:
+          - add: {acceleration: 1}
+          - multiply: {energy: 1.1}
+      - specific_crew:
+        - type: [biological, construct]
+          amount: 50
+        min_morale: 4
+        buff_choice:
+          - add: {acceleration: 1}
+          - multiply: {energy: 1.1}
+          - multiply: {delta_v: 1.1}
+      - specific_crew:
+        - type: [biological]
+          amount: 50
+        - type: [construct]
+          amount: 50
+        min_morale: 4
+        buff:
+          add: {acceleration: 1}
+          multiply: {energy: 1.1, delta_v: 1.1}
   nerve_center:
     name: "Nerve Center"
     assigned_crew:
