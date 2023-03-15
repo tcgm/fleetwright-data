@@ -908,7 +908,7 @@ combat_stations:
           add: {heal_crew: 0.56}
           scaling_function: crew
       - specific_crew:
-        - type: [biological, construct]
+        - type: [biological, infomorph]
           amount: 50
         min_morale: 4
         buff:
@@ -917,7 +917,7 @@ combat_stations:
       - specific_crew:
         - type: [biological]
           amount: 50
-        - type: [construct]
+        - type: [infomorph]
           amount: 50
         min_morale: 4
         buff:
