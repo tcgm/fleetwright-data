@@ -420,6 +420,7 @@ components:
         morale: +2
   #################### [RECREATIONAL] ###################
   vr_chamber:
+    name: VR Chamber
     type: recreational
     density: 1
     price: 5
@@ -430,6 +431,7 @@ components:
         biological: 1
         infomorph: 1
   recreation_server:
+    name: Recreation Server
     type: recreational
     density: 2
     price: 3
@@ -440,6 +442,7 @@ components:
         construct: 1
         infomorph: 1
   board_game_room:
+    name: Board Game Room
     type: recreational
     density: 1
     price: 1
