@@ -310,7 +310,7 @@ components:
         stores: d3he
   #################### [LIVING_QUARTER] ###################
   quarters_sardine_can:
-    name: \"Sardine Can\" quarters
+    name: "\"Sardine Can\" quarters"
     type: living_quarter
     density: 1
     durability: 3
