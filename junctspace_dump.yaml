@@ -501,8 +501,8 @@ components:
       ftl_drive:
         ftl_method: "jump"
         jump_tac_tidi: 15
-        jump_tac_energy: 90
-        jump_str_energy: 90
+        jump_tac_energy: 0.066666
+        jump_str_energy: 0.066666
         jump_range:
           method: log
           constant: 0
@@ -521,8 +521,8 @@ components:
       ftl_drive:
         ftl_method: "jump"
         jump_tac_tidi: 3
-        jump_tac_energy: 60
-        jump_str_energy: 6
+        jump_tac_energy: 0.05
+        jump_str_energy: 0.005
         jump_range:
           method: linear
           constant: 0
@@ -540,8 +540,8 @@ components:
       ftl_drive:
         ftl_method: "jump"
         jump_tac_tidi: 2
-        jump_tac_energy: 50
-        jump_str_energy: 5
+        jump_tac_energy: 0.04
+        jump_str_energy: 0.004
         jump_range:
           method: linear
           constant: 0
@@ -560,7 +560,7 @@ components:
         ftl_method: "jump"
         jump_tac_tidi: 1
         jump_tac_energy: 0.05555
-        jump_str_energy: 8
+        jump_str_energy: 0.00555
         jump_range:
           method: linear
           constant: 0
@@ -578,8 +578,8 @@ components:
       ftl_drive:
         ftl_method: "jump"
         jump_tac_tidi: 4
-        jump_tac_energy: 60
-        jump_str_energy: 6
+        jump_tac_energy: 0.045454
+        jump_str_energy: 0.004545
         jump_range:
           method: linear
           constant: 0
@@ -597,8 +597,8 @@ components:
       ftl_drive:
         ftl_method: "jump"
         jump_tac_tidi: 3
-        jump_tac_energy: 45
-        jump_str_energy: 4.5
+        jump_tac_energy: 0.035714
+        jump_str_energy: 0.0035714
         jump_range:
           method: log
           constant: 0
