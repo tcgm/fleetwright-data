@@ -1,5 +1,5 @@
 %YAML 1.2
-#%FLEETWRIGHT/PROTOTYPES 0.1
+#%FLEETWRIGHT/PROTOTYPES 3.0
 ---
 resources:
   HEAT:
@@ -106,7 +106,7 @@ components:
         works_in_atmo: false
         landing_bad_idea: false
   thermo_electric_rocket:
-    name: "Thermo-Electric Rocket"
+    name: "Thermoelectric Rocket"
     type: "engine"
     density: 1
     durability: 12
@@ -136,7 +136,7 @@ components:
         works_in_atmo: true
         landing_bad_idea: true
   mini_mag_orion:
-    name: "Mini-mag Orion"
+    name: "Magnetic Miniature Orion Drive"
     type: "engine"
     density: 5
     durability: 12
@@ -154,7 +154,7 @@ components:
           ENERGY: 0.03333
         works_in_atmo: false
   fissile_salt_water:
-    name: "Fissile Salt Water Drive"
+    name: "Fissile Saltwater Thruster"
     type: "engine"
     density: 6
     durability: 18
@@ -171,7 +171,7 @@ components:
         works_in_atmo: true
         landing_bad_idea: true
   fusion_torch:
-    name: "Fusion Torch"
+    name: "Fusion Torch Thruster"
     type: "engine"
     density: 1
     durability: 3
@@ -192,7 +192,7 @@ components:
 
   #################### [POWERPLANT] ###################
   fuel_cell:
-    name: Fuel Cell
+    name: "Fuel Cell Generator"
     type: powerplant
     density: 3
     durability: 12
@@ -208,7 +208,7 @@ components:
           ENERGY: 0.08333 # 1/12
           HEAT: 0
   photovoltaic:
-    name: Solar Panel
+    name: "Photovoltaic Solar Panel"
     type: powerplant
     density: 0.2
     durability: 1
@@ -224,7 +224,7 @@ components:
           base: 0
           per_volume: 0.1
   fission:
-    name: Fission Reactor
+    name: "Fission Fragment Reactor"
     type: powerplant
     density: 5
     durability: 24
@@ -239,7 +239,7 @@ components:
           ENERGY: 0.08333 # 1/12
           HEAT: 1
   fusion:
-    name: Fusion Reactor
+    name: "Magneto-Intertial Fusion Reactor"
     type: powerplant
     density: 3
     durability: 9
@@ -255,7 +255,7 @@ components:
           HEAT: 1
   #################### [TANK] ###################
   tank_chemical_fuel:
-    name: Chemical Fuel Tank
+    name: "Chemfuel Tank"
     type: tank
     density: 4
     durability: 1
@@ -264,7 +264,7 @@ components:
       tank:
         stores: chemical_fuel
   tank_inert_fluid:
-    name: Inert Fluid Tank
+    name: "Inert Fluid Tank"
     type: tank
     density: 5
     durability: 1
@@ -273,7 +273,7 @@ components:
       tank:
         stores: inert_fluid
   tank_nuclear_bombs:
-    name: Nuclear Bomb Tank
+    name: "Nuclear Bomb Racks"
     type: tank
     density: 10
     durability: 1
@@ -282,7 +282,7 @@ components:
       tank:
         stores: nuclear_bombs
   tank_fissile_pellets:
-    name: Fissile Pellet Tank
+    name: "Fissile Pellet Storage"
     type: tank
     density: 10
     durability: 1
@@ -291,7 +291,7 @@ components:
       tank:
         stores: fissile_pellets
   tank_dissolved_fissiles:
-    name: Dissolved Fissiles Tank
+    name: "Dissolved Fissile Vat"
     type: tank
     density: 12
     durability: 1
@@ -300,7 +300,7 @@ components:
       tank:
         stores: dissolved_fissiles
   tank_d3he:
-    name: D-3He Tank
+    name: "D-3He Tank"
     type: tank
     density: 3
     durability: 1
@@ -310,7 +310,7 @@ components:
         stores: d3he
   #################### [LIVING_QUARTER] ###################
   quarters_sardine_can:
-    name: "\"Sardine Can\" quarters"
+    name: "Sardine Cans"
     type: living_quarter
     density: 1
     durability: 3
@@ -320,7 +320,7 @@ components:
         crew: 235
         morale: -2
   quarters_cramped:
-    name: Cramped Quarters
+    name: "Cramped Quarters"
     type: living_quarter
     density: 1
     durability: 6
@@ -330,7 +330,7 @@ components:
         crew: 195
         moreale: -1
   quarters_spartan:
-    name: Spartan Quarters
+    name: "Spartan Quarters"
     type: living_quarter
     density: 1
     durability: 6
@@ -340,7 +340,7 @@ components:
         crew: 155
         morale: +0
   quarters_decent:
-    name: Decent Quarters
+    name: "Decent Quarters"
     type: living_quarter
     density: 1
     durability: 9
@@ -350,7 +350,7 @@ components:
         crew: 115
         morale: +1
   quarters_good:
-    name: Good Quarters
+    name: "Good Quarters"
     type: living_quarter
     density: 1
     durability: 9
@@ -361,7 +361,7 @@ components:
         morale: +2
   #################### [STORE] ###################
   survival_rations:
-    name: Survival Rations
+    name: "Survival Rations Storage"
     type: store
     density: 1
     durability: 3
@@ -371,7 +371,7 @@ components:
         crew: 250
         morale: -2
   basic_rations:
-    name: Basic Rations
+    name: "Basic Rations Storage"
     type: store
     density: 1
     durability: 3
@@ -381,7 +381,7 @@ components:
         crew: 200
         morale: 0
   good_rations:
-    name: Good Rations
+    name: "Good Rations Storage"
     type: store
     density: 1
     durability: 3
@@ -391,7 +391,7 @@ components:
         crew: 180
         morale: +2
   algae_reactor:
-    name: Algae Bioreactor
+    name: "Algae Bioreactor"
     type: store
     density: 3
     durability: 12
@@ -405,7 +405,7 @@ components:
         unlimited: true
         morale: 0
   aquaponics_bay:
-    name: Aquaponics Bay
+    name: "Aquaponics Bay"
     type: store
     density: 2
     durability: 6
@@ -420,7 +420,7 @@ components:
         morale: +2
   #################### [RECREATIONAL] ###################
   vr_chamber:
-    name: VR Chamber
+    name: "Virtual Reality Chamber"
     type: recreational
     density: 1
     price: 5
@@ -431,7 +431,7 @@ components:
         biological: 1
         infomorph: 1
   recreation_server:
-    name: Recreation Server
+    name: "Recreation Server"
     type: recreational
     density: 2
     price: 3
@@ -442,7 +442,7 @@ components:
         construct: 1
         infomorph: 1
   board_game_room:
-    name: Board Game Room
+    name: "Board Game Room"
     type: recreational
     density: 1
     price: 1
@@ -454,6 +454,7 @@ components:
         construct: 1
   #################### [COMMAND] ###################
   civilian_bridge:
+    name: "Civilian Bridge"
     type: command
     density: 1
     durability: 6
@@ -470,6 +471,7 @@ components:
         operate_defensive: false
         operate_navigation: true
   warship_cic:
+    name: "Warship Combat Information Centre"
     type: command
     density: 2
     durability: 12
@@ -486,6 +488,7 @@ components:
         operate_defensive: true
         operate_navigation: true
   shipmind_brainframe:
+    name: "Shipmind Brainframe"
     type: command
     density: 3
     durability: 12
@@ -513,6 +516,7 @@ components:
 
   #################### [FTL] ###################
   jump_improvised:
+    name: "MacGyver Drive"
     type: "ftl_drive"
     density: 6
     price: 0.1
@@ -532,6 +536,7 @@ components:
           base: 2
           multiplier: 20
   jump_rudimentary:
+    name: "Rudimentary Jump Drive"
     type: "ftl_drive"
     density: 8
     price: 1
@@ -551,6 +556,7 @@ components:
           constant: 0
           multiplier: 12.5
   jump_standard:
+    name: "Standard Jump Drive"
     type: "ftl_drive"
     density: 8
     price: 4
@@ -570,6 +576,7 @@ components:
           constant: 0
           multiplier: 25
   jump_tactical:
+    name: "Tactical Jump Drive"
     type: "ftl_drive"
     density: 10
     price: 10
@@ -608,6 +615,7 @@ components:
           constant: 0
           multiplier: 50
   jump_industrial:
+    name: "Industrial Jump Drive"
     type: "ftl_drive"
     density: 12
     price: 3
@@ -676,6 +684,7 @@ components:
         power: 6
         power_upgrade: 6
   particle_beam:
+    name: "Particle Beam Accelerator"
     type: weapon_direct
     density: 2
     durability: 2
@@ -702,6 +711,7 @@ components:
         # which is "+2, then +4, +8 after"
   #################### [WEAPON_GUIDED] ###################
   light_vls:
+    name: "Light Vertical Launch System (VLS)"
     type: weapon_guided
     density: 5
     durability: 3
@@ -718,6 +728,7 @@ components:
           ENERGY: -0.033333 # 1/30
     __incomplete: 1
   light_magazine:
+    name: "Light Magazine"
     type: weapon_guided
     density: 5
     durability: 4
@@ -733,6 +744,7 @@ components:
         active:
           ENERGY: -1
   light_em_catapult:
+    name: "Light Electromagnetic Catapult (EMCat)"
     type: weapon_guided
     density: 3
     durability: 3
@@ -748,6 +760,7 @@ components:
         active:
           ENERGY: -4
   heavy_vls:
+    name: "Heavy Vertical Launch System (VLS)"
     type: weapon_guided
     density: 5
     durability: 3
@@ -763,6 +776,7 @@ components:
         active:
           ENERGY: -1
   heavy_magazine:
+    name: "Heavy Magazine"
     type: weapon_guided
     density: 5
     durability: 4
@@ -778,6 +792,7 @@ components:
         active:
           ENERGY: -1
   heavy_em_catapult:
+    name: "Heavy Electromagnetic Catapult (EMCat)"
     type: weapon_guided
     density: 4
     durability: 4
@@ -794,6 +809,7 @@ components:
           ENERGY: -8
   #################### [EWAR] ###################
   sensors:
+    name: "Sensor Suite"
     type: ewar
     density: 3
     durability: 3
@@ -808,6 +824,7 @@ components:
         add:
           sensors: +1
   ecm:
+    name: "Electronic Countermeasures"
     type: ewar
     density: 3
     durability: 3
