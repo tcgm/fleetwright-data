@@ -626,8 +626,8 @@ components:
           precision_targeting: 1
           gauranteed_hit: 2
           probable_hit: 3
-        power: 5
-        power_upgrade: 5
+        power: 7
+        power_upgrade: 7
   laser:
     type: weapon_direct
     density: 3
@@ -649,8 +649,8 @@ components:
           precision_targeting: 2
           gauranteed_hit: 3
           probable_hit: 4
-        power: 5
-        power_upgrade: 5
+        power: 6
+        power_upgrade: 6
   particle_beam:
     type: weapon_direct
     density: 2
@@ -675,7 +675,7 @@ components:
         power: 2
         power_upgrade: 6
         #TODO: implement the actual function somehow
-        # which is "+2, then +4, +6 after"
+        # which is "+2, then +4, +8 after"
   #################### [WEAPON_GUIDED] ###################
   light_vls:
     type: weapon_guided
