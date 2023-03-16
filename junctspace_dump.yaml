@@ -673,7 +673,7 @@ components:
           gauranteed_hit: 4
           probable_hit: 5
         power: 2
-        power_upgrade: 6
+        power_upgrade: 8
         #TODO: implement the actual function somehow
         # which is "+2, then +4, +8 after"
   #################### [WEAPON_GUIDED] ###################
