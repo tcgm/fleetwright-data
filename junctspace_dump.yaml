@@ -192,6 +192,7 @@ components:
 
   #################### [POWERPLANT] ###################
   fuel_cell:
+    name: Fuel Cell
     type: powerplant
     density: 3
     durability: 12
@@ -207,6 +208,7 @@ components:
           ENERGY: 0.08333 # 1/12
           HEAT: 0
   photovoltaic:
+    name: Solar Panel
     type: powerplant
     density: 0.2
     durability: 1
@@ -222,6 +224,7 @@ components:
           base: 0
           per_volume: 0.1
   fission:
+    name: Fission Reactor
     type: powerplant
     density: 5
     durability: 24
@@ -236,6 +239,7 @@ components:
           ENERGY: 0.08333 # 1/12
           HEAT: 1
   fusion:
+    name: Fusion Reactor
     type: powerplant
     density: 3
     durability: 9
