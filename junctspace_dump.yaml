@@ -310,6 +310,7 @@ components:
         stores: d3he
   #################### [LIVING_QUARTER] ###################
   quarters_sardine_can:
+    name: \"Sardine Can\" quarters
     type: living_quarter
     density: 1
     durability: 3
@@ -319,6 +320,7 @@ components:
         crew: 235
         morale: -2
   quarters_cramped:
+    name: Cramped Quarters
     type: living_quarter
     density: 1
     durability: 6
@@ -328,6 +330,7 @@ components:
         crew: 195
         moreale: -1
   quarters_spartan:
+    name: Spartan Quarters
     type: living_quarter
     density: 1
     durability: 6
@@ -337,6 +340,7 @@ components:
         crew: 155
         morale: +0
   quarters_decent:
+    name: Decent Quarters
     type: living_quarter
     density: 1
     durability: 9
@@ -346,6 +350,7 @@ components:
         crew: 115
         morale: +1
   quarters_good:
+    name: Good Quarters
     type: living_quarter
     density: 1
     durability: 9
