@@ -361,6 +361,7 @@ components:
         morale: +2
   #################### [STORE] ###################
   survival_rations:
+    name: Survival Rations
     type: store
     density: 1
     durability: 3
@@ -370,6 +371,7 @@ components:
         crew: 250
         morale: -2
   basic_rations:
+    name: Basic Rations
     type: store
     density: 1
     durability: 3
@@ -379,6 +381,7 @@ components:
         crew: 200
         morale: 0
   good_rations:
+    name: Good Rations
     type: store
     density: 1
     durability: 3
@@ -388,6 +391,7 @@ components:
         crew: 180
         morale: +2
   algae_reactor:
+    name: Algae Bioreactor
     type: store
     density: 3
     durability: 12
@@ -401,6 +405,7 @@ components:
         unlimited: true
         morale: 0
   aquaponics_bay:
+    name: Aquaponics Bay
     type: store
     density: 2
     durability: 6
