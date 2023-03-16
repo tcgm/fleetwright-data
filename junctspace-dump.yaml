@@ -51,12 +51,12 @@ resources:
 
 # ctrl+f for [TYPE] to find a type
 components:
-  #################### [DRIVE] ###################
+#################### [DRIVE] ###################
   chemical_rocket:
     name: "Chemical Rocket"
     type: "engine"
     density: 1
-    durability: 3
+    durability: 1
     price: 0.5
     modules:
       crew:
@@ -65,7 +65,7 @@ components:
           per_volume: 1
       engine:
         thrust: 275
-        fuel:
+        fuel: 
           "chemical_fuel": 10
         works_in_atmo: true
         landing_bad_idea: false
@@ -73,7 +73,7 @@ components:
     name: "Thermal Rocket"
     type: "engine"
     density: 1
-    durability: 15
+    durability: 5
     price: 1
     modules:
       crew:
@@ -84,14 +84,14 @@ components:
         thrust: 250
         fuel:
           "inert_fluid": 5
-          HEAT: 1
+          "HEAT": 10
         works_in_atmo: true
         landing_bad_idea: false
   electric_rocket:
     name: "Electric Rocket"
     type: "engine"
     density: 1
-    durability: 6
+    durability: 2 
     price: 1
     modules:
       crew:
@@ -102,27 +102,27 @@ components:
         thrust: 40
         fuel:
           "inert_fluid": 0.025
-          ENERGY: 0.02
+          ENERGY: 10
         works_in_atmo: false
         landing_bad_idea: false
   thermo_electric_rocket:
     name: "Thermoelectric Rocket"
     type: "engine"
     density: 1
-    durability: 12
+    durability: 4
     price: 2
     modules:
       engine:
         thrust: 250
         fuel:
           "inert_fluid": 2.5
-          ENERGY: 0.02
-          HEAT: 0.5
+          HEAT: 5
+          ENERGY: 10
   orion_drive:
     name: "Orion Drive"
     type: "engine"
     density: 8
-    durability: 24
+    durability: 8
     price: 6
     modules:
       crew:
@@ -139,7 +139,7 @@ components:
     name: "Magnetic Miniature Orion Drive"
     type: "engine"
     density: 5
-    durability: 12
+    durability: 4
     price: 8
     modules:
       crew:
@@ -151,13 +151,14 @@ components:
         fuel:
           "fissile_pellets": 0.25
         alternator:
-          ENERGY: 0.03333
+          ENERGY: 16
+          HEAT: 4
         works_in_atmo: false
   fissile_salt_water:
     name: "Fissile Saltwater Thruster"
     type: "engine"
     density: 6
-    durability: 18
+    durability: 6
     price: 9
     modules:
       crew:
@@ -174,7 +175,7 @@ components:
     name: "Fusion Torch Thruster"
     type: "engine"
     density: 1
-    durability: 3
+    durability: 1
     price: 12
     modules:
       crew:
@@ -187,25 +188,27 @@ components:
           "d3he": 0.05
         works_in_atmo: false
       converter:
-        output:
-          ENERGY: 0.04
+        output: 
+          ENERGY: 12
+          HEAT: 3
 
-  #################### [POWERPLANT] ###################
+#################### [POWERPLANT] ###################
   fuel_cell:
     name: "Fuel Cell Generator"
     type: powerplant
     density: 3
-    durability: 12
+    durability: 3
     price: 1
     modules:
       crew:
         strategic:
+          base: 0
           per_volume: 0.5
       converter:
         input:
           chemical_fuel: 3
         output:
-          ENERGY: 0.08333 # 1/12
+          ENERGY: 30
           HEAT: 0
   photovoltaic:
     name: "Photovoltaic Solar Panel"
@@ -214,46 +217,172 @@ components:
     durability: 1
     price: 1
     modules:
-      #TODO: solar panels ought to be their own module
       converter:
         output:
-          ENERGY: 0.1
+          ENERGY: 10
           HEAT: 0
       crew:
         strategic:
           base: 0
           per_volume: 0.1
-  fission:
+  molten_salt:
+    name: "Molten Salt Reactor"
+    type: powerplant
+    density: 6
+    durability: 8
+    price: 3
+    modules:
+      crew:
+        strategic:
+          base: 6
+          per_volume: 2
+      converter:
+        output:
+          ENERGY: 20
+          HEAT: 10
+  pebble_bed:
+    name: "Pebble Bed Reactor"
+    type: powerplant
+    density: 4
+    durability: 5
+    price: 2
+    modules:
+      crew:
+        strategic:
+          base: 3
+          per_volume: 1
+      converter:
+        output:
+          ENERGY: 18
+          HEAT: 6
+  fission_fragment:
     name: "Fission Fragment Reactor"
     type: powerplant
-    density: 5
-    durability: 24
-    price: 5 #TODO y=mx+b
-    modules:
-      crew:
-        strategic:
-          base: 10
-          per_volume: 2
-      converter:
-        output:
-          ENERGY: 0.08333 # 1/12
-          HEAT: 1
-  fusion:
-    name: "Magneto-Intertial Fusion Reactor"
-    type: powerplant
     density: 3
-    durability: 9
-    price: 6 #TODO y=mx+b
+    durability: 2
+    price: 5
     modules:
       crew:
         strategic:
-          base: 15
+          base: 12
+          per_volume: 4
+      converter:
+        output:
+          ENERGY: 32
+          HEAT: 4
+  magneto_inertial:
+    name: "Magneto-Intertial Generator"
+    type: powerplant
+    density: 4
+    durability: 2
+    price: 6
+    modules:
+      crew:
+        strategic:
+          base: 7
           per_volume: 2
       converter:
         output:
-          ENERGY: 0.11111 # 1/9
-          HEAT: 1
-  #################### [TANK] ###################
+          ENERGY: 35
+          HEAT: 5
+  electrostatic_fusion:
+    name: "Electrostatic Fusion Plant"
+    type: powerplant
+    density: 2
+    durability: 2
+    price: 5
+    modules:
+      crew:
+        strategic:
+          base: 6
+          per_volume: 2
+      converter:
+        output:
+          ENERGY: 24
+          HEAT: 4
+#################### [RADIATOR] ###################
+  solid_panel:
+    name: "Solid Panel Radiator"
+    type: radiator
+    density: 4
+    durability: 2
+    price: 1
+    modules:
+      crew:
+        strategic:
+          base: 5
+          per_volume: 1
+      converter:
+        input:
+          ENERGY: 0.5
+        output:
+          HEAT: -12
+  open_cycle:
+    name: "Open Cycle Radiator"
+    type: radiator
+    density: 1
+    durability: 10
+    price: 1
+    modules:
+      crew:
+        strategic:
+          base: 0
+          per_volume: 1
+      converter:
+        input:
+          inert_fluid: 3
+          ENERGY: 0.5
+        output:
+          HEAT: -30
+  ballistic_droplet:
+    name: "Kinetic Droplet Ejector"
+    type: radiator
+    density: 3
+    durability: 3
+    price: 2
+    modules:
+      crew:
+        strategic:
+          base: 4
+          per_volume: 2
+      converter:
+        input:
+          ENERGY: 0.5
+        output:
+          HEAT: -20
+  em_droplet:
+    name: "Electromagnetic Droplet Ejector"
+    type: radiator
+    density: 2
+    durability: 6
+    price: 4
+    modules:
+      crew:
+        strategic:
+          base: 5
+          per_volume: 3
+      converter:
+        input:
+          ENERGY: 2
+        output:
+          HEAT: -24
+  dusty_plasma:
+    name: "Dusty Plasmaic Radiator"
+    type: radiator
+    density: 2
+    durability: 5
+    price: 7
+    modules:
+      crew:
+        strategic:
+          base: 6
+          per_volume: 3
+      converter:
+        input:
+          ENERGY: 3
+        output:
+          HEAT: -36
+#################### [TANK] ###################
   tank_chemical_fuel:
     name: "Chemfuel Tank"
     type: tank
@@ -308,12 +437,66 @@ components:
     modules:
       tank:
         stores: d3he
-  #################### [LIVING_QUARTER] ###################
+#################### [COMBAT_STATION] ###################
+  damcon:
+    name: "Damage Control"
+    type: combat_station
+    density: 2
+    durability: 5
+    price: 2
+    fixed_volume: 1
+    modules:
+      levelled_buff:
+        levels:
+          1:
+            crew: {base: 10} # CrewModule
+            buff: {add: {repair: 1}} # BuffModule
+          2:
+            min_morale: 2
+            crew: {base: 25}
+            buff: {add: {repair: 3}}
+          3:
+            min_morale: 4
+            crew: {base: 50} # haven't added crew types to CrewModule yet
+            buff: {add: {repair: 6}}
+          4:
+            min_morale: 6
+            crew: {base: 100}
+            buff: {add: {repair: 12}}
+  engineering:
+    name: "Engineering Bay"
+    type: combat_station
+    density: 3
+    durability: 3
+    price: 4
+    fixed_volume: 1
+  nerve_center:
+    name: "Nerve Centre"
+    type: combat_station
+    density: 3
+    durability: 1
+    price: 5
+    fixed_volume: 1
+  medbay:
+    name: "Medbay"
+    type: combat_station
+    density: 2
+    durability: 2
+    price: 5
+    fixed_volume: 1
+  medevac:
+    name: "Medical EVAC"
+    type: combat_station
+    density: 2
+    durability: 5
+    price: 3
+    fixed_volume: 1
+#################### [LIVING_QUARTER] ###################
   quarters_sardine_can:
     name: "Sardine Cans"
     type: living_quarter
     density: 1
-    durability: 3
+    durability: 1
     price: 1
     modules:
       quarters:
@@ -323,7 +506,7 @@ components:
     name: "Cramped Quarters"
     type: living_quarter
     density: 1
-    durability: 6
+    durability: 2
     price: 1
     modules:
       quarters:
@@ -333,7 +516,7 @@ components:
     name: "Spartan Quarters"
     type: living_quarter
     density: 1
-    durability: 6
+    durability: 2
     price: 1
     modules:
       quarters:
@@ -343,7 +526,7 @@ components:
     name: "Decent Quarters"
     type: living_quarter
     density: 1
-    durability: 9
+    durability: 3
     price: 2
     modules:
       quarters:
@@ -353,18 +536,18 @@ components:
     name: "Good Quarters"
     type: living_quarter
     density: 1
-    durability: 9
+    durability: 3
     price: 2
     modules:
       quarters:
         crew: 75
         morale: +2
-  #################### [STORE] ###################
+#################### [STORE] ###################
   survival_rations:
     name: "Survival Rations Storage"
     type: store
     density: 1
-    durability: 3
+    durability: 1
     price: 0.5
     modules:
       stores:
@@ -374,7 +557,7 @@ components:
     name: "Basic Rations Storage"
     type: store
     density: 1
-    durability: 3
+    durability: 1
     price: 1
     modules:
       stores:
@@ -384,7 +567,7 @@ components:
     name: "Good Rations Storage"
     type: store
     density: 1
-    durability: 3
+    durability: 1
     price: 1.5
     modules:
       stores:
@@ -394,7 +577,7 @@ components:
     name: "Algae Bioreactor"
     type: store
     density: 3
-    durability: 12
+    durability: 4
     price: 2
     modules:
       crew:
@@ -408,7 +591,7 @@ components:
     name: "Aquaponics Bay"
     type: store
     density: 2
-    durability: 6
+    durability: 2
     price: 3
     modules:
       crew:
@@ -418,13 +601,13 @@ components:
         crew: 50
         unlimited: true
         morale: +2
-  #################### [RECREATIONAL] ###################
+#################### [RECREATIONAL] ###################
   vr_chamber:
-    name: "Virtual Reality Chamber"
+    name: "VR Chamber"
     type: recreational
     density: 1
     price: 5
-    durability: 3
+    durability: 1
     modules:
       recreational:
         crew_served: 300
@@ -435,7 +618,7 @@ components:
     type: recreational
     density: 2
     price: 3
-    durability: 9
+    durability: 3
     modules:
       recreational:
         crew_served: 300
@@ -446,18 +629,18 @@ components:
     type: recreational
     density: 1
     price: 1
-    durability: 9
+    durability: 3
     modules:
       recreational:
         crew_served: 300
         biological: 1
         construct: 1
-  #################### [COMMAND] ###################
+#################### [COMMAND] ###################
   civilian_bridge:
     name: "Civilian Bridge"
     type: command
     density: 1
-    durability: 6
+    durability: 2
     price: 1
     fixed_volume: 1
     modules:
@@ -474,7 +657,7 @@ components:
     name: "Warship Combat Information Centre"
     type: command
     density: 2
-    durability: 12
+    durability: 4
     price: 3
     fixed_volume: 1
     modules:
@@ -491,7 +674,7 @@ components:
     name: "Shipmind Brainframe"
     type: command
     density: 3
-    durability: 12
+    durability: 4
     price: 6
     fixed_volume: 1
     modules:
@@ -514,17 +697,17 @@ components:
       #TODO jump energy buff
       #TODO evasion buff
 
-  #################### [FTL] ###################
+#################### [FTL] ###################
   jump_improvised:
     name: "MacGyver Drive"
     type: "ftl_drive"
     density: 6
     price: 0.1
-    durability: 3
+    durability: 1
+    crew:
+      strategic:
+        per_volume: 20
     modules:
-      crew:
-        strategic:
-          per_volume: 20
       ftl_drive:
         ftl_method: "jump"
         jump_tac_tidi: 15
@@ -540,12 +723,12 @@ components:
     type: "ftl_drive"
     density: 8
     price: 1
-    durability: 6
+    durability: 2
+    crew:
+      strategic:
+        base: 10
+        per_volume: 4
     modules:
-      crew:
-        strategic:
-          base: 10
-          per_volume: 4
       ftl_drive:
         ftl_method: "jump"
         jump_tac_tidi: 3
@@ -560,12 +743,12 @@ components:
     type: "ftl_drive"
     density: 8
     price: 4
-    durability: 12
+    durability: 4
+    crew:
+      strategic:
+        base: 5
+        per_volume: 2
     modules:
-      crew:
-        strategic:
-          base: 5
-          per_volume: 2
       ftl_drive:
         ftl_method: "jump"
         jump_tac_tidi: 2
@@ -580,31 +763,24 @@ components:
     type: "ftl_drive"
     density: 10
     price: 10
-    durability: 24
+    durability: 8
     modules:
-      crew:
-        strategic:
-          base: 5
-          per_volume: 3
       ftl_drive:
         ftl_method: "jump"
         jump_tac_tidi: 1
-        jump_tac_energy: 0.05555
+        jump_tac_energy: 80
         jump_str_energy: 8
         jump_range:
           method: linear
           constant: 0
           multiplier: 25
   jump_longrange:
+    name: "Long Range Jump Drive"
     type: "ftl_drive"
     density: 8
     price: 15
-    durability: 9
+    durability: 3
     modules:
-      crew:
-        strategic:
-          base: 6
-          per_volume: 4
       ftl_drive:
         ftl_method: "jump"
         jump_tac_tidi: 4
@@ -619,12 +795,8 @@ components:
     type: "ftl_drive"
     density: 12
     price: 3
-    durability: 21
+    durability: 7
     modules:
-      crew:
-        strategic:
-          base: 2
-          per_volume: 1
       ftl_drive:
         ftl_method: "jump"
         jump_tac_tidi: 3
@@ -635,8 +807,9 @@ components:
           constant: 0
           base: 4.5
           multiplier: 45
-  #################### [WEAPON_DIRECT] ###################
+#################### [WEAPON_DIRECT] ###################
   macron_gun:
+    name: "Macron Cannon"
     type: weapon_direct
     density: 2
     durability: 2
@@ -649,17 +822,9 @@ components:
       weapon_direct:
         active:
           ENERGY: -4
-        range:
-          precision_targeting: 1
-          gauranteed_hit: 2
-          probable_hit: 4
-        range_upgrade:
-          precision_targeting: 1
-          gauranteed_hit: 2
-          probable_hit: 3
-        power: 7
-        power_upgrade: 7
+    __incomplete: 1
   laser:
+    name: "LASER Emitter"
     type: weapon_direct
     density: 3
     durability: 3
@@ -672,16 +837,7 @@ components:
       weapon_direct:
         active:
           ENERGY: -5
-        range:
-          precision_targeting: 4
-          gauranteed_hit: 7
-          probable_hit: 10
-        range_upgrade:
-          precision_targeting: 2
-          gauranteed_hit: 3
-          probable_hit: 4
-        power: 6
-        power_upgrade: 6
+    __incomplete: 1
   particle_beam:
     name: "Particle Beam Accelerator"
     type: weapon_direct
@@ -696,19 +852,8 @@ components:
       weapon_direct:
         active:
           ENERGY: -5
-        range:
-          precision_targeting: 2
-          gauranteed_hit: 4
-          probable_hit: 6
-        range_upgrade:
-          precision_targeting: 2
-          gauranteed_hit: 4
-          probable_hit: 5
-        power: 2
-        power_upgrade: 8
-        #TODO: implement the actual function somehow
-        # which is "+2, then +4, +8 after"
-  #################### [WEAPON_GUIDED] ###################
+    __incomplete: 1
+#################### [WEAPON_GUIDED] ###################
   light_vls:
     name: "Light Vertical Launch System (VLS)"
     type: weapon_guided
@@ -721,8 +866,6 @@ components:
           base: 4
           per_volume: 2
       weapon_guided:
-        launch_method: vls
-        size: light
         active:
           ENERGY: -1
     __incomplete: 1
@@ -738,10 +881,9 @@ components:
           base: 3
           per_volume: 1
       weapon_guided:
-        launch_method: magazine
-        size: light
         active:
           ENERGY: -1
+    __incomplete: 1
   light_em_catapult:
     name: "Light Electromagnetic Catapult (EMCat)"
     type: weapon_guided
@@ -754,8 +896,6 @@ components:
           base: 5
           per_volume: 1
       weapon_guided:
-        launch_method: magazine
-        size: light
         active:
           ENERGY: -4
   heavy_vls:
@@ -770,8 +910,6 @@ components:
           base: 3
           per_volume: 2
       weapon_guided:
-        launch_method: vls
-        size: heavy
         active:
           ENERGY: -1
   heavy_magazine:
@@ -786,8 +924,6 @@ components:
           base: 2
           per_volume: 1
       weapon_guided:
-        launch_method: magazine
-        size: heavy
         active:
           ENERGY: -1
   heavy_em_catapult:
@@ -802,11 +938,9 @@ components:
           base: 5
           per_volume: 1
       weapon_guided:
-        launch_method: magazine
-        size: heavy
         active:
           ENERGY: -8
-  #################### [EWAR] ###################
+#################### [EWAR] ###################
   sensors:
     name: "Sensor Suite"
     type: ewar
@@ -822,6 +956,8 @@ components:
         scaling_function: volume
         add:
           sensors: +1
+        active:
+          ENERGY: -3
   ecm:
     name: "Electronic Countermeasures"
     type: ewar
@@ -837,230 +973,5 @@ components:
         scaling_function: volume
         add:
           raw_ecm: 1
-  uplink:
-    type: ewar
-    density: 3
-    durability: 9
-    price: 3
-    modules:
-      crew:
-        strategic:
-          per_volume: 2
-
-#################### [COMBAT_STATION] ###################
-combat_stations:
-  damcon:
-    name: "Damage Control"
-    assigned_crew:
-      - any_crew: 10
-        buff:
-          scaling_function: crew
-          add: {repair: 0.1}
-      - any_crew: 25
-        min_morale: 2
-        buff:
-          scaling_function: crew
-          add: {repair: 0.12}
-      - specific_crew:
-        - type: [biological, construct]
-          amount: 50
-        min_morale: 4
-        buff:
-          scaling_function: crew
-          add: {repair: 0.14}
-      - specific_crew: 
-        - type: [biological]
-          amount: 50
-        - type: [construct]
-          amount: 50
-        min_morale: 6
-        buff:
-          scaling_function: crew
-          add: {repair: 0.15}
-  engineering:
-    name: "Engineering"
-    assigned_crew:
-      - any_crew: 10
-        buff:
-          add: {acceleration: 1}
-      - any_crew: 25
-        min_morale: 2
-        buff_choice:
-          - add: {acceleration: 1}
-          - multiply: {energy: 1.1}
-      - specific_crew:
-        - type: [biological, construct]
-          amount: 50
-        min_morale: 4
-        buff_choice:
-          - add: {acceleration: 1}
-          - multiply: {energy: 1.1}
-          - multiply: {delta_v: 1.1}
-      - specific_crew:
-        - type: [biological]
-          amount: 50
-        - type: [construct]
-          amount: 50
-        min_morale: 4
-        buff:
-          add: {acceleration: 1}
-          multiply: {energy: 1.1, delta_v: 1.1}
-  nerve_center:
-    name: "Nerve Center"
-    assigned_crew:
-      - any_crew: 10
-        buff_choice:
-          - scaling_function: 1
-            add: {ecm: 1}
-          - scaling_function: 1
-            add: {sensors: 1}
-      - any_crew: 25
-        min_morale: 4
-        buff_choice:
-          - add: {ecm: 2}
-          - add: {sensors: 2}
-      - specific_crew:
-        - type: [biological, construct]
-          amount: 50
-        min_morale: 4
-        buff:
-          add: {ecm: 3, sensors: 3}
-          scaling_function: 1
-      - specific_crew: 
-        - type: [biological]
-          amount: 50
-        - type: [construct]
-          amount: 50
-        min_morale: 6
-        buff:
-          scaling_function: 1
-          add: {ecm: 4, sensors: 4}
-  medbay:
-    name: "Medbay"
-    assigned_crew:
-      - any_crew: 10
-        buff:
-          add: {heal_crew: 0.2}
-          scaling_function: crew
-      - any_crew: 25
-        min_morale: 2
-        buff:
-          add: {heal_crew: 0.56}
-          scaling_function: crew
-      - specific_crew:
-        - type: [biological, infomorph]
-          amount: 50
-        min_morale: 4
-        buff:
-          add: {heal_crew: 0.64}
-          scaling_function: crew
-      - specific_crew:
-        - type: [biological]
-          amount: 50
-        - type: [infomorph]
-          amount: 50
-        min_morale: 4
-        buff:
-          add: {heal_crew: 0.75}
-          scaling_function: crew
-  medevac:
-    name: "Medevac"
-
-
-#################### [MISSILES] ###################
-missiles:
-  guidance:
-    heat_seeking:
-      price:
-        light: 0.1
-        heavy: 1
-    home_on_jam:
-      price:
-        light: 0.1
-        heavy: 1
-    imaging_radar:
-      price:
-        light: 0.1
-        heavy: 1
-    center_of_mass:
-      price:
-        light: 0.1
-        heavy: 1
-    command_guidance:
-      price:
-        light: 0.1
-        heavy: 1
-  payload:
-    kinetic:
-      price:
-        light: 0
-        heavy: 0
-    inertial_mine:
-      price:
-        light: 0.1
-        heavy: 1
-    nuclear_bomb:
-      price:
-        light: 0.6
-        heavy: 5
-    neutron_bomb:
-      price:
-        light: 0.8
-        heavy: 6
-    casaba_howitzer:
-      price:
-        light: 0.8
-        heavy: 6
-    nefp:
-      price:
-        light: 1
-        heavy: 7
-    excalibur:
-      price:
-        light: 1.2
-        heavy: 8
-    decoy:
-      price:
-        light: 0.3
-        heavy: 4
-    em_deflector:
-      price:
-        light: 0.5
-        heavy: 4
-    light_gas_gun:
-      price:
-        light: 0.3
-        heavy: 3
-    chemical_laser:
-      price:
-        light: 0.3
-        heavy: 3
-    laser_relay:
-      price:
-        light: 0.5
-        heavy: 4
-    missile_rack:
-      price:
-        light: 1
-        heavy: 3
-  propulsion:
-    none:
-      price:
-        light: 0
-        heavy: 0
-    solid_rocket_motor:
-      price:
-        light: 0.1
-        heavy: 1
-    liquid_fueled_rocket:
-      price:
-        light: 0.2
-        heavy: 2
-    nuclear_thermal:
-      price:
-        light: 0.6
-        heavy: 6
-    nuclear_thermo_electric_hybrid:
-      price:
-        light: 1
-        heavy: 10
+        active:
+          ENERGY: -3
