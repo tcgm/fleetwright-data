@@ -660,6 +660,7 @@ components:
         power: 7
         power_upgrade: 7
   laser:
+    name: "Laser"
     type: weapon_direct
     density: 3
     durability: 3
@@ -671,7 +672,7 @@ components:
           per_volume: 3
       weapon_direct:
         active:
-          ENERGY: -5
+          ENERGY: -0.025 # 1/40
         range:
           precision_targeting: 4
           gauranteed_hit: 7
@@ -695,7 +696,7 @@ components:
           per_volume: 2
       weapon_direct:
         active:
-          ENERGY: -5
+          ENERGY: -0.033333 # 1/30
         range:
           precision_targeting: 2
           gauranteed_hit: 4
@@ -724,7 +725,7 @@ components:
         launch_method: vls
         size: light
         active:
-          ENERGY: -1
+          ENERGY: -0.033333 # 1/30
     __incomplete: 1
   light_magazine:
     name: "Light Magazine"
