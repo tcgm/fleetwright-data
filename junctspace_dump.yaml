@@ -738,11 +738,8 @@ components:
         strategic:
           base: 3
           per_volume: 1
-      weapon_guided:
-        launch_method: magazine
+      magazine:
         size: light
-        active:
-          ENERGY: -1
   light_em_catapult:
     name: "Light Electromagnetic Catapult (EMCat)"
     type: weapon_guided
@@ -758,7 +755,7 @@ components:
         launch_method: magazine
         size: light
         active:
-          ENERGY: -4
+          ENERGY: 0.0277777 # 1/36
   heavy_vls:
     name: "Heavy Vertical Launch System (VLS)"
     type: weapon_guided
@@ -773,8 +770,6 @@ components:
       weapon_guided:
         launch_method: vls
         size: heavy
-        active:
-          ENERGY: -1
   heavy_magazine:
     name: "Heavy Magazine"
     type: weapon_guided
@@ -786,11 +781,8 @@ components:
         strategic:
           base: 2
           per_volume: 1
-      weapon_guided:
-        launch_method: magazine
+      magazine:
         size: heavy
-        active:
-          ENERGY: -1
   heavy_em_catapult:
     name: "Heavy Electromagnetic Catapult (EMCat)"
     type: weapon_guided
@@ -806,7 +798,7 @@ components:
         launch_method: magazine
         size: heavy
         active:
-          ENERGY: -8
+          ENERGY: 0.0625 # 1/16
   #################### [EWAR] ###################
   sensors:
     name: "Sensor Suite"
