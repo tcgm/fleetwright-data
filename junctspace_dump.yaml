@@ -724,8 +724,6 @@ components:
       weapon_guided:
         launch_method: vls
         size: light
-        active:
-          ENERGY: -0.033333 # 1/30
     __incomplete: 1
   light_magazine:
     name: "Light Magazine"
