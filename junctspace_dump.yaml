@@ -840,6 +840,71 @@ components:
         strategic:
           per_volume: 2
 
+  #################### [UTILITY] ###################
+
+  cargo_pod_rack:
+    name: Cargo Pod Rack
+    type: utility
+    density: 1
+    durability: 6
+    price: 1
+  
+  shuttle_hangar:
+    name: Shuttle Hangar
+    type: utility
+    density: 1
+    durability: 3
+    price: 2
+
+  docking_gantry:
+    name: Docking Gantry
+    type: utility
+    density: 0.1
+    durability: 6
+    price: 1
+
+  mining_equipment:
+    name: Mining Equipment
+    type: utility
+    density: 6
+    durability: 30
+    price: 3 
+
+  refinery:
+    name: Materials Refinery
+    type: utility
+    density: 4
+    durability: 18
+    price: 20
+
+  basic_siru:
+    name: Basic ISRU
+    type: utility
+    density: 3
+    durability: 12
+    price: 6
+    #TODO maybe a converter
+  
+  advanced_isru:
+    name: Advanced ISRU
+    type: utility
+    density: 5
+    durability: 6
+    price: 18
+  
+  industrial_fabricator:
+    name: Industrial Fabricator
+    type: utility
+    density: 3
+    durability: 9
+    price: 15
+
+  construction_equipment:
+    name: Construction Equipment
+    density: 5
+    durability: 24
+    price: 5
+
 #################### [COMBAT_STATION] ###################
 combat_stations:
   damcon:
@@ -984,7 +1049,6 @@ combat_stations:
         buff:
           add: {wia_ratio: 0.4}
           scaling_function: 1
-
 
 #################### [MISSILES] ###################
 missiles:
