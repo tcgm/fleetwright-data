@@ -752,7 +752,7 @@ components:
       weapon_guided:
         launch_method: magazine
         size: light
-        muzzle_velocity_multiplier: 4
+        muzzle_velocity_multiplier: 1
         active:
           ENERGY: 0.0277777 # 1/36
   heavy_vls:
@@ -795,7 +795,7 @@ components:
           per_volume: 1
       weapon_guided:
         launch_method: magazine
-        muzzle_velocity_multiplier: 1
+        muzzle_velocity_multiplier: 4
         size: heavy
         active:
           ENERGY: 0.0625 # 1/16
