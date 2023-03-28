@@ -901,6 +901,7 @@ components:
 
   construction_equipment:
     name: Construction Equipment
+    type: utility
     density: 5
     durability: 24
     price: 5
