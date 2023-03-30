@@ -724,8 +724,6 @@ components:
       weapon_guided:
         launch_method: vls
         size: light
-        active:
-          ENERGY: -0.033333 # 1/30
     __incomplete: 1
   light_magazine:
     name: "Light Magazine"
@@ -738,11 +736,8 @@ components:
         strategic:
           base: 3
           per_volume: 1
-      weapon_guided:
-        launch_method: magazine
+      magazine:
         size: light
-        active:
-          ENERGY: -1
   light_em_catapult:
     name: "Light Electromagnetic Catapult (EMCat)"
     type: weapon_guided
@@ -757,8 +752,9 @@ components:
       weapon_guided:
         launch_method: magazine
         size: light
+        muzzle_velocity_multiplier: 1
         active:
-          ENERGY: -4
+          ENERGY: 0.0277777 # 1/36
   heavy_vls:
     name: "Heavy Vertical Launch System (VLS)"
     type: weapon_guided
@@ -773,8 +769,6 @@ components:
       weapon_guided:
         launch_method: vls
         size: heavy
-        active:
-          ENERGY: -1
   heavy_magazine:
     name: "Heavy Magazine"
     type: weapon_guided
@@ -786,11 +780,8 @@ components:
         strategic:
           base: 2
           per_volume: 1
-      weapon_guided:
-        launch_method: magazine
+      magazine:
         size: heavy
-        active:
-          ENERGY: -1
   heavy_em_catapult:
     name: "Heavy Electromagnetic Catapult (EMCat)"
     type: weapon_guided
@@ -804,9 +795,10 @@ components:
           per_volume: 1
       weapon_guided:
         launch_method: magazine
+        muzzle_velocity_multiplier: 4
         size: heavy
         active:
-          ENERGY: -8
+          ENERGY: 0.0625 # 1/16
   #################### [EWAR] ###################
   sensors:
     name: "Sensor Suite"
@@ -847,6 +839,72 @@ components:
       crew:
         strategic:
           per_volume: 2
+
+  #################### [UTILITY] ###################
+
+  cargo_pod_rack:
+    name: Cargo Pod Rack
+    type: utility
+    density: 1
+    durability: 6
+    price: 1
+  
+  shuttle_hangar:
+    name: Shuttle Hangar
+    type: utility
+    density: 1
+    durability: 3
+    price: 2
+
+  docking_gantry:
+    name: Docking Gantry
+    type: utility
+    density: 0.1
+    durability: 6
+    price: 1
+
+  mining_equipment:
+    name: Mining Equipment
+    type: utility
+    density: 6
+    durability: 30
+    price: 3 
+
+  refinery:
+    name: Materials Refinery
+    type: utility
+    density: 4
+    durability: 18
+    price: 20
+
+  basic_siru:
+    name: Basic ISRU
+    type: utility
+    density: 3
+    durability: 12
+    price: 6
+    #TODO maybe a converter
+  
+  advanced_isru:
+    name: Advanced ISRU
+    type: utility
+    density: 5
+    durability: 6
+    price: 18
+  
+  industrial_fabricator:
+    name: Industrial Fabricator
+    type: utility
+    density: 3
+    durability: 9
+    price: 15
+
+  construction_equipment:
+    name: Construction Equipment
+    type: utility
+    density: 5
+    durability: 24
+    price: 5
 
 #################### [COMBAT_STATION] ###################
 combat_stations:
@@ -966,7 +1024,32 @@ combat_stations:
           scaling_function: crew
   medevac:
     name: "Medevac"
-
+    assigned_crew:
+      - any_crew: 10
+        buff:
+          add: {wia_ratio: 0.1}
+          scaling_function: 1
+      - any_crew: 25
+        min_morale: 2
+        buff:
+          add: {wia_ratio: 0.2}
+          scaling_function: 1
+      - specific_crew:
+        - type: [biological, infomorph]
+          amount: 50
+        min_morale: 4
+        buff:
+          add: {wia_ratio: 0.3}
+          scaling_function: 1
+      - specific_crew:
+        - type: [biological]
+          amount: 50
+        - type: [infomorph]
+          amount: 50
+        min_morale: 4
+        buff:
+          add: {wia_ratio: 0.4}
+          scaling_function: 1
 
 #################### [MISSILES] ###################
 missiles:
