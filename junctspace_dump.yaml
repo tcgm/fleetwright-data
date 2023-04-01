@@ -57,7 +57,7 @@ components:
     type: "engine"
     density: 1
     durability: 3
-    price: "0.5*volume"
+    price: 0.5
     modules:
       crew:
         strategic:
@@ -66,7 +66,7 @@ components:
       engine:
         thrust: 275
         fuel:
-          chemical_fuel: "10*volume"
+          chemical_fuel: 10
         works_in_atmo: true
         landing_bad_idea: false
   thermal_rocket:
@@ -530,11 +530,7 @@ components:
         jump_tac_tidi: 15
         jump_tac_energy: 0.142857 # 1/7
         jump_str_energy: 0.142857
-        jump_range:
-          method: log
-          constant: 0
-          base: 2
-          multiplier: 20
+        jump_range: "log(20u, 2)"
   jump_rudimentary:
     name: "Rudimentary Jump Drive"
     type: "ftl_drive"
@@ -551,10 +547,7 @@ components:
         jump_tac_tidi: 3
         jump_tac_energy: 0.0909 # 1/11
         jump_str_energy: 0.00909
-        jump_range:
-          method: linear
-          constant: 0
-          multiplier: 12.5
+        jump_range: "12.5u"
   jump_standard:
     name: "Standard Jump Drive"
     type: "ftl_drive"
@@ -571,10 +564,7 @@ components:
         jump_tac_tidi: 2
         jump_tac_energy: 0.07692 # 1/13
         jump_str_energy: 0.007692
-        jump_range:
-          method: linear
-          constant: 0
-          multiplier: 25
+        jump_range: "25u"
   jump_tactical:
     name: "Tactical Jump Drive"
     type: "ftl_drive"
@@ -591,10 +581,7 @@ components:
         jump_tac_tidi: 1
         jump_tac_energy: 0.0125 # 1/8
         jump_str_energy: 0.00125
-        jump_range:
-          method: linear
-          constant: 0
-          multiplier: 25
+        jump_range: "25u"
   jump_longrange:
     type: "ftl_drive"
     density: 8
@@ -610,10 +597,7 @@ components:
         jump_tac_tidi: 4
         jump_tac_energy: 0.1
         jump_str_energy: 0.01
-        jump_range:
-          method: linear
-          constant: 0
-          multiplier: 50
+        jump_range: "50u"
   jump_industrial:
     name: "Industrial Jump Drive"
     type: "ftl_drive"
@@ -630,11 +614,7 @@ components:
         jump_tac_tidi: 3
         jump_tac_energy: 0.0666666 # 1/15
         jump_str_energy: 0.00666666
-        jump_range:
-          method: log
-          constant: 0
-          base: 4.5
-          multiplier: 45
+        jump_range: "log(45u, 4.5)"
   #################### [WEAPON_DIRECT] ###################
   macron_gun:
     type: weapon_direct
