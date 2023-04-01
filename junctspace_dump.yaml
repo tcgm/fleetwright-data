@@ -149,9 +149,9 @@ components:
       engine:
         thrust: 275
         fuel:
-          "fissile_pellets": 0.25
+          "fissile_pellets": v/4
         alternator:
-          ENERGY: 0.03333
+          ENERGY: v/30
         works_in_atmo: false
   fissile_salt_water:
     name: "Fissile Saltwater Thruster"
@@ -167,7 +167,7 @@ components:
       engine:
         thrust: 450
         fuel:
-          "dissolved_fissiles": 0.75
+          "dissolved_fissiles": 0.75v
         works_in_atmo: true
         landing_bad_idea: true
   fusion_torch:
@@ -184,11 +184,11 @@ components:
       engine:
         thrust: 225
         fuel:
-          "d3he": 0.05
+          "d3he": v/20
         works_in_atmo: false
       converter:
         output:
-          ENERGY: 0.04
+          ENERGY: v/25
 
   #################### [POWERPLANT] ###################
   fuel_cell:
@@ -203,10 +203,10 @@ components:
           per_volume: 0.5
       converter:
         input:
-          chemical_fuel: 3
+          chemical_fuel: v/12
         output:
-          ENERGY: 0.08333 # 1/12
-          HEAT: 0
+          ENERGY: v/12
+          HEAT: '0'
   photovoltaic:
     name: "Photovoltaic Solar Panel"
     type: powerplant
@@ -217,8 +217,8 @@ components:
       #TODO: solar panels ought to be their own module
       converter:
         output:
-          ENERGY: 0.1
-          HEAT: 0
+          ENERGY: v/10
+          HEAT: '0'
       crew:
         strategic:
           base: 0
@@ -236,7 +236,7 @@ components:
           per_volume: 2
       converter:
         output:
-          ENERGY: 0.08333 # 1/12
+          ENERGY: "floor((v>=6?1:0) + v/12)"
           HEAT: 1
   fusion:
     name: "Magneto-Intertial Fusion Reactor"
@@ -251,7 +251,7 @@ components:
           per_volume: 2
       converter:
         output:
-          ENERGY: 0.11111 # 1/9
+          ENERGY: "(v>=5?1:0) + v/9"
           HEAT: 1
   #################### [TANK] ###################
   tank_chemical_fuel:
