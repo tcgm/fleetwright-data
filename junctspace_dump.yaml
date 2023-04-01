@@ -237,7 +237,7 @@ components:
       converter:
         output:
           ENERGY: "floor((v>=6?1:0) + v/12)"
-          HEAT: 1
+          HEAT: '1'
   fusion:
     name: "Magneto-Intertial Fusion Reactor"
     type: powerplant
@@ -252,7 +252,7 @@ components:
       converter:
         output:
           ENERGY: "(v>=5?1:0) + v/9"
-          HEAT: 1
+          HEAT: '1'
   #################### [TANK] ###################
   tank_chemical_fuel:
     name: "Chemfuel Tank"
