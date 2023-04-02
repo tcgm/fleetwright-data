@@ -1,0 +1,18 @@
+%YAML 1.2
+
+component:
+  light_vls:
+    name: "Light Vertical Launch System (VLS)"
+    type: weapon_guided
+    density: 5
+    durability: 3
+    price: 3
+    modules:
+      crew:
+        strategic:
+          base: 4
+          per_volume: 2
+      weapon_guided:
+        launch_method: vls
+        size: light
+    __incomplete: 1

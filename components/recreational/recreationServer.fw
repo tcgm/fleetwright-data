@@ -1,0 +1,14 @@
+%YAML 1.2
+
+component:
+  recreation_server:
+    name: "Recreation Server"
+    type: recreational
+    density: 2
+    price: 3
+    durability: 9
+    modules:
+      recreational:
+        crew_served: 300
+        construct: 1
+        infomorph: 1

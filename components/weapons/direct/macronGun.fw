@@ -1,0 +1,26 @@
+%YAML 1.2
+
+component:
+  macron_gun:
+    type: weapon_direct
+    density: 2
+    durability: 2
+    price: 3
+    modules:
+      crew:
+        strategic:
+          base: 6
+          per_volume: 2
+      weapon_direct:
+        active:
+          ENERGY: -4
+        range:
+          precision_targeting: 1
+          gauranteed_hit: 2
+          probable_hit: 4
+        range_upgrade:
+          precision_targeting: 1
+          gauranteed_hit: 2
+          probable_hit: 3
+        power: 7
+        power_upgrade: 7

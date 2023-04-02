@@ -1,0 +1,9 @@
+%YAML 1.2
+
+component:
+  refinery:
+    name: Materials Refinery
+    type: utility
+    density: 4
+    durability: 18
+    price: 20

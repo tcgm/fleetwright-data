@@ -1,0 +1,13 @@
+%YAML 1.2
+
+component:
+  basic_rations:
+    name: "Basic Rations Storage"
+    type: store
+    density: 1
+    durability: 3
+    price: 1
+    modules:
+      stores:
+        crew: 200
+        morale: 0

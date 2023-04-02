@@ -1,0 +1,31 @@
+%YAML 1.2
+
+combat_station:
+  medbay:
+    name: "Medbay"
+    assigned_crew:
+      - any_crew: 10
+        buff:
+          add: {heal_crew: 0.2}
+          scaling_function: crew
+      - any_crew: 25
+        min_morale: 2
+        buff:
+          add: {heal_crew: 0.56}
+          scaling_function: crew
+      - specific_crew:
+        - type: [biological, infomorph]
+          amount: 50
+        min_morale: 4
+        buff:
+          add: {heal_crew: 0.64}
+          scaling_function: crew
+      - specific_crew:
+        - type: [biological]
+          amount: 50
+        - type: [infomorph]
+          amount: 50
+        min_morale: 4
+        buff:
+          add: {heal_crew: 0.75}
+          scaling_function: crew

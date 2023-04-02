@@ -1,0 +1,31 @@
+%YAML 1.2
+
+combat_station:
+  damcon:
+    name: "Damage Control"
+    assigned_crew:
+      - any_crew: 10
+        buff:
+          scaling_function: crew
+          add: {repair: 0.1}
+      - any_crew: 25
+        min_morale: 2
+        buff:
+          scaling_function: crew
+          add: {repair: 0.12}
+      - specific_crew:
+        - type: [biological, construct]
+          amount: 50
+        min_morale: 4
+        buff:
+          scaling_function: crew
+          add: {repair: 0.14}
+      - specific_crew: 
+        - type: [biological]
+          amount: 50
+        - type: [construct]
+          amount: 50
+        min_morale: 6
+        buff:
+          scaling_function: crew
+          add: {repair: 0.15}

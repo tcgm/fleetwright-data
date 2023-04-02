@@ -1,0 +1,27 @@
+%YAML 1.2
+
+component:
+  laser:
+    name: "Laser"
+    type: weapon_direct
+    density: 3
+    durability: 3
+    price: 3
+    modules:
+      crew:
+        strategic:
+          base: 5
+          per_volume: 3
+      weapon_direct:
+        active:
+          ENERGY: -0.025 # 1/40
+        range:
+          precision_targeting: 4
+          gauranteed_hit: 7
+          probable_hit: 10
+        range_upgrade:
+          precision_targeting: 2
+          gauranteed_hit: 3
+          probable_hit: 4
+        power: 6
+        power_upgrade: 6

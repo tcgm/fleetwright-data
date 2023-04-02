@@ -1,0 +1,20 @@
+%YAML 1.2
+
+component:
+  jump_industrial:
+    name: "Industrial Jump Drive"
+    type: "ftl_drive"
+    density: 12
+    price: 3
+    durability: 21
+    modules:
+      crew:
+        strategic:
+          base: 2
+          per_volume: 1
+      ftl_drive:
+        ftl_method: "jump"
+        jump_tac_tidi: 3
+        jump_tac_energy: 0.0666666 # 1/15
+        jump_str_energy: 0.00666666
+        jump_range: "log(45u, 4.5)"

@@ -1,0 +1,20 @@
+%YAML 1.2
+
+component:
+  jump_rudimentary:
+    name: "Rudimentary Jump Drive"
+    type: "ftl_drive"
+    density: 8
+    price: 1
+    durability: 6
+    modules:
+      crew:
+        strategic:
+          base: 10
+          per_volume: 4
+      ftl_drive:
+        ftl_method: "jump"
+        jump_tac_tidi: 3
+        jump_tac_energy: 0.0909 # 1/11
+        jump_str_energy: 0.00909
+        jump_range: "12.5u"

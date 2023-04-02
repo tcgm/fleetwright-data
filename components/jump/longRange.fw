@@ -1,0 +1,19 @@
+%YAML 1.2
+
+component:
+  jump_longrange:
+    type: "ftl_drive"
+    density: 8
+    price: 15
+    durability: 9
+    modules:
+      crew:
+        strategic:
+          base: 6
+          per_volume: 4
+      ftl_drive:
+        ftl_method: "jump"
+        jump_tac_tidi: 4
+        jump_tac_energy: 0.1
+        jump_str_energy: 0.01
+        jump_range: "50u"

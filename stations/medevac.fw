@@ -1,0 +1,31 @@
+%YAML 1.2
+
+combat_station:
+  medevac:
+    name: "Medevac"
+    assigned_crew:
+      - any_crew: 10
+        buff:
+          add: {wia_ratio: 0.1}
+          scaling_function: 1
+      - any_crew: 25
+        min_morale: 2
+        buff:
+          add: {wia_ratio: 0.2}
+          scaling_function: 1
+      - specific_crew:
+        - type: [biological, infomorph]
+          amount: 50
+        min_morale: 4
+        buff:
+          add: {wia_ratio: 0.3}
+          scaling_function: 1
+      - specific_crew:
+        - type: [biological]
+          amount: 50
+        - type: [infomorph]
+          amount: 50
+        min_morale: 4
+        buff:
+          add: {wia_ratio: 0.4}
+          scaling_function: 1

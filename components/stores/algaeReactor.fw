@@ -1,0 +1,17 @@
+%YAML 1.2
+
+component:
+  algae_reactor:
+    name: "Algae Bioreactor"
+    type: store
+    density: 3
+    durability: 12
+    price: 2
+    modules:
+      crew:
+        strategic:
+          per_volume: 2
+      stores:
+        crew: 70
+        unlimited: true
+        morale: 0

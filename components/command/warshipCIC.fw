@@ -1,0 +1,20 @@
+%YAML 1.2
+
+component:
+  warship_cic:
+    name: "Warship Combat Information Centre"
+    type: command
+    density: 2
+    durability: 12
+    price: 3
+    fixed_volume: 1
+    modules:
+      crew:
+        tactical:
+          base: 20
+        strategic:
+          base: 20
+      command:
+        operate_offensive: true
+        operate_defensive: true
+        operate_navigation: true

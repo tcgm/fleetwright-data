@@ -1,0 +1,13 @@
+%YAML 1.2
+
+component:
+  quarters_cramped:
+    name: "Cramped Quarters"
+    type: living_quarter
+    density: 1
+    durability: 6
+    price: 1
+    modules:
+      quarters:
+        crew: 195
+        moreale: -1

@@ -1,0 +1,12 @@
+%YAML 1.2
+
+component:
+  tank_chemical_fuel:
+    name: "Chemfuel Tank"
+    type: tank
+    density: 4
+    durability: 1
+    price: 2
+    modules:
+      tank:
+        stores: chemical_fuel

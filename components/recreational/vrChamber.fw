@@ -1,0 +1,14 @@
+%YAML 1.2
+
+component:
+  vr_chamber:
+    name: "Virtual Reality Chamber"
+    type: recreational
+    density: 1
+    price: 5
+    durability: 3
+    modules:
+      recreational:
+        crew_served: 300
+        biological: 1
+        infomorph: 1

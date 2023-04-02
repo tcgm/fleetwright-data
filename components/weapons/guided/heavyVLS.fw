@@ -1,0 +1,17 @@
+%YAML 1.2
+
+component:
+  heavy_vls:
+    name: "Heavy Vertical Launch System (VLS)"
+    type: weapon_guided
+    density: 5
+    durability: 3
+    price: 3
+    modules:
+      crew:
+        strategic:
+          base: 3
+          per_volume: 2
+      weapon_guided:
+        launch_method: vls
+        size: heavy

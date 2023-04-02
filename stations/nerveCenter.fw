@@ -1,0 +1,33 @@
+%YAML 1.2
+
+combat_station:
+  nerve_center:
+    name: "Nerve Center"
+    assigned_crew:
+      - any_crew: 10
+        buff_choice:
+          - scaling_function: 1
+            add: {ecm: 1}
+          - scaling_function: 1
+            add: {sensors: 1}
+      - any_crew: 25
+        min_morale: 4
+        buff_choice:
+          - add: {ecm: 2}
+          - add: {sensors: 2}
+      - specific_crew:
+        - type: [biological, construct]
+          amount: 50
+        min_morale: 4
+        buff:
+          add: {ecm: 3, sensors: 3}
+          scaling_function: 1
+      - specific_crew: 
+        - type: [biological]
+          amount: 50
+        - type: [construct]
+          amount: 50
+        min_morale: 6
+        buff:
+          scaling_function: 1
+          add: {ecm: 4, sensors: 4}

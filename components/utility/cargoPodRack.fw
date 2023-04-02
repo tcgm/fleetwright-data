@@ -1,0 +1,9 @@
+%YAML 1.2
+
+component:
+  cargo_pod_rack:
+    name: Cargo Pod Rack
+    type: utility
+    density: 1
+    durability: 6
+    price: 1

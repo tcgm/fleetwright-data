@@ -1,0 +1,20 @@
+%YAML 1.2
+
+component:
+  jump_tactical:
+    name: "Tactical Jump Drive"
+    type: "ftl_drive"
+    density: 10
+    price: 10
+    durability: 24
+    modules:
+      crew:
+        strategic:
+          base: 5
+          per_volume: 3
+      ftl_drive:
+        ftl_method: "jump"
+        jump_tac_tidi: 1
+        jump_tac_energy: 0.0125 # 1/8
+        jump_str_energy: 0.00125
+        jump_range: "25u"
