@@ -1,0 +1,23 @@
+%YAML 1.2
+
+missile:
+    none:
+      price:
+        light: 0
+        heavy: 0
+    solid_rocket_motor:
+      price:
+        light: 0.1
+        heavy: 1
+    liquid_fueled_rocket:
+      price:
+        light: 0.2
+        heavy: 2
+    nuclear_thermal:
+      price:
+        light: 0.6
+        heavy: 6
+    nuclear_thermo_electric_hybrid:
+      price:
+        light: 1
+        heavy: 10

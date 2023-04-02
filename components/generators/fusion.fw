@@ -1,0 +1,17 @@
+component:
+  #################### [POWERPLANT] ###################
+    fusion:
+    name: "Magneto-Intertial Fusion Reactor"
+    type: powerplant
+    density: 3
+    durability: 9
+    price: 6 #TODO y=mx+b
+    modules:
+      crew:
+        strategic:
+          base: 15
+          per_volume: 2
+      converter:
+        output:
+          ENERGY: 0.11111 # 1/9
+          HEAT: 1

@@ -1,0 +1,17 @@
+component:
+  #################### [POWERPLANT] ###################
+    fission:
+    name: "Fission Fragment Reactor"
+    type: powerplant
+    density: 5
+    durability: 24
+    price: 5 #TODO y=mx+b
+    modules:
+      crew:
+        strategic:
+          base: 10
+          per_volume: 2
+      converter:
+        output:
+          ENERGY: 0.08333 # 1/12
+          HEAT: 1

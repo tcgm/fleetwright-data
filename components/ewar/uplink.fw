@@ -1,0 +1,12 @@
+%YAML 1.2
+
+component:
+  uplink:
+    type: ewar
+    density: 3
+    durability: 9
+    price: 3
+    modules:
+      crew:
+        strategic:
+          per_volume: 2

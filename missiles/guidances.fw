@@ -1,0 +1,24 @@
+%YAML 1.2
+
+missile:
+  guidance:
+    heat_seeking:
+      price:
+        light: 0.1
+        heavy: 1
+    home_on_jam:
+      price:
+        light: 0.1
+        heavy: 1
+    imaging_radar:
+      price:
+        light: 0.1
+        heavy: 1
+    center_of_mass:
+      price:
+        light: 0.1
+        heavy: 1
+    command_guidance:
+      price:
+        light: 0.1
+        heavy: 1

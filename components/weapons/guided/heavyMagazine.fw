@@ -1,0 +1,16 @@
+%YAML 1.2
+
+component:
+  heavy_magazine:
+    name: "Heavy Magazine"
+    type: weapon_guided
+    density: 5
+    durability: 4
+    price: 2
+    modules:
+      crew:
+        strategic:
+          base: 2
+          per_volume: 1
+      magazine:
+        size: heavy

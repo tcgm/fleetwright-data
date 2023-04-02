@@ -1,0 +1,13 @@
+%YAML 1.2
+
+component:
+  quarters_sardine_can:
+    name: "Sardine Cans"
+    type: living_quarter
+    density: 1
+    durability: 3
+    price: 1
+    modules:
+      quarters:
+        crew: 235
+        morale: -2

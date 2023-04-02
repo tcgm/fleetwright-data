@@ -1,0 +1,20 @@
+%YAML 1.2
+
+component:
+  light_em_catapult:
+    name: "Light Electromagnetic Catapult (EMCat)"
+    type: weapon_guided
+    density: 3
+    durability: 3
+    price: 4
+    modules:
+      crew:
+        strategic:
+          base: 5
+          per_volume: 1
+      weapon_guided:
+        launch_method: magazine
+        size: light
+        muzzle_velocity_multiplier: 1
+        active:
+          ENERGY: 0.0277777 # 1/36

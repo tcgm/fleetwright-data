@@ -1,0 +1,18 @@
+component:
+  #################### [POWERPLANT] ###################
+    fuel_cell:
+    name: "Fuel Cell Generator"
+    type: powerplant
+    density: 3
+    durability: 12
+    price: 1
+    modules:
+      crew:
+        strategic:
+          per_volume: 0.5
+      converter:
+        input:
+          chemical_fuel: 3
+        output:
+          ENERGY: 0.08333 # 1/12
+          HEAT: 0

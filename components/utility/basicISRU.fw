@@ -1,0 +1,10 @@
+%YAML 1.2
+
+component:
+  basic_isru:
+    name: Basic ISRU
+    type: utility
+    density: 3
+    durability: 12
+    price: 6
+    #TODO maybe a converter

@@ -1,0 +1,15 @@
+component:
+  #################### [DRIVE] ###################
+  thermo_electric_rocket:
+    name: "Thermoelectric Rocket"
+    type: "engine"
+    density: 1
+    durability: 12
+    price: 2
+    modules:
+      engine:
+        thrust: 250
+        fuel:
+          "inert_fluid": 2.5
+          ENERGY: 0.02
+          HEAT: 0.5

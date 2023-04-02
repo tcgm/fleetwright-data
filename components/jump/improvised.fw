@@ -1,0 +1,19 @@
+%YAML 1.2
+
+component:
+  jump_improvised:
+    name: "MacGyver Drive"
+    type: "ftl_drive"
+    density: 6
+    price: 0.1
+    durability: 3
+    modules:
+      crew:
+        strategic:
+          per_volume: 20
+      ftl_drive:
+        ftl_method: "jump"
+        jump_tac_tidi: 15
+        jump_tac_energy: 0.142857 # 1/7
+        jump_str_energy: 0.142857
+        jump_range: "log(20u, 2)"

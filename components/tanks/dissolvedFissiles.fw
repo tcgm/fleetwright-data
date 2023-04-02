@@ -1,0 +1,12 @@
+%YAML 1.2
+
+component:
+  tank_dissolved_fissiles:
+    name: "Dissolved Fissile Vat"
+    type: tank
+    density: 12
+    durability: 1
+    price: 3
+    modules:
+      tank:
+        stores: dissolved_fissiles

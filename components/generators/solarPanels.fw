@@ -1,0 +1,18 @@
+component:
+  #################### [POWERPLANT] ###################
+    photovoltaic:
+    name: "Photovoltaic Solar Panel"
+    type: powerplant
+    density: 0.2
+    durability: 1
+    price: 1
+    modules:
+      #TODO: solar panels ought to be their own module
+      converter:
+        output:
+          ENERGY: 0.1
+          HEAT: 0
+      crew:
+        strategic:
+          base: 0
+          per_volume: 0.1

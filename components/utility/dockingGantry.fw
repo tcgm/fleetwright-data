@@ -1,0 +1,9 @@
+%YAML 1.2
+
+component:
+  docking_gantry:
+    name: Docking Gantry
+    type: utility
+    density: 0.1
+    durability: 6
+    price: 1

@@ -1,0 +1,12 @@
+%YAML 1.2
+
+component:
+  tank_nuclear_bombs:
+    name: "Nuclear Bomb Racks"
+    type: tank
+    density: 10
+    durability: 1
+    price: 3
+    modules:
+      tank:
+        stores: nuclear_bombs

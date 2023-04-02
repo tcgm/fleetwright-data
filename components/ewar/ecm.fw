@@ -1,0 +1,18 @@
+%YAML 1.2
+
+component:
+  ecm:
+    name: "Electronic Countermeasures"
+    type: ewar
+    density: 3
+    durability: 3
+    price: 4
+    modules:
+      crew:
+        strategic:
+          base: 4
+          per_volume: 2
+      buff:
+        scaling_function: volume
+        add:
+          raw_ecm: 1

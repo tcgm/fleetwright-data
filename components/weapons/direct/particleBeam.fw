@@ -1,0 +1,29 @@
+%YAML 1.2
+
+component:
+  particle_beam:
+    name: "Particle Beam Accelerator"
+    type: weapon_direct
+    density: 2
+    durability: 2
+    price: 3
+    modules:
+      crew:
+        strategic:
+          base: 8
+          per_volume: 2
+      weapon_direct:
+        active:
+          ENERGY: -0.033333 # 1/30
+        range:
+          precision_targeting: 2
+          gauranteed_hit: 4
+          probable_hit: 6
+        range_upgrade:
+          precision_targeting: 2
+          gauranteed_hit: 4
+          probable_hit: 5
+        power: 2
+        power_upgrade: 8
+        #TODO: implement the actual function somehow
+        # which is "+2, then +4, +8 after"

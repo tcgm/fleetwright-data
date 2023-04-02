@@ -1,0 +1,20 @@
+component:
+  #################### [DRIVE] ###################
+    electric_rocket:
+    name: "Electric Rocket"
+    type: "engine"
+    density: 1
+    durability: 6
+    price: 1
+    modules:
+      crew:
+        strategic:
+          base: 5
+          per_volume: 0.1
+      engine:
+        thrust: 40
+        fuel:
+          "inert_fluid": 0.025
+          ENERGY: 0.02
+        works_in_atmo: false
+        landing_bad_idea: false
