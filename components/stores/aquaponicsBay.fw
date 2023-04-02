@@ -1,0 +1,17 @@
+%YAML 1.2
+
+component:
+  aquaponics_bay:
+    name: "Aquaponics Bay"
+    type: store
+    density: 2
+    durability: 6
+    price: 3
+    modules:
+      crew:
+        strategic:
+          per_volume: 4
+      stores:
+        crew: 50
+        unlimited: true
+        morale: +2

@@ -1,0 +1,16 @@
+%YAML 1.2
+
+component:
+  light_magazine:
+    name: "Light Magazine"
+    type: weapon_guided
+    density: 5
+    durability: 4
+    price: 2
+    modules:
+      crew:
+        strategic:
+          base: 3
+          per_volume: 1
+      magazine:
+        size: light

@@ -1,0 +1,13 @@
+%YAML 1.2
+
+component:
+  survival_rations:
+    name: "Survival Rations Storage"
+    type: store
+    density: 1
+    durability: 3
+    price: 0.5
+    modules:
+      stores:
+        crew: 250
+        morale: -2

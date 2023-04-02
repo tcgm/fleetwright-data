@@ -1,0 +1,12 @@
+%YAML 1.2
+
+component:
+  tank_inert_fluid:
+    name: "Inert Fluid Tank"
+    type: tank
+    density: 5
+    durability: 1
+    price: 0.2
+    modules:
+      tank:
+        stores: inert_fluid

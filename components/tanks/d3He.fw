@@ -1,0 +1,12 @@
+%YAML 1.2
+
+component:
+  tank_d3he:
+    name: "D-3He Tank"
+    type: tank
+    density: 3
+    durability: 1
+    price: 1
+    modules:
+      tank:
+        stores: d3he

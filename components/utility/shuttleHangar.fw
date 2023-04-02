@@ -1,0 +1,9 @@
+%YAML 1.2
+
+component:
+  shuttle_hangar:
+    name: Shuttle Hangar
+    type: utility
+    density: 1
+    durability: 3
+    price: 2

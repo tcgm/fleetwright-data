@@ -1,0 +1,12 @@
+%YAML 1.2
+
+component:
+  tank_fissile_pellets:
+    name: "Fissile Pellet Storage"
+    type: tank
+    density: 10
+    durability: 1
+    price: 3
+    modules:
+      tank:
+        stores: fissile_pellets

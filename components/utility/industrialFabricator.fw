@@ -1,0 +1,9 @@
+%YAML 1.2
+
+component:
+  industrial_fabricator:
+    name: Industrial Fabricator
+    type: utility
+    density: 3
+    durability: 9
+    price: 15

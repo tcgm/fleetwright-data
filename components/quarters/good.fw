@@ -1,0 +1,13 @@
+%YAML 1.2
+
+component:
+  quarters_good:
+    name: "Good Quarters"
+    type: living_quarter
+    density: 1
+    durability: 9
+    price: 2
+    modules:
+      quarters:
+        crew: 75
+        morale: +2

@@ -1,0 +1,14 @@
+%YAML 1.2
+
+component:
+  board_game_room:
+    name: "Board Game Room"
+    type: recreational
+    density: 1
+    price: 1
+    durability: 9
+    modules:
+      recreational:
+        crew_served: 300
+        biological: 1
+        construct: 1

@@ -1,0 +1,29 @@
+%YAML 1.2
+
+component:
+  shipmind_brainframe:
+    name: "Shipmind Brainframe"
+    type: command
+    density: 3
+    durability: 12
+    price: 6
+    fixed_volume: 1
+    modules:
+      crew:
+        strategic:
+          base: 1
+      command:
+        operate_offensive: true
+        operate_defensive: true
+        operate_navigation: true
+      buff:
+        scaling_function: 1
+        stacking: false
+        add:
+          ecm: +2
+          sensors: +2
+          acceleration: +1
+        multiply:
+          jump_energy: 0.9
+      #TODO jump energy buff
+      #TODO evasion buff

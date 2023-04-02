@@ -1,0 +1,13 @@
+%YAML 1.2
+
+component:
+  good_rations:
+    name: "Good Rations Storage"
+    type: store
+    density: 1
+    durability: 3
+    price: 1.5
+    modules:
+      stores:
+        crew: 180
+        morale: +2

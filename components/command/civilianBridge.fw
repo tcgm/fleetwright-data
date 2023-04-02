@@ -1,0 +1,20 @@
+%YAML 1.2
+
+component:
+  civilian_bridge:
+    name: "Civilian Bridge"
+    type: command
+    density: 1
+    durability: 6
+    price: 1
+    fixed_volume: 1
+    modules:
+      crew:
+        tactical:
+          base: 6
+        strategic:
+          base: 6
+      command:
+        operate_offensive: false
+        operate_defensive: false
+        operate_navigation: true

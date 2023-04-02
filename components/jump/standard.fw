@@ -1,0 +1,20 @@
+%YAML 1.2
+
+component:
+  jump_standard:
+    name: "Standard Jump Drive"
+    type: "ftl_drive"
+    density: 8
+    price: 4
+    durability: 12
+    modules:
+      crew:
+        strategic:
+          base: 5
+          per_volume: 2
+      ftl_drive:
+        ftl_method: "jump"
+        jump_tac_tidi: 2
+        jump_tac_energy: 0.07692 # 1/13
+        jump_str_energy: 0.007692
+        jump_range: "25u"

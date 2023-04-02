@@ -1,0 +1,9 @@
+%YAML 1.2
+
+component:
+  advanced_isru:
+    name: Advanced ISRU
+    type: utility
+    density: 5
+    durability: 6
+    price: 18

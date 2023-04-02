@@ -1,0 +1,20 @@
+%YAML 1.2
+
+component:
+  heavy_em_catapult:
+    name: "Heavy Electromagnetic Catapult (EMCat)"
+    type: weapon_guided
+    density: 4
+    durability: 4
+    price: 5
+    modules:
+      crew:
+        strategic:
+          base: 5
+          per_volume: 1
+      weapon_guided:
+        launch_method: magazine
+        muzzle_velocity_multiplier: 4
+        size: heavy
+        active:
+          ENERGY: 0.0625 # 1/16
