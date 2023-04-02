@@ -1,0 +1,21 @@
+component:
+  #################### [DRIVE] ###################
+  fusion_torch:
+    name: "Fusion Torch Thruster"
+    type: "engine"
+    density: 1
+    durability: 3
+    price: 12
+    modules:
+      crew:
+        strategic:
+          base: 8
+          per_volume: 2
+      engine:
+        thrust: 225
+        fuel:
+          "d3he": 0.05
+        works_in_atmo: false
+      converter:
+        output:
+          ENERGY: 0.04

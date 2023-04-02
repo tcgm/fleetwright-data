@@ -1,0 +1,19 @@
+component:
+  #################### [DRIVE] ###################
+  fissile_salt_water:
+    name: "Fissile Saltwater Thruster"
+    type: "engine"
+    density: 6
+    durability: 18
+    price: 9
+    modules:
+      crew:
+        strategic:
+          base: 12
+          per_volume: 8
+      engine:
+        thrust: 450
+        fuel:
+          "dissolved_fissiles": 0.75
+        works_in_atmo: true
+        landing_bad_idea: true

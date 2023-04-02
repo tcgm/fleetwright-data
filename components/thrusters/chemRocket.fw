@@ -1,0 +1,19 @@
+component:
+  #################### [DRIVE] ###################
+  chemical_rocket:
+    name: "Chemical Rocket"
+    type: "engine"
+    density: 1
+    durability: 3
+    price: 0.5
+    modules:
+      crew:
+        strategic:
+          base: 0
+          per_volume: 1
+      engine:
+        thrust: 275
+        fuel:
+          "chemical_fuel": 10
+        works_in_atmo: true
+        landing_bad_idea: false

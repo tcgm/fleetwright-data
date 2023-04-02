@@ -1,0 +1,47 @@
+resources:
+  HEAT:
+    name: "Heat"
+    storeable: false
+  ENERGY:
+    name: "Energy"
+    storeable: false
+  chemical_fuel:
+    name: "Chemfuel"
+    storeable: true
+    density: 0
+    price: 2
+    hazards:
+      hazard_leak: true
+  inert_fluid:
+    name: "Inert Fluid"
+    storeable: true
+    density: 0
+    price: 0.01
+    hazards: null
+  nuclear_bombs:
+    name: "Nuclear Bombs"
+    storeable: true
+    density: 0
+    price: 12
+    hazards:
+      terrorist_theft: true
+  fissile_pellets:
+    name: "Fissile Pellets"
+    storeable: true
+    density: 0
+    price: 8
+    hazards: null
+  dissolved_fissiles:
+    name: "Dissolved Fissiles"
+    storeable: true
+    density: 0
+    price: 9
+    hazards:
+      hazard_leak: true
+      critical_leak: true
+  d3he:
+    name: "D-3He Fuel"
+    storeable: true
+    density: 0
+    price: 3
+    hazards: null

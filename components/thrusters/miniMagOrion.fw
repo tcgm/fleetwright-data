@@ -1,0 +1,20 @@
+component:
+  #################### [DRIVE] ###################
+  mini_mag_orion:
+    name: "Magnetic Miniature Orion Drive"
+    type: "engine"
+    density: 5
+    durability: 12
+    price: 8
+    modules:
+      crew:
+        strategic:
+          base: 6
+          per_volume: 2
+      engine:
+        thrust: 275
+        fuel:
+          "fissile_pellets": 0.25
+        alternator:
+          ENERGY: 0.03333
+        works_in_atmo: false

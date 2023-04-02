@@ -1,0 +1,20 @@
+component:
+  #################### [DRIVE] ###################
+  thermal_rocket:
+    name: "Thermal Rocket"
+    type: "engine"
+    density: 1
+    durability: 15
+    price: 1
+    modules:
+      crew:
+        strategic:
+          base: 2
+          per_volume: 1
+      engine:
+        thrust: 250
+        fuel:
+          "inert_fluid": 5
+          HEAT: 1
+        works_in_atmo: true
+        landing_bad_idea: false

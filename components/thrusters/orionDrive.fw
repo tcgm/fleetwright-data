@@ -1,0 +1,19 @@
+component:
+  #################### [DRIVE] ###################
+  orion_drive:
+    name: "Orion Drive"
+    type: "engine"
+    density: 8
+    durability: 24
+    price: 6
+    modules:
+      crew:
+        strategic:
+          base: 6
+          per_volume: 3
+      engine:
+        thrust: 350
+        fuel:
+          "nuclear_bombs": 0.5
+        works_in_atmo: true
+        landing_bad_idea: true
