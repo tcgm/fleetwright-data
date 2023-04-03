@@ -1,0 +1,58 @@
+type: "ship"
+name: "Haiku"
+prefix: "DFLT"
+callsign: "Apollo 1"
+armour: 210
+components:
+# Warship Combat Information Centre | 2M | $3
+- {id: "warship_cic", volume: 1, armour: true}
+# Board Game Room | 5M | $5
+- {id: "board_game_room", volume: 5, armour: false}
+# Basic Rations Storage | 25M | $25
+- {id: "basic_rations", volume: 25, armour: false}
+# Decent Quarters | 10M | $20
+- {id: "quarters_decent", volume: 10, armour: false, data: {occupied: true}}
+# Dissolved Fissile Vat | 180M | $45
+- {id: "tank_dissolved_fissiles", volume: 15, armour: true}
+# Magneto-Intertial Fusion Reactor | 300M | $600
+- {id: "fusion", volume: 100, armour: true}
+# Fissile Saltwater Thruster | 150M | $225
+- {id: "fissile_salt_water", volume: 25, armour: true}
+# Standard Jump Drive | 400M | $200
+- {id: "jump_standard", volume: 50, armour: true}
+# Sensor Suite | 30M | $40
+- {id: "sensors", volume: 10, armour: true}
+# Electronic Countermeasures | 75M | $100
+- {id: "ecm", volume: 25, armour: true}
+# macron_gun | 50M | $75
+- {id: "macron_gun", volume: 25, armour: false, data: {range: 10, power: 15, special: 0}}
+# macron_gun | 50M | $75
+- {id: "macron_gun", volume: 25, armour: false, data: {range: 10, power: 15, special: 0}}
+# macron_gun | 50M | $75
+- {id: "macron_gun", volume: 25, armour: false, data: {range: 10, power: 15, special: 0}}
+# Laser | 75M | $75
+- {id: "laser", volume: 25, armour: false, data: {range: 10, power: 15, special: 0}}
+# Light Vertical Launch System (VLS) | 125M | $75
+- {id: "light_vls", volume: 25, armour: true, data: [{guidance: "command_guidance", payload: "kinetic", propulsion: "none", count: 200}]}
+# Heavy Vertical Launch System (VLS) | 125M | $75
+- {id: "heavy_vls", volume: 25, armour: true, data: [{guidance: "command_guidance", payload: "kinetic", propulsion: "none", count: 25}]}
+# Laser | 15M | $15
+- {id: "laser", volume: 5, armour: false, data: {range: 0, power: 5, special: 0}}
+combat_stations:
+  damcon:
+    crew:
+      any: 200
+  engineering:
+    crew:
+      any: 50
+    data: 0
+  nerve_center:
+    crew:
+      any: 50
+    data: 0
+  medbay:
+    crew:
+      any: 100
+  medevac:
+    crew:
+      any: 200
