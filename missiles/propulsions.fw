@@ -1,6 +1,7 @@
 %YAML 1.2
 ---
-missile:
+missiles:
+  propulsion:
     none:
       price:
         light: 0
