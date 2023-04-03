@@ -1,5 +1,7 @@
 %YAML 1.2
 
+---
+
 component:
   recreation_server:
     name: "Recreation Server"

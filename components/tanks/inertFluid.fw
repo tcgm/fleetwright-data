@@ -1,5 +1,7 @@
 %YAML 1.2
 
+---
+
 component:
   tank_inert_fluid:
     name: "Inert Fluid Tank"

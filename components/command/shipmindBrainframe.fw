@@ -1,5 +1,7 @@
 %YAML 1.2
 
+---
+
 component:
   shipmind_brainframe:
     name: "Shipmind Brainframe"

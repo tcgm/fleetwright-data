@@ -1,5 +1,7 @@
 %YAML 1.2
 
+---
+
 component:
   industrial_fabricator:
     name: Industrial Fabricator

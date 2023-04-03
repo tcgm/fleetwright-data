@@ -1,5 +1,7 @@
 %YAML 1.2
 
+---
+
 component:
   jump_industrial:
     name: "Industrial Jump Drive"

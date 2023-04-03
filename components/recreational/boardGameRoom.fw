@@ -1,5 +1,7 @@
 %YAML 1.2
 
+---
+
 component:
   board_game_room:
     name: "Board Game Room"

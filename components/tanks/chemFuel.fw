@@ -1,5 +1,7 @@
 %YAML 1.2
 
+---
+
 component:
   tank_chemical_fuel:
     name: "Chemfuel Tank"

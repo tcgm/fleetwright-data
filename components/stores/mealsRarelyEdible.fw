@@ -1,5 +1,7 @@
 %YAML 1.2
 
+---
+
 component:
   survival_rations:
     name: "Survival Rations Storage"

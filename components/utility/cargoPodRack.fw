@@ -1,5 +1,7 @@
 %YAML 1.2
 
+---
+
 component:
   cargo_pod_rack:
     name: Cargo Pod Rack

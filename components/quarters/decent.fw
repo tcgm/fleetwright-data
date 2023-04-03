@@ -1,5 +1,7 @@
 %YAML 1.2
 
+---
+
 component:
   quarters_decent:
     name: "Decent Quarters"

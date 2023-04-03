@@ -1,5 +1,7 @@
 %YAML 1.2
 
+---
+
 component:
   warship_cic:
     name: "Warship Combat Information Centre"

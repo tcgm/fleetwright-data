@@ -1,5 +1,7 @@
 %YAML 1.2
 
+---
+
 component:
   civilian_bridge:
     name: "Civilian Bridge"

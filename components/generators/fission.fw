@@ -1,3 +1,7 @@
+%YAML 1.2
+
+---
+
 component:
   #################### [POWERPLANT] ###################
     fission:

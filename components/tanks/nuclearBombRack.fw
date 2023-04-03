@@ -1,5 +1,7 @@
 %YAML 1.2
 
+---
+
 component:
   tank_nuclear_bombs:
     name: "Nuclear Bomb Racks"

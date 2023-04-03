@@ -1,5 +1,7 @@
 %YAML 1.2
 
+---
+
 component:
   mining_equipment:
     name: Mining Equipment

@@ -1,5 +1,7 @@
 %YAML 1.2
 
+---
+
 component:
   basic_rations:
     name: "Basic Rations Storage"

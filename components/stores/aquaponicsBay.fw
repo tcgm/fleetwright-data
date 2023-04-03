@@ -1,5 +1,7 @@
 %YAML 1.2
 
+---
+
 component:
   aquaponics_bay:
     name: "Aquaponics Bay"

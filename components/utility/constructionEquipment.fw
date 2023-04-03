@@ -1,5 +1,7 @@
 %YAML 1.2
 
+---
+
 component:
   construction_equipment:
     name: Construction Equipment

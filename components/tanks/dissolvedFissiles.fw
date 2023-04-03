@@ -1,5 +1,7 @@
 %YAML 1.2
 
+---
+
 component:
   tank_dissolved_fissiles:
     name: "Dissolved Fissile Vat"

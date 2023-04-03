@@ -1,5 +1,7 @@
 %YAML 1.2
 
+---
+
 component:
   jump_rudimentary:
     name: "Rudimentary Jump Drive"

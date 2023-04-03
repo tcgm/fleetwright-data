@@ -1,5 +1,7 @@
 %YAML 1.2
 
+---
+
 component:
   tank_d3he:
     name: "D-3He Tank"
