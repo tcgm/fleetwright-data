@@ -62,6 +62,5 @@ for filename in filenames:
                 current["combat_stations"]
             )
 
-pprint.pprint(result)
 with open("junctspace.yaml", "w") as f:
     yaml.dump(result, f, Dumper=yaml.SafeDumper, sort_keys=False)
