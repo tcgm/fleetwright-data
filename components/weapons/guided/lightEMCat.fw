@@ -1,6 +1,6 @@
 %YAML 1.2
-
-component:
+---
+components:
   light_em_catapult:
     name: "Light Electromagnetic Catapult (EMCat)"
     type: weapon_guided

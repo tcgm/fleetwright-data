@@ -1,6 +1,6 @@
 %YAML 1.2
-
-component:
+---
+components:
   light_magazine:
     name: "Light Magazine"
     type: weapon_guided
