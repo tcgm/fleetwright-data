@@ -1,9 +1,8 @@
-# stages:
- # - validate
-
-# validate-yaml:
- # stage: validate
- # image: python:3
-  #:script:
-  #  - pip install pyyaml
-   # - python3 compile.py
+stages:
+  - validate
+validate-yaml:
+  stage: validate
+  image: python:3
+  script:
+    - pip install pyyaml
+    - python3 dumpBuilder.py

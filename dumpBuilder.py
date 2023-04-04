@@ -62,5 +62,17 @@ for filename in filenames:
 with open("junctspace.yaml", "w") as f:
     yaml.dump(result, f, Dumper=yaml.SafeDumper, sort_keys=False)
 
+with open("junctspace.txt", "w") as f:
+    yaml.dump(result, f, Dumper=yaml.SafeDumper, sort_keys=False)
+
+with open("junctspace.fw", "w") as f:
+    yaml.dump(result, f, Dumper=yaml.SafeDumper, sort_keys=False)
+
 with open("junctspace_dump.yaml", "w") as f:
+    yaml.dump(result, f, Dumper=yaml.SafeDumper, sort_keys=False)
+
+with open("junctspace_dump.txt", "w") as f:
+    yaml.dump(result, f, Dumper=yaml.SafeDumper, sort_keys=False)
+
+with open("junctspace_dump.fw", "w") as f:
     yaml.dump(result, f, Dumper=yaml.SafeDumper, sort_keys=False)
