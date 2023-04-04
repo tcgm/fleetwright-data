@@ -1,6 +1,6 @@
 %YAML 1.2
----
-components:
+
+component:
   macron_gun:
     type: weapon_direct
     density: 2
