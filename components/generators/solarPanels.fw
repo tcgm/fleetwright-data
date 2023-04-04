@@ -1,10 +1,8 @@
 %YAML 1.2
-
 ---
-
-component:
+components:
   #################### [POWERPLANT] ###################
-    photovoltaic:
+  photovoltaic:
     name: "Photovoltaic Solar Panel"
     type: powerplant
     density: 0.2
