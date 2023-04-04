@@ -12,10 +12,7 @@ BASE_DIRECTORIES = [
 filenames = []
 for directory in BASE_DIRECTORIES:
     filenames.extend(
-        glob.glob(f"{directory}/*.fw")
-    )
-    filenames.extend(
-        glob.glob(f"{directory}/**/*.fw")
+        glob.glob(f"{directory}/**/*.fw", recursive=True)
     )
 
 result = {
