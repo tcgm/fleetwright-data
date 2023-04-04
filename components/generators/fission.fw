@@ -1,7 +1,10 @@
 %YAML 1.2
+
 ---
-components:
-  fission:
+
+component:
+  #################### [POWERPLANT] ###################
+    fission:
     name: "Fission Fragment Reactor"
     type: powerplant
     density: 5
