@@ -1,10 +1,7 @@
 %YAML 1.2
-
 ---
-
-component:
-  #################### [POWERPLANT] ###################
-    fuel_cell:
+components:
+  fuel_cell:
     name: "Fuel Cell Generator"
     type: powerplant
     density: 3
