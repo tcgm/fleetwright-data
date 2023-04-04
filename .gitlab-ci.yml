@@ -6,4 +6,4 @@ validate-yaml:
   image: python:3
   script:
     - pip install pyyaml
-    - python -c 'import yaml, sys; yaml.safe_load(sys.stdin)' < junctspace_dump.yaml
+    - python3 compile.py
