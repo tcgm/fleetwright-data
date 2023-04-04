@@ -1,0 +1,1097 @@
+resources:
+  HEAT:
+    name: Heat
+    storeable: false
+  ENERGY:
+    name: Energy
+    storeable: false
+  chemical_fuel:
+    name: Chemfuel
+    storeable: true
+    density: 0
+    price: 2
+    hazards:
+      hazard_leak: true
+  inert_fluid:
+    name: Inert Fluid
+    storeable: true
+    density: 0
+    price: 0.01
+    hazards: null
+  nuclear_bombs:
+    name: Nuclear Bombs
+    storeable: true
+    density: 0
+    price: 12
+    hazards:
+      terrorist_theft: true
+  fissile_pellets:
+    name: Fissile Pellets
+    storeable: true
+    density: 0
+    price: 8
+    hazards: null
+  dissolved_fissiles:
+    name: Dissolved Fissiles
+    storeable: true
+    density: 0
+    price: 9
+    hazards:
+      hazard_leak: true
+      critical_leak: true
+  d3he:
+    name: D-3He Fuel
+    storeable: true
+    density: 0
+    price: 3
+    hazards: null
+components:
+  civilian_bridge:
+    name: Civilian Bridge
+    type: command
+    density: 1
+    durability: 6
+    price: 1
+    fixed_volume: 1
+    modules:
+      crew:
+        tactical:
+          base: 6
+        strategic:
+          base: 6
+      command:
+        operate_offensive: false
+        operate_defensive: false
+        operate_navigation: true
+  shipmind_brainframe:
+    name: Shipmind Brainframe
+    type: command
+    density: 3
+    durability: 12
+    price: 6
+    fixed_volume: 1
+    modules:
+      crew:
+        strategic:
+          base: 1
+      command:
+        operate_offensive: true
+        operate_defensive: true
+        operate_navigation: true
+      buff:
+        scaling_function: 1
+        stacking: false
+        add:
+          ecm: 2
+          sensors: 2
+          acceleration: 1
+        multiply:
+          jump_energy: 0.9
+  warship_cic:
+    name: Warship Combat Information Centre
+    type: command
+    density: 2
+    durability: 12
+    price: 3
+    fixed_volume: 1
+    modules:
+      crew:
+        tactical:
+          base: 20
+        strategic:
+          base: 20
+      command:
+        operate_offensive: true
+        operate_defensive: true
+        operate_navigation: true
+  ecm:
+    name: Electronic Countermeasures
+    type: ewar
+    density: 3
+    durability: 3
+    price: 4
+    modules:
+      crew:
+        strategic:
+          base: 4
+          per_volume: 2
+      buff:
+        scaling_function: volume
+        add:
+          raw_ecm: 1
+  sensors:
+    name: Sensor Suite
+    type: ewar
+    density: 3
+    durability: 3
+    price: 4
+    modules:
+      crew:
+        strategic:
+          base: 4
+          per_volume: 2
+      buff:
+        scaling_function: volume
+        add:
+          sensors: 1
+  uplink:
+    type: ewar
+    density: 3
+    durability: 9
+    price: 3
+    modules:
+      crew:
+        strategic:
+          per_volume: 2
+  fission: null
+  name: Electric Rocket
+  type: engine
+  density: 1
+  durability: 6
+  price: 1
+  modules:
+    crew:
+      strategic:
+        base: 5
+        per_volume: 0.1
+    engine:
+      thrust: 40
+      fuel:
+        inert_fluid: 0.025
+        ENERGY: 0.02
+      works_in_atmo: false
+      landing_bad_idea: false
+  fuel_cell: null
+  fusion:
+    name: Magneto-Intertial Fusion Reactor
+    type: powerplant
+    density: 3
+    durability: 9
+    price: 6
+    modules:
+      crew:
+        strategic:
+          base: 15
+          per_volume: 2
+      converter:
+        output:
+          ENERGY: 0.11111
+          HEAT: 1
+  photovoltaic: null
+  jump_improvised:
+    name: MacGyver Drive
+    type: ftl_drive
+    density: 6
+    price: 0.1
+    durability: 3
+    modules:
+      crew:
+        strategic:
+          per_volume: 20
+      ftl_drive:
+        ftl_method: jump
+        jump_tac_tidi: 15
+        jump_tac_energy: 0.142857
+        jump_str_energy: 0.142857
+        jump_range: log(20u, 2)
+  jump_industrial:
+    name: Industrial Jump Drive
+    type: ftl_drive
+    density: 12
+    price: 3
+    durability: 21
+    modules:
+      crew:
+        strategic:
+          base: 2
+          per_volume: 1
+      ftl_drive:
+        ftl_method: jump
+        jump_tac_tidi: 3
+        jump_tac_energy: 0.0666666
+        jump_str_energy: 0.00666666
+        jump_range: log(45u, 4.5)
+  jump_longrange:
+    type: ftl_drive
+    density: 8
+    price: 15
+    durability: 9
+    modules:
+      crew:
+        strategic:
+          base: 6
+          per_volume: 4
+      ftl_drive:
+        ftl_method: jump
+        jump_tac_tidi: 4
+        jump_tac_energy: 0.1
+        jump_str_energy: 0.01
+        jump_range: 50u
+  jump_rudimentary:
+    name: Rudimentary Jump Drive
+    type: ftl_drive
+    density: 8
+    price: 1
+    durability: 6
+    modules:
+      crew:
+        strategic:
+          base: 10
+          per_volume: 4
+      ftl_drive:
+        ftl_method: jump
+        jump_tac_tidi: 3
+        jump_tac_energy: 0.0909
+        jump_str_energy: 0.00909
+        jump_range: 12.5u
+  jump_standard:
+    name: Standard Jump Drive
+    type: ftl_drive
+    density: 8
+    price: 4
+    durability: 12
+    modules:
+      crew:
+        strategic:
+          base: 5
+          per_volume: 2
+      ftl_drive:
+        ftl_method: jump
+        jump_tac_tidi: 2
+        jump_tac_energy: 0.07692
+        jump_str_energy: 0.007692
+        jump_range: 25u
+  jump_tactical:
+    name: Tactical Jump Drive
+    type: ftl_drive
+    density: 10
+    price: 10
+    durability: 24
+    modules:
+      crew:
+        strategic:
+          base: 5
+          per_volume: 3
+      ftl_drive:
+        ftl_method: jump
+        jump_tac_tidi: 1
+        jump_tac_energy: 0.0125
+        jump_str_energy: 0.00125
+        jump_range: 25u
+  quarters_cramped:
+    name: Cramped Quarters
+    type: living_quarter
+    density: 1
+    durability: 6
+    price: 1
+    modules:
+      quarters:
+        crew: 195
+        moreale: -1
+  quarters_decent:
+    name: Decent Quarters
+    type: living_quarter
+    density: 1
+    durability: 9
+    price: 2
+    modules:
+      quarters:
+        crew: 115
+        morale: 1
+  quarters_good:
+    name: Good Quarters
+    type: living_quarter
+    density: 1
+    durability: 9
+    price: 2
+    modules:
+      quarters:
+        crew: 75
+        morale: 2
+  quarters_sardine_can:
+    name: Sardine Cans
+    type: living_quarter
+    density: 1
+    durability: 3
+    price: 1
+    modules:
+      quarters:
+        crew: 235
+        morale: -2
+  quarters_spartan:
+    name: Spartan Quarters
+    type: living_quarter
+    density: 1
+    durability: 6
+    price: 1
+    modules:
+      quarters:
+        crew: 155
+        morale: 0
+  board_game_room:
+    name: Board Game Room
+    type: recreational
+    density: 1
+    price: 1
+    durability: 9
+    modules:
+      recreational:
+        crew_served: 300
+        biological: 1
+        construct: 1
+  recreation_server:
+    name: Recreation Server
+    type: recreational
+    density: 2
+    price: 3
+    durability: 9
+    modules:
+      recreational:
+        crew_served: 300
+        construct: 1
+        infomorph: 1
+  vr_chamber:
+    name: Virtual Reality Chamber
+    type: recreational
+    density: 1
+    price: 5
+    durability: 3
+    modules:
+      recreational:
+        crew_served: 300
+        biological: 1
+        infomorph: 1
+  algae_reactor:
+    name: Algae Bioreactor
+    type: store
+    density: 3
+    durability: 12
+    price: 2
+    modules:
+      crew:
+        strategic:
+          per_volume: 2
+      stores:
+        crew: 70
+        unlimited: true
+        morale: 0
+  aquaponics_bay:
+    name: Aquaponics Bay
+    type: store
+    density: 2
+    durability: 6
+    price: 3
+    modules:
+      crew:
+        strategic:
+          per_volume: 4
+      stores:
+        crew: 50
+        unlimited: true
+        morale: 2
+  basic_rations:
+    name: Basic Rations Storage
+    type: store
+    density: 1
+    durability: 3
+    price: 1
+    modules:
+      stores:
+        crew: 200
+        morale: 0
+  good_rations:
+    name: Good Rations Storage
+    type: store
+    density: 1
+    durability: 3
+    price: 1.5
+    modules:
+      stores:
+        crew: 180
+        morale: 2
+  survival_rations:
+    name: Survival Rations Storage
+    type: store
+    density: 1
+    durability: 3
+    price: 0.5
+    modules:
+      stores:
+        crew: 250
+        morale: -2
+  tank_chemical_fuel:
+    name: Chemfuel Tank
+    type: tank
+    density: 4
+    durability: 1
+    price: 2
+    modules:
+      tank:
+        stores: chemical_fuel
+  tank_d3he:
+    name: D-3He Tank
+    type: tank
+    density: 3
+    durability: 1
+    price: 1
+    modules:
+      tank:
+        stores: d3he
+  tank_dissolved_fissiles:
+    name: Dissolved Fissile Vat
+    type: tank
+    density: 12
+    durability: 1
+    price: 3
+    modules:
+      tank:
+        stores: dissolved_fissiles
+  tank_fissile_pellets:
+    name: Fissile Pellet Storage
+    type: tank
+    density: 10
+    durability: 1
+    price: 3
+    modules:
+      tank:
+        stores: fissile_pellets
+  tank_inert_fluid:
+    name: Inert Fluid Tank
+    type: tank
+    density: 5
+    durability: 1
+    price: 0.2
+    modules:
+      tank:
+        stores: inert_fluid
+  tank_nuclear_bombs:
+    name: Nuclear Bomb Racks
+    type: tank
+    density: 10
+    durability: 1
+    price: 3
+    modules:
+      tank:
+        stores: nuclear_bombs
+  chemical_rocket:
+    name: Chemical Rocket
+    type: engine
+    density: 1
+    durability: 3
+    price: 0.5
+    modules:
+      crew:
+        strategic:
+          base: 0
+          per_volume: 1
+      engine:
+        thrust: 275
+        fuel:
+          chemical_fuel: 10
+        works_in_atmo: true
+        landing_bad_idea: false
+  electric_rocket: null
+  fissile_salt_water:
+    name: Fissile Saltwater Thruster
+    type: engine
+    density: 6
+    durability: 18
+    price: 9
+    modules:
+      crew:
+        strategic:
+          base: 12
+          per_volume: 8
+      engine:
+        thrust: 450
+        fuel:
+          dissolved_fissiles: 0.75
+        works_in_atmo: true
+        landing_bad_idea: true
+  fusion_torch:
+    name: Fusion Torch Thruster
+    type: engine
+    density: 1
+    durability: 3
+    price: 12
+    modules:
+      crew:
+        strategic:
+          base: 8
+          per_volume: 2
+      engine:
+        thrust: 225
+        fuel:
+          d3he: 0.05
+        works_in_atmo: false
+      converter:
+        output:
+          ENERGY: 0.04
+  mini_mag_orion:
+    name: Magnetic Miniature Orion Drive
+    type: engine
+    density: 5
+    durability: 12
+    price: 8
+    modules:
+      crew:
+        strategic:
+          base: 6
+          per_volume: 2
+      engine:
+        thrust: 275
+        fuel:
+          fissile_pellets: 0.25
+        alternator:
+          ENERGY: 0.03333
+        works_in_atmo: false
+  orion_drive:
+    name: Orion Drive
+    type: engine
+    density: 8
+    durability: 24
+    price: 6
+    modules:
+      crew:
+        strategic:
+          base: 6
+          per_volume: 3
+      engine:
+        thrust: 350
+        fuel:
+          nuclear_bombs: 0.5
+        works_in_atmo: true
+        landing_bad_idea: true
+  thermal_rocket:
+    name: Thermal Rocket
+    type: engine
+    density: 1
+    durability: 15
+    price: 1
+    modules:
+      crew:
+        strategic:
+          base: 2
+          per_volume: 1
+      engine:
+        thrust: 250
+        fuel:
+          inert_fluid: 5
+          HEAT: 1
+        works_in_atmo: true
+        landing_bad_idea: false
+  thermo_electric_rocket:
+    name: Thermoelectric Rocket
+    type: engine
+    density: 1
+    durability: 12
+    price: 2
+    modules:
+      engine:
+        thrust: 250
+        fuel:
+          inert_fluid: 2.5
+          ENERGY: 0.02
+          HEAT: 0.5
+  advanced_isru:
+    name: Advanced ISRU
+    type: utility
+    density: 5
+    durability: 6
+    price: 18
+  basic_isru:
+    name: Basic ISRU
+    type: utility
+    density: 3
+    durability: 12
+    price: 6
+  cargo_pod_rack:
+    name: Cargo Pod Rack
+    type: utility
+    density: 1
+    durability: 6
+    price: 1
+  construction_equipment:
+    name: Construction Equipment
+    type: utility
+    density: 5
+    durability: 24
+    price: 5
+  docking_gantry:
+    name: Docking Gantry
+    type: utility
+    density: 0.1
+    durability: 6
+    price: 1
+  industrial_fabricator:
+    name: Industrial Fabricator
+    type: utility
+    density: 3
+    durability: 9
+    price: 15
+  mining_equipment:
+    name: Mining Equipment
+    type: utility
+    density: 6
+    durability: 30
+    price: 3
+  refinery:
+    name: Materials Refinery
+    type: utility
+    density: 4
+    durability: 18
+    price: 20
+  shuttle_hangar:
+    name: Shuttle Hangar
+    type: utility
+    density: 1
+    durability: 3
+    price: 2
+  laser:
+    name: Laser
+    type: weapon_direct
+    density: 3
+    durability: 3
+    price: 3
+    modules:
+      crew:
+        strategic:
+          base: 5
+          per_volume: 3
+      weapon_direct:
+        active:
+          ENERGY: -0.025
+        range:
+          precision_targeting: 4
+          gauranteed_hit: 7
+          probable_hit: 10
+        range_upgrade:
+          precision_targeting: 2
+          gauranteed_hit: 3
+          probable_hit: 4
+        power: 6
+        power_upgrade: 6
+  macron_gun:
+    type: weapon_direct
+    density: 2
+    durability: 2
+    price: 3
+    modules:
+      crew:
+        strategic:
+          base: 6
+          per_volume: 2
+      weapon_direct:
+        active:
+          ENERGY: -4
+        range:
+          precision_targeting: 1
+          gauranteed_hit: 2
+          probable_hit: 4
+        range_upgrade:
+          precision_targeting: 1
+          gauranteed_hit: 2
+          probable_hit: 3
+        power: 7
+        power_upgrade: 7
+  particle_beam:
+    name: Particle Beam Accelerator
+    type: weapon_direct
+    density: 2
+    durability: 2
+    price: 3
+    modules:
+      crew:
+        strategic:
+          base: 8
+          per_volume: 2
+      weapon_direct:
+        active:
+          ENERGY: -0.033333
+        range:
+          precision_targeting: 2
+          gauranteed_hit: 4
+          probable_hit: 6
+        range_upgrade:
+          precision_targeting: 2
+          gauranteed_hit: 4
+          probable_hit: 5
+        power: 2
+        power_upgrade: 8
+  heavy_em_catapult:
+    name: Heavy Electromagnetic Catapult (EMCat)
+    type: weapon_guided
+    density: 4
+    durability: 4
+    price: 5
+    modules:
+      crew:
+        strategic:
+          base: 5
+          per_volume: 1
+      weapon_guided:
+        launch_method: magazine
+        muzzle_velocity_multiplier: 4
+        size: heavy
+        active:
+          ENERGY: 0.0625
+  heavy_magazine:
+    name: Heavy Magazine
+    type: weapon_guided
+    density: 5
+    durability: 4
+    price: 2
+    modules:
+      crew:
+        strategic:
+          base: 2
+          per_volume: 1
+      magazine:
+        size: heavy
+  heavy_vls:
+    name: Heavy Vertical Launch System (VLS)
+    type: weapon_guided
+    density: 5
+    durability: 3
+    price: 3
+    modules:
+      crew:
+        strategic:
+          base: 3
+          per_volume: 2
+      weapon_guided:
+        launch_method: vls
+        size: heavy
+  light_em_catapult:
+    name: Light Electromagnetic Catapult (EMCat)
+    type: weapon_guided
+    density: 3
+    durability: 3
+    price: 4
+    modules:
+      crew:
+        strategic:
+          base: 5
+          per_volume: 1
+      weapon_guided:
+        launch_method: magazine
+        size: light
+        muzzle_velocity_multiplier: 1
+        active:
+          ENERGY: 0.0277777
+  light_magazine:
+    name: Light Magazine
+    type: weapon_guided
+    density: 5
+    durability: 4
+    price: 2
+    modules:
+      crew:
+        strategic:
+          base: 3
+          per_volume: 1
+      magazine:
+        size: light
+  light_vls:
+    name: Light Vertical Launch System (VLS)
+    type: weapon_guided
+    density: 5
+    durability: 3
+    price: 3
+    modules:
+      crew:
+        strategic:
+          base: 4
+          per_volume: 2
+      weapon_guided:
+        launch_method: vls
+        size: light
+    __incomplete: 1
+combat_stations:
+  damcon:
+    name: Damage Control
+    assigned_crew:
+    - any_crew: 10
+      buff:
+        scaling_function: crew
+        add:
+          repair: 0.1
+    - any_crew: 25
+      min_morale: 2
+      buff:
+        scaling_function: crew
+        add:
+          repair: 0.12
+    - specific_crew:
+      - type:
+        - biological
+        - construct
+        amount: 50
+      min_morale: 4
+      buff:
+        scaling_function: crew
+        add:
+          repair: 0.14
+    - specific_crew:
+      - type:
+        - biological
+        amount: 50
+      - type:
+        - construct
+        amount: 50
+      min_morale: 6
+      buff:
+        scaling_function: crew
+        add:
+          repair: 0.15
+  engineering:
+    name: Engineering
+    assigned_crew:
+    - any_crew: 10
+      buff:
+        add:
+          acceleration: 1
+    - any_crew: 25
+      min_morale: 2
+      buff_choice:
+      - add:
+          acceleration: 1
+      - multiply:
+          energy: 1.1
+    - specific_crew:
+      - type:
+        - biological
+        - construct
+        amount: 50
+      min_morale: 4
+      buff_choice:
+      - add:
+          acceleration: 1
+      - multiply:
+          energy: 1.1
+      - multiply:
+          delta_v: 1.1
+    - specific_crew:
+      - type:
+        - biological
+        amount: 50
+      - type:
+        - construct
+        amount: 50
+      min_morale: 4
+      buff:
+        add:
+          acceleration: 1
+        multiply:
+          energy: 1.1
+          delta_v: 1.1
+  medbay:
+    name: Medbay
+    assigned_crew:
+    - any_crew: 10
+      buff:
+        add:
+          heal_crew: 0.2
+        scaling_function: crew
+    - any_crew: 25
+      min_morale: 2
+      buff:
+        add:
+          heal_crew: 0.56
+        scaling_function: crew
+    - specific_crew:
+      - type:
+        - biological
+        - infomorph
+        amount: 50
+      min_morale: 4
+      buff:
+        add:
+          heal_crew: 0.64
+        scaling_function: crew
+    - specific_crew:
+      - type:
+        - biological
+        amount: 50
+      - type:
+        - infomorph
+        amount: 50
+      min_morale: 4
+      buff:
+        add:
+          heal_crew: 0.75
+        scaling_function: crew
+  medevac:
+    name: Medevac
+    assigned_crew:
+    - any_crew: 10
+      buff:
+        add:
+          wia_ratio: 0.1
+        scaling_function: 1
+    - any_crew: 25
+      min_morale: 2
+      buff:
+        add:
+          wia_ratio: 0.2
+        scaling_function: 1
+    - specific_crew:
+      - type:
+        - biological
+        - infomorph
+        amount: 50
+      min_morale: 4
+      buff:
+        add:
+          wia_ratio: 0.3
+        scaling_function: 1
+    - specific_crew:
+      - type:
+        - biological
+        amount: 50
+      - type:
+        - infomorph
+        amount: 50
+      min_morale: 4
+      buff:
+        add:
+          wia_ratio: 0.4
+        scaling_function: 1
+  nerve_center:
+    name: Nerve Center
+    assigned_crew:
+    - any_crew: 10
+      buff_choice:
+      - scaling_function: 1
+        add:
+          ecm: 1
+      - scaling_function: 1
+        add:
+          sensors: 1
+    - any_crew: 25
+      min_morale: 4
+      buff_choice:
+      - add:
+          ecm: 2
+      - add:
+          sensors: 2
+    - specific_crew:
+      - type:
+        - biological
+        - construct
+        amount: 50
+      min_morale: 4
+      buff:
+        add:
+          ecm: 3
+          sensors: 3
+        scaling_function: 1
+    - specific_crew:
+      - type:
+        - biological
+        amount: 50
+      - type:
+        - construct
+        amount: 50
+      min_morale: 6
+      buff:
+        scaling_function: 1
+        add:
+          ecm: 4
+          sensors: 4
+missiles:
+  guidance:
+    heat_seeking:
+      price:
+        light: 0.1
+        heavy: 1
+    home_on_jam:
+      price:
+        light: 0.1
+        heavy: 1
+    imaging_radar:
+      price:
+        light: 0.1
+        heavy: 1
+    center_of_mass:
+      price:
+        light: 0.1
+        heavy: 1
+    command_guidance:
+      price:
+        light: 0.1
+        heavy: 1
+  payload:
+    kinetic:
+      price:
+        light: 0
+        heavy: 0
+    inertial_mine:
+      price:
+        light: 0.1
+        heavy: 1
+    nuclear_bomb:
+      price:
+        light: 0.6
+        heavy: 5
+    neutron_bomb:
+      price:
+        light: 0.8
+        heavy: 6
+    casaba_howitzer:
+      price:
+        light: 0.8
+        heavy: 6
+    nefp:
+      price:
+        light: 1
+        heavy: 7
+    excalibur:
+      price:
+        light: 1.2
+        heavy: 8
+    decoy:
+      price:
+        light: 0.3
+        heavy: 4
+    em_deflector:
+      price:
+        light: 0.5
+        heavy: 4
+    light_gas_gun:
+      price:
+        light: 0.3
+        heavy: 3
+    chemical_laser:
+      price:
+        light: 0.3
+        heavy: 3
+    laser_relay:
+      price:
+        light: 0.5
+        heavy: 4
+    missile_rack:
+      price:
+        light: 1
+        heavy: 3
+  propulsion:
+    none:
+      price:
+        light: 0
+        heavy: 0
+    solid_rocket_motor:
+      price:
+        light: 0.1
+        heavy: 1
+    liquid_fueled_rocket:
+      price:
+        light: 0.2
+        heavy: 2
+    nuclear_thermal:
+      price:
+        light: 0.6
+        heavy: 6
+    nuclear_thermo_electric_hybrid:
+      price:
+        light: 1
+        heavy: 10
