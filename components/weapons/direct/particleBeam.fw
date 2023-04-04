@@ -1,6 +1,6 @@
 %YAML 1.2
-
-component:
+---
+components:
   particle_beam:
     name: "Particle Beam Accelerator"
     type: weapon_direct

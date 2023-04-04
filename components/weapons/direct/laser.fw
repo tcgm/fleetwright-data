@@ -1,6 +1,6 @@
 %YAML 1.2
-
-component:
+---
+components:
   laser:
     name: "Laser"
     type: weapon_direct
