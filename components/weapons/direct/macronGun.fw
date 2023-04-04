@@ -1,5 +1,7 @@
 %YAML 1.2
 
+---
+
 component:
   macron_gun:
     type: weapon_direct

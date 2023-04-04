@@ -1,6 +1,8 @@
 %YAML 1.2
+
 ---
-components:
+
+component:
   heavy_magazine:
     name: "Heavy Magazine"
     type: weapon_guided

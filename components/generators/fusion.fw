@@ -1,6 +1,9 @@
 %YAML 1.2
+
 ---
+
 component:
+  #################### [POWERPLANT] ###################
   fusion:
     name: Magneto-Intertial Fusion Reactor
     type: powerplant

@@ -1,6 +1,8 @@
 %YAML 1.2
+
 ---
-components:
+
+component:
   heavy_em_catapult:
     name: "Heavy Electromagnetic Catapult (EMCat)"
     type: weapon_guided

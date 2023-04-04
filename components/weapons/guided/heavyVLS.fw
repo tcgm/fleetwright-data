@@ -1,6 +1,8 @@
 %YAML 1.2
+
 ---
-components:
+
+component:
   heavy_vls:
     name: "Heavy Vertical Launch System (VLS)"
     type: weapon_guided
