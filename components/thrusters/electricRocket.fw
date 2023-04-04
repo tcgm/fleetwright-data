@@ -1,8 +1,10 @@
 %YAML 1.2
+
 ---
-components:
+
+component:
   #################### [DRIVE] ###################
-  electric_rocket:
+    electric_rocket:
     name: "Electric Rocket"
     type: "engine"
     density: 1
