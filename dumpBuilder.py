@@ -1,6 +1,8 @@
 import glob
 import yaml
 import pprint
+import os
+import zipfile
 
 BASE_DIRECTORIES = [
     "components",
@@ -14,6 +16,7 @@ for directory in BASE_DIRECTORIES:
     filenames.extend(
         glob.glob(f"{directory}/**/*.fw", recursive=True)
     )
+
 
 result = {
     "resources": {},
@@ -76,3 +79,9 @@ with open("junctspace_dump.txt", "w") as f:
 
 with open("junctspace_dump.fw", "w") as f:
     yaml.dump(result, f, Dumper=yaml.SafeDumper, sort_keys=False)
+
+path = ""
+zipf = zipfile.ZipFile('junctspace.zip'.format(os.path.join(path, directory)), 'w', zipfile.ZIP_DEFLATED)
+for filename in filenames:
+    zipf.write(os.path.abspath(filename), arcname=filename)
+zipf.close()
