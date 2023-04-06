@@ -4,6 +4,12 @@ import pprint
 import os
 import zipfile
 
+#Gamedata master directory
+DATA_DIR = "gamedata/"
+
+#Vanilla Gamedata Processing
+BASEDATA_DIR = DATA_DIR + "fleetwright/"
+
 BASE_DIRECTORIES = [
     "components",
     "missiles",
@@ -14,7 +20,7 @@ BASE_DIRECTORIES = [
 filenames = []
 for directory in BASE_DIRECTORIES:
     filenames.extend(
-        glob.glob(f"{directory}/**/*.fw", recursive=True)
+        glob.glob(f"{BASEDATA_DIR + directory}/**/*.fw", recursive=True)
     )
 
 
@@ -81,7 +87,7 @@ with open("junctspace_dump.fw", "w") as f:
     yaml.dump(result, f, Dumper=yaml.SafeDumper, sort_keys=False)
 
 path = ""
-zipf = zipfile.ZipFile('junctspace.zip'.format(os.path.join(path, directory)), 'w', zipfile.ZIP_DEFLATED)
+zipf = zipfile.ZipFile('fleetwright.zip'.format(os.path.join(path, directory)), 'w', zipfile.ZIP_DEFLATED)
 for filename in filenames:
     zipf.write(os.path.abspath(filename), arcname=filename)
 zipf.close()
